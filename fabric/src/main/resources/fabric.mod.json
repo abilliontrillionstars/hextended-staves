@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "lanishextendedstaves",
+  "version": "${version}",
+  "name": "Hextended Staves",
+  "description": "Bolsters your stick collection with some nice-looking staves, with extra casting properties!",
+  "authors": [
+    "just_laniakea, with the help of the Hex Casting Discord Server <3"
+  ],
+  "contact": {
+    "homepage": "https://abilliontrillionstars.github.io/hextended-staves",
+    "sources": "github.com/abilliontrillionstars/hextended-staves"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "abilliontrillionstars.lanishextendedstaves.fabric.LanisHextendedStavesFabric"
+    ],
+    "client": [
+      "abilliontrillionstars.lanishextendedstaves.fabric.LanisHextendedStavesClientFabric"
+    ]
+  },
+  "mixins": [
+    "lanishextendedstaves-common.mixins.json",
+    "lanishextendedstaves.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.19.2",
+    "fabricloader": ">=0.14.21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.9.0+kotlin.1.8.0",
+    "architectury": ">=6.5.85",
+    "hexcasting": ">=0.10.3"
+  }
+}

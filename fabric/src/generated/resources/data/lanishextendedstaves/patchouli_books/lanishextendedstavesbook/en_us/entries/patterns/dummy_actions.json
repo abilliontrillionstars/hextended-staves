@@ -1,0 +1,18 @@
+{
+  "name": "lanishextendedstaves.entry.dummy_actions",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:birch_sign",
+  "sortnum": 0,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "lanishextendedstaves:signum",
+      "anchor": "lanishextendedstaves:signum",
+      "input": "number",
+      "output": "number",
+      "text": "lanishextendedstaves.page.dummy_actions.signum"
+    }
+  ]
+}

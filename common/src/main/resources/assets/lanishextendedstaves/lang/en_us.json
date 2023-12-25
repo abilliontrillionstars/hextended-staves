@@ -1,0 +1,13 @@
+{
+  "item.lanishextendedstaves.dummy_item": "Dummy Item",
+  "hexcasting.spell.lanishextendedstaves:congrats": "Congrats",
+  "hexcasting.spell.lanishextendedstaves:signum": "Signum Purification",
+  "hexcasting.spell.book.lanishextendedstaves:congrats": "Dum. Spell Actn.",
+  "hexcasting.spell.book.lanishextendedstaves:signum": "Dum. Actn.",
+  "lanishextendedstaves.entry.dummy_spells": "Dummy Spells",
+  "lanishextendedstaves.entry.dummy_actions": "Dummy Actions",
+  "lanishextendedstaves.page.dummy_spells.congrats": "Accepts a player entity, tells them they are doing a good job.",
+  "lanishextendedstaves.page.dummy_actions.signum": "Accepts a $(l:casting/101)number/$, returns -1 if it is negative, 0 if 0, 1 if positive.",
+  "text.lanishextendedstaves.congrats": "Good job, %1$s!",
+  "text.lanishextendedstaves.congrats.player": "a Player"
+}
