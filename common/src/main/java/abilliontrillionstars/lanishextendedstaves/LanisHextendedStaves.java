@@ -15,7 +15,6 @@ public class LanisHextendedStaves {
     public static final String MOD_ID = "lanishextendedstaves";
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
-
     public static void init() {
         LOGGER.info("Hextended Staves says hello!");
 

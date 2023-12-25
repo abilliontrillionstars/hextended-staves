@@ -1,5 +1,8 @@
 package abilliontrillionstars.lanishextendedstaves.registry;
 
+import abilliontrillionstars.lanishextendedstaves.items.ItemExtendedStaff;
+import at.petrak.hexcasting.common.lib.HexItems;
+import com.ibm.icu.text.UForwardCharacterIterator;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -20,10 +23,16 @@ public class LanisHextendedStavesItemRegistry {
     }
 
     // A new creative tab. Notice how it is one of the few things that are not deferred
-    public static final CreativeModeTab DUMMY_GROUP = CreativeTabRegistry.create(id("dummy_group"), () -> new ItemStack(LanisHextendedStavesItemRegistry.DUMMY_ITEM.get()));
+    //public static final CreativeModeTab HEXTENDED_GEAR = CreativeTabRegistry.create(id("hextended_gear"), () -> new ItemStack(LanisHextendedStavesItemRegistry.EXTENDED_STAFF.get()));
 
     // During the loading phase, refrain from accessing suppliers' items (e.g. EXAMPLE_ITEM.get()), they will not be available
-    public static final RegistrySupplier<Item> DUMMY_ITEM = ITEMS.register("dummy_item", () -> new Item(new Item.Properties().tab(DUMMY_GROUP)));
-
-
+    //public static final RegistrySupplier<Item> EXTENDED_STAFF = ITEMS.register("extended_staff", () -> new Item(new Item.Properties().tab(HEXTENDED_GEAR)));
+    public static final String[] EXTENDED_STAFF_IDS = {"extended_staff"};
+    static
+    {
+        for(String id : EXTENDED_STAFF_IDS)
+        {
+            ITEMS.register(id, () -> new ItemExtendedStaff(HexItems.unstackable()));
+        }
+    }
 }
