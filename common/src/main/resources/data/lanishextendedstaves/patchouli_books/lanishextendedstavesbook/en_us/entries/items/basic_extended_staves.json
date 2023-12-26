@@ -1,0 +1,31 @@
+{
+  "name": "lanishextendedstaves.entry.basic_extended_staves",
+  "category": "hexcasting:items",
+  "icon": "hexcasting:spruce",
+  "sortnum": 7,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "lanishextendedstaves.page.basic_extended_staves.0"
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "lanishextendedstaves.page.basic_extended_staves.crafting.header",
+      "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc",
+      "recipes": [
+        "lanishextendedstaves:extended_oak",
+        "lanishextendedstaves:extended_spruce",
+        "lanishextendedstaves:extended_birch",
+        "lanishextendedstaves:extended_jungle",
+        "lanishextendedstaves:extended_acacia",
+        "lanishextendedstaves:extended_dark_oak",
+        "lanishextendedstaves:extended_crimson",
+        "lanishextendedstaves:extended_warped",
+        "lanishextendedstaves:extended_mangrove",
+        "lanishextendedstaves:extended_edified"
+      ]
+    }
+  ]
+}

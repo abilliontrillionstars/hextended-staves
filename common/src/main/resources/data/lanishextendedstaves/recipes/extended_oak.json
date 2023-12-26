@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "hexcasting:oak_staff"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    },
+    "Z": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "pattern": [
+    " YX",
+    " ZY",
+    "Y  "
+  ],
+  "result": {
+    "item": "lanishextendedstaves:extended_staff_oak"
+  },
+  "show_notification": true
+}

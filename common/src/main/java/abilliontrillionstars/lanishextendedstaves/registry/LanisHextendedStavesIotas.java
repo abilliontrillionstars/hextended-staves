@@ -11,7 +11,8 @@ import java.util.Map;
 
 import static abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves.id;
 
-public class LanisHextendedStavesIotaTypeRegistry {
+public class LanisHextendedStavesIotas
+{
     public static Map<ResourceLocation, IotaType<?>> TYPES = new HashMap<>();
 
     public static void init() {

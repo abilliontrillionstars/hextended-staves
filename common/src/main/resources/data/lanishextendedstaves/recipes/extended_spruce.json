@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "hexcasting:spruce_staff"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    },
+    "Z": {
+      "item": "minecraft:spruce_planks"
+    }
+  },
+  "pattern": [
+    " YX",
+    " ZY",
+    "Y  "
+  ],
+  "result": {
+    "item": "lanishextendedstaves:extended_staff_spruce"
+  },
+  "show_notification": true
+}

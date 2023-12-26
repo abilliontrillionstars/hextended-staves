@@ -10,9 +10,20 @@ types:
         - does not have a media buffer of its own
         - has a chargeup time to cast its bound hex(?), as well as the usual cooldown
         - needs a music disc (or similar expensive item) to craft along with
+        - cannot be cast from while in the grid
         Maybe takes the form of being etched into the wood, a trusty hex the wielder knows by heart
+
 
     Reverberating Staff
         depend on Oneironaut/Nova's addon, casts the hex every tick
         - maybe add an extra couple flow control patterns
         - require a reverb rod in the recipe ofc
+
+
+    Misc hex gear:
+
+    Charged Amethyst Diadem:
+        mechanics related to bloodcasting
+        - makes bloodcasting more feasible,
+        possibly increasing the amount of media one can get out of their health
+        - flay minds into it? increases capacity?

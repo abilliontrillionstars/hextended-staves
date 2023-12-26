@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "hexcasting:acacia_staff"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    },
+    "Z": {
+      "item": "minecraft:acacia_planks"
+    }
+  },
+  "pattern": [
+    " YX",
+    " ZY",
+    "Y  "
+  ],
+  "result": {
+    "item": "lanishextendedstaves:extended_staff_acacia"
+  },
+  "show_notification": true
+}

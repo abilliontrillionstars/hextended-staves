@@ -1,8 +1,8 @@
 package abilliontrillionstars.lanishextendedstaves;
 
-import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesIotaTypeRegistry;
-import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesItemRegistry;
-import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesPatternRegistry;
+import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesIotas;
+import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesItems;
+import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesPatterns;
 import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,9 +18,9 @@ public class LanisHextendedStaves {
     public static void init() {
         LOGGER.info("Hextended Staves says hello!");
 
-        LanisHextendedStavesItemRegistry.init();
-        LanisHextendedStavesIotaTypeRegistry.init();
-        LanisHextendedStavesPatternRegistry.init();
+        LanisHextendedStavesItems.init();
+        LanisHextendedStavesIotas.init();
+        LanisHextendedStavesPatterns.init();
 
         LOGGER.info(LanisHextendedStavesAbstractions.getConfigDirectory().toAbsolutePath().normalize().toString());
     }

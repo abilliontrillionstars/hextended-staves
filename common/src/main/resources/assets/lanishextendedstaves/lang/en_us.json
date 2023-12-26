@@ -1,5 +1,21 @@
 {
-  "item.lanishextendedstaves.extended_staff": "Extended Staff",
+  "item.lanishextendedstaves.extended_staff_oak": "Extended Oak Staff",
+  "item.lanishextendedstaves.extended_staff_spruce": "Extended Spruce Staff",
+  "item.lanishextendedstaves.extended_staff_birch": "Extended Birch Staff",
+  "item.lanishextendedstaves.extended_staff_jungle": "Extended Jungle Staff",
+  "item.lanishextendedstaves.extended_staff_dark_oak": "Extended Dark Oak Staff",
+  "item.lanishextendedstaves.extended_staff_acacia": "Extended Acacia Staff",
+  "item.lanishextendedstaves.extended_staff_crimson": "Extended Crimson Staff",
+  "item.lanishextendedstaves.extended_staff_warped": "Extended Warped Staff",
+  "item.lanishextendedstaves.extended_staff_mangrove": "Extended Mangrove Staff",
+  "item.lanishextendedstaves.extended_staff_edified": "Extended Edified Staff",
+
+  "lanishextendedstaves.entry.basic_extended_staves": "Hextended Staves",
+  "lanishextendedstaves.page.basic_extended_staves.0" : "As I learn more about this art, I find myself yearning for variety in my instruments just as I do in my work. Here I have detailed the devotion I have since taken into the craftmanship of the curious sticks that bring about my casting grid.",
+  "lanishextendedstaves.page.basic_extended_staves.crafting.header": "Extended Staves",
+  "lanishextendedstaves.page.basic_extended_staves.crafting.desc": "An extension $(italic)of an extension/$ of your mind",
+
+
   "hexcasting.spell.lanishextendedstaves:congrats": "Congrats",
   "hexcasting.spell.lanishextendedstaves:signum": "Signum Purification",
   "hexcasting.spell.book.lanishextendedstaves:congrats": "Dum. Spell Actn.",
