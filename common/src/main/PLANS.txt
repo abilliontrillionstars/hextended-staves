@@ -13,6 +13,11 @@ types:
         - cannot be cast from while in the grid
         Maybe takes the form of being etched into the wood, a trusty hex the wielder knows by heart
 
+    Drawing Orb
+        staff with less grid space
+        - you can set it to scry/ponder a position, extends ambit in (3-4?) sphere, but ONLY to entities
+
+
 
     Reverberating Staff
         depend on Oneironaut/Nova's addon, casts the hex every tick
@@ -26,4 +31,5 @@ types:
         mechanics related to bloodcasting
         - makes bloodcasting more feasible,
         possibly increasing the amount of media one can get out of their health
-        - flay minds into it? increases capacity?
+        - malleability theme, some event will progressively increase its capacity
+            - flay minds into it? staffcasted patterns increase by a small bit?

@@ -1,0 +1,23 @@
+/*
+package abilliontrillionstars.lanishextendedstaves.fabric;
+
+import abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves;
+
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Identifier;
+
+public class BundledResourcePackFabric
+{
+    // yoinked from https://github.com/TeamMidnightDust/BetterBeds/blob/6be616e91eea01dba91c842bd5a5bd6693991bba/src/main/java/eu/midnightdust/betterbeds/BetterBedsClient.java#L4
+    public static void register()
+    {
+        FabricLoader.getInstance().getModContainer(LanisHextendedStaves.MOD_ID).ifPresent(modContainer ->
+        {
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(LanisHextendedStaves.MOD_ID, "Staff Name Tweaks"),  modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
+        });
+    }
+}
+*/

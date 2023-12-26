@@ -24,11 +24,10 @@ public class LanisHextendedStavesItems
     public static final String[] EXTENDED_STAFF_IDS = {"extended_staff_oak", "extended_staff_spruce",
             "extended_staff_birch", "extended_staff_jungle", "extended_staff_dark_oak", "extended_staff_acacia",
             "extended_staff_crimson", "extended_staff_warped", "extended_staff_edified"};
+
     static
     {
         for(String id : EXTENDED_STAFF_IDS)
-        {
             ITEMS.register(id, () -> new ItemExtendedStaff(HexItems.unstackable()));
-        }
     }
 }

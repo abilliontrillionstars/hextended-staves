@@ -1,7 +1,7 @@
 {
   "name": "lanishextendedstaves.entry.basic_extended_staves",
   "category": "hexcasting:items",
-  "icon": "hexcasting:spruce",
+  "icon": "lanishextendedstaves:extended_spruce_staff",
   "sortnum": 7,
   "advancement": "hexcasting:root",
   "read_by_default": true,

@@ -11,7 +11,7 @@
   "item.lanishextendedstaves.extended_staff_edified": "Extended Edified Staff",
 
   "lanishextendedstaves.entry.basic_extended_staves": "Hextended Staves",
-  "lanishextendedstaves.page.basic_extended_staves.0" : "As I learn more about this art, I find myself yearning for variety in my instruments just as I do in my work. Here I have detailed the devotion I have since taken into the craftmanship of the curious sticks that bring about my casting grid.",
+  "lanishextendedstaves.page.basic_extended_staves.0" : "As I learn more about this art, I find myself yearning for variety in my instruments just as I do in my work. I've since $(italic)cast/$ some time into the craftmanship of the curious sticks that bring about my casting grid.",
   "lanishextendedstaves.page.basic_extended_staves.crafting.header": "Extended Staves",
   "lanishextendedstaves.page.basic_extended_staves.crafting.desc": "An extension $(italic)of an extension/$ of your mind",
 
