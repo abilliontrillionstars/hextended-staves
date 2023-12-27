@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+
 /**
  * This is effectively the loading entrypoint for most of your code, at least
  * if you are using Architectury as intended.
@@ -23,6 +24,7 @@ public class LanisHextendedStaves {
         LanisHextendedStavesPatterns.init();
 
         LOGGER.info(LanisHextendedStavesAbstractions.getConfigDirectory().toAbsolutePath().normalize().toString());
+
     }
 
     /**

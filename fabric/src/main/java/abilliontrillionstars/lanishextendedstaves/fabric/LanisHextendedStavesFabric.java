@@ -13,7 +13,11 @@ import abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves;
  */
 public class LanisHextendedStavesFabric implements ModInitializer {
     @Override
-    public void onInitialize() {
+    public void onInitialize()
+    {
         LanisHextendedStaves.init();
+
+        // can't make a class with a register function and not call it!!!!! WAHOO!
+        BundledResourcePackFabric.register();
     }
 }

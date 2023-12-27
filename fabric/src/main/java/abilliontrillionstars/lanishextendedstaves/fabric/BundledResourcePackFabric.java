@@ -1,4 +1,4 @@
-/*
+
 package abilliontrillionstars.lanishextendedstaves.fabric;
 
 import abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves;
@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Identifier;
+
 
 public class BundledResourcePackFabric
 {
@@ -16,8 +16,7 @@ public class BundledResourcePackFabric
     {
         FabricLoader.getInstance().getModContainer(LanisHextendedStaves.MOD_ID).ifPresent(modContainer ->
         {
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(LanisHextendedStaves.MOD_ID, "Staff Name Tweaks"),  modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
+            ResourceManagerHelper.registerBuiltinResourcePack(new ResourceLocation(LanisHextendedStaves.MOD_ID, "staff_name_tweaks"), modContainer, "Staff Terminology", ResourcePackActivationType.NORMAL);
         });
     }
 }
-*/
