@@ -10,20 +10,23 @@
   "item.lanishextendedstaves.extended_staff_mangrove": "Extended Mangrove Staff",
   "item.lanishextendedstaves.extended_staff_edified": "Extended Edified Staff",
 
-  "lanishextendedstaves.entry.basic_extended_staves": "Hextended Staves",
-  "lanishextendedstaves.page.basic_extended_staves.0" : "As I learn more about this art, I find myself yearning for variety in my instruments just as I do in my work. I've since $(italic)cast/$ some time into the craftmanship of the curious sticks that bring about my casting grid. ",
+  "item.lanishextendedstaves.lesser_battery_staff": "Improvised Amethyst Staff",
+  "item.lanishextendedstaves.lesser_battery_extended_staff": "Improvised Extended Amethyst Staff",
+  "item.lanishextendedstaves.sealed_lesser_battery_extended_staff": "Sealed Improvised Extended Amethyst Staff",
+  "item.lanishextendedstaves.sealed_lesser_battery_staff": "Sealed Improvised Amethyst Staff",
+
+
+
+
+  "lanishextendedstaves.entry.basic_extended_staves": "Extended Staves",
+  "lanishextendedstaves.page.basic_extended_staves.0" : "As I learn more about this art, I find myself yearning for variety in my instruments just as I do in my work. I've since $(italic)cast/$ some time into the craftmanship of these curious sticks. The length allows for a miniscule addition in grid space, but not as I might get from a $(l:items/lens)$(item)Scrying Lens/$. As such, I find the choice between it and $(l:items/staff)$(item)its shorter sibling/$ can still be made of preference, rather than use.",
   "lanishextendedstaves.page.basic_extended_staves.crafting.header": "Extended Staves",
   "lanishextendedstaves.page.basic_extended_staves.crafting.desc": "An extension $(italic)of an extension/$ of your mind",
 
-
-  "hexcasting.spell.lanishextendedstaves:congrats": "Congrats",
-  "hexcasting.spell.lanishextendedstaves:signum": "Signum Purification",
-  "hexcasting.spell.book.lanishextendedstaves:congrats": "Dum. Spell Actn.",
-  "hexcasting.spell.book.lanishextendedstaves:signum": "Dum. Actn.",
-  "lanishextendedstaves.entry.dummy_spells": "Dummy Spells",
-  "lanishextendedstaves.entry.dummy_actions": "Dummy Actions",
-  "lanishextendedstaves.page.dummy_spells.congrats": "Accepts a player entity, tells them they are doing a good job.",
-  "lanishextendedstaves.page.dummy_actions.signum": "Accepts a $(l:casting/101)number/$, returns -1 if it is negative, 0 if 0, 1 if positive.",
-  "text.lanishextendedstaves.congrats": "Good job, %1$s!",
-  "text.lanishextendedstaves.congrats.player": "a Player"
+  "lanishextendedstaves.entry.functional_staves_1": "Functional Staves",
+  "lanishextendedstaves.page.functional_staves_1.0": "Of course, in my ingenuity, it would be narrow-minded to craft extensions of my staff only in the physical sense. If I'm to cultivate a flexible and oh so utile art, my tools must so be as well. The first, a cleverly-thought but crudely built staff of amethyst. Peculiarly, the amethyst block will more readily crumble when directly used to weave the _media, providing itself to my _Hexes.",
+  "lanishextendedstaves.page.functional_staves_1.crafting.desc.0": "For when you forget wood and you're already ~100 blocks deep in the geode",
+  "lanishextendedstaves.page.functional_staves_1.crafting.desc.1": "$(italic)We made it. We created it. We brought it forth from the night of the ages. We alone. Our hands. Our mind. Ours alone and only./$",
+  "lanishextendedstaves.page.functional_staves_1.1": "Furthermore, should I find myself enamored in its impure yet ordered, crude yet elegant, pungent yet aloft, glistening yet vacuous yet glistening yet-- $(br2)If I should like to keep it, I have found means of preventing its crumble, sealing it so that I may use it indefinitely.",
+  "lanishextendedstaves.page.functional_staves_1.2": "$(italic)No single one can possess greater wisdom than the many Scholars who are elected by all men for their wisdom. Yet we can. We do. We have fought against saying it, but now it is said. We do not care. We forget all men, all laws and all things save our metals $(br)and our wires. So much is still to be learned! So long a road lies before us, and what care we if we must travel it alone!/$"
 }

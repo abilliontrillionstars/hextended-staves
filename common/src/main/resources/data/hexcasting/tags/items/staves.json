@@ -9,6 +9,12 @@
     "lanishextendedstaves:extended_staff_acacia",
     "lanishextendedstaves:extended_staff_crimson",
     "lanishextendedstaves:extended_staff_warped",
-    "lanishextendedstaves:extended_staff_edified"
+    "lanishextendedstaves:extended_staff_edified",
+
+    "lanishextendedstaves:lesser_battery_staff",
+    "lanishextendedstaves:lesser_battery_extended_staff",
+    "lanishextendedstaves:sealed_lesser_battery_staff",
+    "lanishextendedstaves:sealed_lesser_battery_extended_staff"
+
   ]
 }

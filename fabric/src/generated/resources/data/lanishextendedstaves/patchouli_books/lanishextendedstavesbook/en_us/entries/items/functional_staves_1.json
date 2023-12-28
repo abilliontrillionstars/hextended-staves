@@ -1,0 +1,37 @@
+{
+  "name": "lanishextendedstaves.entry.functional_staves_1",
+  "category": "hexcasting:items",
+  "icon": "lanishextendedstaves:lesser_battery_staff",
+  "sortnum": 8,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "lanishextendedstaves.page.functional_staves_1.0"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "lanishextendedstaves:lesser_battery_staff",
+      "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.0"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "lanishextendedstaves.page.functional_staves_1.1"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "lanishextendedstaves:lesser_battery_extended_staff",
+      "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.1"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "lanishextendedstaves.page.functional_staves_1.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "lanishextendedstaves:sealed_lesser_battery_staff",
+      "recipe2": "lanishextendedstaves:sealed_lesser_battery_extended_staff"
+    }
+  ]
+}

@@ -8,5 +8,10 @@
   "item.lanishextendedstaves.extended_staff_crimson": "Crimson Staff",
   "item.lanishextendedstaves.extended_staff_warped": "Warped Staff",
   "item.lanishextendedstaves.extended_staff_mangrove": "Mangrove Staff",
-  "item.lanishextendedstaves.extended_staff_edified": "Edified Staff"
+  "item.lanishextendedstaves.extended_staff_edified": "Edified Staff",
+
+  "item.lanishextendedstaves.lesser_battery_staff": "Improvised Amethyst Wand",
+  "item.lanishextendedstaves.lesser_battery_extended_staff": "Improvised Amethyst Staff",
+  "item.lanishextendedstaves.sealed_lesser_battery_staff": "Sealed Improvised Amethyst Wand",
+  "item.lanishextendedstaves.sealed_lesser_battery_extended_staff": "Sealed Improvised Amethyst Staff"
 }

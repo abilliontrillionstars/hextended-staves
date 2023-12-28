@@ -1,31 +1,49 @@
 Staves!! long ones!!
 
-types:
     Extended(?)
         Normal staff but lorj, offers slightly more grid space (configurable)
-        maybe I should change the lang for hex's staves to "wands" instead of calling it great
+        maybe I should change the lang for hex's staves to "wands" instead of calling it extended
+
+    Impermanent Staff / Improviser's Staff
+        staff made from amethyst, for people who didn't bring wood into the geode
+        - has a media buffer (like a phial, implements MediaHolderItem)
+        - breaks like a cypher (cannot be recharged)
+
+    Drawing Orb
+        staff with less grid space
+        - you can set it to scry/ponder a position
+        - extends ambit in (3-4?) sphere, but ONLY to entities
+        - or a single block
+
+    Crossmod Staves
+        mostly cosmetic, for aesthetic matching
+        - Ice and Fire
+        - Botania
+        - Ars Nouveau?
+        -
 
     Grand/Great(?) Staves
-        has ItemPackagedHex (is a casting device) BUT:
+        implements ItemPackagedHex (is a casting device) BUT:
         - does not have a media buffer of its own
         - has a chargeup time to cast its bound hex(?), as well as the usual cooldown
         - needs a music disc (or similar expensive item) to craft along with
         - cannot be cast from while in the grid
         Maybe takes the form of being etched into the wood, a trusty hex the wielder knows by heart
 
-    Drawing Orb
-        staff with less grid space
-        - you can set it to scry/ponder a position, extends ambit in (3-4?) sphere, but ONLY to entities
-
-
-
     Reverberating Staff
         depend on Oneironaut/Nova's addon, casts the hex every tick
         - maybe add an extra couple flow control patterns
         - require a reverb rod in the recipe ofc
 
+    Notes:
+    ""like the long staves would come with 1 level of a grid expanding enchant for free, but
+     you could still go out and apply the enchant manually if you wanted to use one of the
+     small staves and get the same functionality"" -Chloe
 
-    Misc hex gear:
+
+
+
+Misc hex gear:
 
     Charged Amethyst Diadem:
         mechanics related to bloodcasting

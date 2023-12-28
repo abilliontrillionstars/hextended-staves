@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld_rod",
+  "textures": {
+    "layer0": "lanishextendedstaves:item/sealed_lesser_battery_staff"
+  }
+}
