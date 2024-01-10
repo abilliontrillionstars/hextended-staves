@@ -13,5 +13,19 @@
   "item.lanishextendedstaves.lesser_battery_staff": "Improvised Amethyst Wand",
   "item.lanishextendedstaves.lesser_battery_extended_staff": "Improvised Amethyst Staff",
   "item.lanishextendedstaves.sealed_lesser_battery_staff": "Sealed Improvised Amethyst Wand",
-  "item.lanishextendedstaves.sealed_lesser_battery_extended_staff": "Sealed Improvised Amethyst Staff"
+  "item.lanishextendedstaves.sealed_lesser_battery_extended_staff": "Sealed Improvised Amethyst Staff",
+
+  "item.lanishextendedstaves.moss_staff": "Mossy Wand",
+  "item.lanishextendedstaves.flowered_moss_staff": "Flowering Mossy Wand",
+  "item.lanishextendedstaves.extended_moss_staff": "Mossy Staff",
+  "item.lanishextendedstaves.extended_flowered_moss_staff": "Flowering Mossy Staff",
+  "item.lanishextendedstaves.prismarine_staff": "Prismarine Wand",
+  "item.lanishextendedstaves.dark_prismarine_staff": "Dark Prismarine Wand",
+  "item.lanishextendedstaves.extended_prismarine_staff": "Prismarine Staff",
+  "item.lanishextendedstaves.extended_dark_prismarine_staff": "Dark Prismarine Staff",
+  "item.lanishextendedstaves.obsidian_staff": "Obsidian Wand",
+  "item.lanishextendedstaves.purpur_staff": "Purpur Wand",
+  "item.lanishextendedstaves.extended_obsidian_staff": "Obsidian Staff",
+  "item.lanishextendedstaves.extended_purpur_staff": "Purpur Staff"
 }
+

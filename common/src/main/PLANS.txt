@@ -1,10 +1,10 @@
 Staves!! long ones!!
 
-    Extended(?)
+    Extended(?) - DONE
         Normal staff but lorj, offers slightly more grid space (configurable)
         maybe I should change the lang for hex's staves to "wands" instead of calling it extended
 
-    Impermanent Staff / Improviser's Staff
+    Impermanent Staff / Improviser's Staff - DONE
         staff made from amethyst, for people who didn't bring wood into the geode
         - has a media buffer (like a phial, implements MediaHolderItem)
         - breaks like a cypher (cannot be recharged)
@@ -18,9 +18,21 @@ Staves!! long ones!!
     Crossmod Staves
         mostly cosmetic, for aesthetic matching
         - Ice and Fire
+            - dragonscale,
         - Botania
+            - manasteel, terrasteel, elementium, livingrock, livingwood and dreamwood
         - Ars Nouveau?
         -
+    Other Staves
+	    - spoon staff but the extended version is comically large
+		    "this staff's name is 'Spoon Theory' look him up on google"
+	    - also moss staff. need. flowering azalea variants. maybe an glow berrie?
+	    - prismarine staves for matching to aquatic players, dark variant
+	    - copper staves?
+	    - nether-related staves (not quartz, sam covered that), netherrack?
+	    - end staves > purpur, obsidian?
+
+
 
     Grand/Great(?) Staves
         implements ItemPackagedHex (is a casting device) BUT:
@@ -42,12 +54,11 @@ Staves!! long ones!!
 
 
 
-
 Misc hex gear:
 
     Charged Amethyst Diadem:
         mechanics related to bloodcasting
-        - makes bloodcasting more feasible,
-        possibly increasing the amount of media one can get out of their health
+        - makes bloodcasting more feasible, possibly increasing the amount
+         of media one can get out of their health
         - malleability theme, some event will progressively increase its capacity
             - flay minds into it? staffcasted patterns increase by a small bit?

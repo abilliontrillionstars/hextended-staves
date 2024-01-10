@@ -11,27 +11,26 @@
       "text": "lanishextendedstaves.page.functional_staves_1.0"
     },
     {
-      "type": "patchouli:crafting",
-      "recipe": "lanishextendedstaves:lesser_battery_staff",
-      "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.0"
+      "type": "hexcasting:crafting_multi",
+      "heading": "lanishextendedstaves.page.functional_staves_1.crafting.header.0",
+      "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.0",
+      "recipes": [
+        "lanishextendedstaves:lesser_battery_staff",
+        "lanishextendedstaves:lesser_battery_extended_staff"
+      ]
     },
     {
       "type": "patchouli:text",
       "text": "lanishextendedstaves.page.functional_staves_1.1"
     },
     {
-      "type": "patchouli:crafting",
-      "recipe": "lanishextendedstaves:lesser_battery_extended_staff",
-      "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.1"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "lanishextendedstaves.page.functional_staves_1.2"
-    },
-    {
-      "type": "patchouli:crafting",
-      "recipe": "lanishextendedstaves:sealed_lesser_battery_staff",
-      "recipe2": "lanishextendedstaves:sealed_lesser_battery_extended_staff"
+      "type": "hexcasting:crafting_multi",
+      "heading": "lanishextendedstaves.page.functional_staves_1.crafting.header.1",
+      "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.1",
+      "recipes": [
+        "lanishextendedstaves:sealed_lesser_battery_staff",
+        "lanishextendedstaves:sealed_lesser_battery_extended_staff"
+      ]
     }
   ]
 }

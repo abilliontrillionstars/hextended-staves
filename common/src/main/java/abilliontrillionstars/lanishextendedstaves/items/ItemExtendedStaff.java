@@ -15,8 +15,8 @@ public class ItemExtendedStaff extends ItemStaff
 {
     static
     {
-        DiscoveryHandlers.addGridScaleModifier(player -> LanisHextendedStavesItems.isExtendedStaff(player.getItemBySlot(EquipmentSlot.MAINHAND).getItem()) ? 0.90f : 1);
-        DiscoveryHandlers.addGridScaleModifier(player -> LanisHextendedStavesItems.isExtendedStaff(player.getItemBySlot(EquipmentSlot.OFFHAND).getItem()) ? 0.90f : 1);
+        DiscoveryHandlers.addGridScaleModifier(player -> player.getItemBySlot(EquipmentSlot.MAINHAND).getItem().getClass() == ItemExtendedStaff.class ? 0.90f : 1);
+        DiscoveryHandlers.addGridScaleModifier(player -> player.getItemBySlot(EquipmentSlot.OFFHAND).getItem().getClass() == ItemExtendedStaff.class ? 0.90f : 1);
     }
     public ItemExtendedStaff(Properties properties)  { super(properties); }
 }

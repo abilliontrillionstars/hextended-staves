@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "lanishextendedstaves:obsidian_staff"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    },
+    "Z": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    " YX",
+    " ZY",
+    "Y  "
+  ],
+  "result": {
+    "item": "lanishextendedstaves:extended_obsidian_staff"
+  },
+  "show_notification": true
+}

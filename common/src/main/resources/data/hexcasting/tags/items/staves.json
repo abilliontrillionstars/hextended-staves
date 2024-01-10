@@ -14,7 +14,19 @@
     "lanishextendedstaves:lesser_battery_staff",
     "lanishextendedstaves:lesser_battery_extended_staff",
     "lanishextendedstaves:sealed_lesser_battery_staff",
-    "lanishextendedstaves:sealed_lesser_battery_extended_staff"
+    "lanishextendedstaves:sealed_lesser_battery_extended_staff",
 
+    "lanishextendedstaves:moss_staff",
+    "lanishextendedstaves:flowered_moss_staff",
+    "lanishextendedstaves:extended_moss_staff",
+    "lanishextendedstaves:extended_flowered_moss_staff",
+    "lanishextendedstaves:prismarine_staff",
+    "lanishextendedstaves:dark_prismarine_staff",
+    "lanishextendedstaves:extended_prismarine_staff",
+    "lanishextendedstaves:extended_dark_prismarine_staff",
+    "lanishextendedstaves:obsidian_staff",
+    "lanishextendedstaves:purpur_staff",
+    "lanishextendedstaves:extended_obsidian_staff",
+    "lanishextendedstaves:extended_purpur_staff"
   ]
 }
