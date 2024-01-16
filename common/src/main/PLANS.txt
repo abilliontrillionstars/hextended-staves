@@ -21,8 +21,12 @@ Staves!! long ones!!
             - dragonscale,
         - Botania
             - manasteel, terrasteel, elementium, livingrock, livingwood and dreamwood
-        - Ars Nouveau?
-        -
+        - Ars Nouveau? (no, added by Ars Scalaes)
+
+	The Old Serpent on discord requested "Bewitchment, Haema, and the entire Spell Engine Suite ... The Graveyard might be interesting too .."
+        gchpaco suggested Hexerei. that's a good one.
+
+
     Other Staves
 	    - spoon staff but the extended version is comically large
 		    "this staff's name is 'Spoon Theory' look him up on google"
@@ -30,9 +34,7 @@ Staves!! long ones!!
 	    - prismarine staves for matching to aquatic players, dark variant
 	    - copper staves?
 	    - nether-related staves (not quartz, sam covered that), netherrack?
-	    - end staves > purpur, obsidian?
-
-
+	    - end staves > purpur, obsidian?`1	
 
     Grand/Great(?) Staves
         implements ItemPackagedHex (is a casting device) BUT:
@@ -41,6 +43,7 @@ Staves!! long ones!!
         - needs a music disc (or similar expensive item) to craft along with
         - cannot be cast from while in the grid
         Maybe takes the form of being etched into the wood, a trusty hex the wielder knows by heart
+	alternatively, instead of the 
 
     Reverberating Staff
         depend on Oneironaut/Nova's addon, casts the hex every tick
@@ -51,6 +54,8 @@ Staves!! long ones!!
     ""like the long staves would come with 1 level of a grid expanding enchant for free, but
      you could still go out and apply the enchant manually if you wanted to use one of the
      small staves and get the same functionality"" -Chloe
+
+    
 
 
 

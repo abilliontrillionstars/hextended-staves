@@ -47,12 +47,9 @@ public class LanisHextendedStavesItems
     public static final RegistrySupplier<Item> LESSER_BATTERY_STAFF = ITEMS.register("lesser_battery_staff", () -> new ItemBatteryStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     public static final RegistrySupplier<Item> SEALED_LESSER_BATTERY_STAFF = ITEMS.register("sealed_lesser_battery_staff", () -> new ItemStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     public static final RegistrySupplier<Item> LESSER_BATTERY_EXTENDED_STAFF = ITEMS.register("lesser_battery_extended_staff", () -> new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
-    public static final Set<Item> EXTENDED_STAFF_SET = new HashSet<>();
     static
     {
         for(String id : EXTENDED_STAFF_IDS)
             ITEMS.register(id, () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     }
-    public static boolean isExtendedStaff(Item item)  { return EXTENDED_STAFF_SET.contains(item); }
-
 }

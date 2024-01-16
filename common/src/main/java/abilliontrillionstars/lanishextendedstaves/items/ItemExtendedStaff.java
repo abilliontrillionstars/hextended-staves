@@ -1,15 +1,8 @@
 package abilliontrillionstars.lanishextendedstaves.items;
 
-import abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves;
-import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesItems;
 import at.petrak.hexcasting.api.misc.DiscoveryHandlers;
 import at.petrak.hexcasting.common.items.ItemStaff;
-import net.minecraft.core.Registry;
 import net.minecraft.world.entity.EquipmentSlot;
-
-import static abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves.id;
-import static abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesItems.EXTENDED_STAFF_IDS;
-import static abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesItems.EXTENDED_STAFF_SET;
 
 public class ItemExtendedStaff extends ItemStaff
 {
