@@ -1,6 +1,6 @@
 {
   "pack": {
     "pack_format": 9,
-    "description": "Base Hex staves -> 'Wands' and Hextended's -> just 'Staves'. (Built-in)"
+    "description": "Hex 'Staff' -> 'Wand' & 'Extended' -> just 'Staff'. (Built-in)"
   }
 }
