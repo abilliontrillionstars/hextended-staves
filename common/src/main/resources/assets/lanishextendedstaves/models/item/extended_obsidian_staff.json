@@ -1,6 +1,14 @@
 {
   "parent": "lanishextendedstaves:item/extended_staff",
+  "overrides": [
+    {
+      "model": "lanishextendedstaves:item/dyed_long/extended_obsidian_staff_dyeable",
+      "predicate": {
+        "hexgloop:is_casting": 0.0
+      }
+    }
+  ],
   "textures": {
-    "layer0": "lanishextendedstaves:item/extended_obsidian_staff"
+    "layer0": "lanishextendedstaves:item/long/extended_obsidian_staff"
   }
 }

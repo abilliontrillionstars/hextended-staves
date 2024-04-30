@@ -13,6 +13,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.ItemStack;
+import dev.architectury.platform.Platform;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,8 +22,10 @@ public class LanisHextendedStavesItems
 {
     // Register items through this
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(LanisHextendedStaves.MOD_ID, Registry.ITEM_REGISTRY);
-    public static void init() {
+    public static void init()
+    {
         ITEMS.register();
+        registerConditionalItems();
     }
 
     // A new creative tab. Notice how it is one of the few things that are not deferred
@@ -38,18 +41,32 @@ public class LanisHextendedStavesItems
     public static final RegistrySupplier<Item> OBSIDIAN_STAFF = ITEMS.register("obsidian_staff", () -> new ItemStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     public static final RegistrySupplier<Item> PURPUR_STAFF = ITEMS.register("purpur_staff", () -> new ItemStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
 
+    public static final RegistrySupplier<Item> LESSER_BATTERY_STAFF = ITEMS.register("lesser_battery_staff", () -> new ItemBatteryStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+    public static final RegistrySupplier<Item> SEALED_LESSER_BATTERY_STAFF = ITEMS.register("sealed_lesser_battery_staff", () -> new ItemStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+    public static final RegistrySupplier<Item> LESSER_BATTERY_EXTENDED_STAFF = ITEMS.register("lesser_battery_extended_staff", () -> new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
 
     public static final String[] EXTENDED_STAFF_IDS = {"extended_staff_oak", "extended_staff_spruce",
             "extended_staff_birch", "extended_staff_jungle", "extended_staff_dark_oak", "extended_staff_acacia",
             "extended_staff_crimson", "extended_staff_warped", "extended_staff_edified", "sealed_lesser_battery_extended_staff",
             "extended_moss_staff", "extended_flowered_moss_staff", "extended_prismarine_staff", "extended_dark_prismarine_staff",
             "extended_obsidian_staff", "extended_purpur_staff",};
-    public static final RegistrySupplier<Item> LESSER_BATTERY_STAFF = ITEMS.register("lesser_battery_staff", () -> new ItemBatteryStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
-    public static final RegistrySupplier<Item> SEALED_LESSER_BATTERY_STAFF = ITEMS.register("sealed_lesser_battery_staff", () -> new ItemStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
-    public static final RegistrySupplier<Item> LESSER_BATTERY_EXTENDED_STAFF = ITEMS.register("lesser_battery_extended_staff", () -> new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     static
     {
         for(String id : EXTENDED_STAFF_IDS)
             ITEMS.register(id, () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+    }
+
+
+    private static void registerConditionalItems()
+    {
+        if (Platform.isModLoaded("hexcasting"))
+            System.out.println("this is the LOVELY lanishextendedstaves coming to you UH-LIVE from the soon-to-be-former Registration Event! How are y'all doin' tonight?");
+
+        if (Platform.isModLoaded("hexgloop"))
+        {
+            System.out.println("Oh my stars! If it isn't HexGloop! We finally load!");
+
+        }
+
     }
 }

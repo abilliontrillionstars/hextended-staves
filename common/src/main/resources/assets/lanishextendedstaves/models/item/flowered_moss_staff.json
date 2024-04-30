@@ -1,6 +1,10 @@
 {
   "parent": "minecraft:item/handheld_rod",
-  "textures": {
-    "layer0": "lanishextendedstaves:item/flowered_moss_staff"
-  }
+  "overrides": [
+    {
+      "model": "lanishextendedstaves:item/dyed/flowered_moss_staff_dyeable",
+      "predicate": { "hexgloop:is_casting": 0.0 }
+    }
+  ],
+  "textures": { "layer0": "lanishextendedstaves:item/flowered_moss_staff" }
 }
