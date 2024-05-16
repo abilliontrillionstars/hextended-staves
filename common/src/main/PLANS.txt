@@ -12,8 +12,8 @@ Staves!! long ones!!
     Drawing Orb
         staff with less grid space
         - you can set it to scry/ponder a position
-        - extends ambit in (3-4?) sphere, but ONLY to entities
-        - or a single block
+        - extends ambit to a single entity(?) or block
+        - ambit is only granted when the orb is held (in either hand)
 
     Crossmod Staves
         mostly cosmetic, for aesthetic matching
@@ -27,10 +27,10 @@ Staves!! long ones!!
 	The Old Serpent on discord requested "Bewitchment, Haema, and the entire Spell Engine Suite 
 	... The Graveyard might be interesting too .."
 
-        gchpaco suggested Hexerei. that's a good one.
+        - gchpaco suggested Hexerei. that's a good one.
 
 
-    Other Staves
+    Other Staves - DONE
 	    - spoon staff but the extended version is comically large
 		    "this staff's name is 'Spoon Theory' look him up on google"
 	    - also moss staff. need. flowering azalea variants. maybe an glow berrie?
@@ -63,7 +63,7 @@ Staves!! long ones!!
 Bookbinding! Customized spellbooks
     Custom Spellbooks that have varying page counts, but with other effects
     - spellbook with lessened pages, but built-in hexbook
-    
+    - spellbooks can be made with a specific number of pages
     
 
 Other hex gear:
@@ -77,7 +77,7 @@ Other hex gear:
 
     Budding Amethyst Diadem: (bud diadem)
         a headband that grows tiny clusters from its wearer's brain activity
-        - doing certain things can make it briefly go faster
+        - doing certain things can make it briefly go faster (qualia)
 
     Bloodletter's Diadem: (blood diadem)
         mechanics related to bloodcasting, made using the bud diadem
@@ -85,6 +85,7 @@ Other hex gear:
          of media one can get out of their health
         -- malleability theme, some event will progressively increase its capacity
         -- flay minds into it? staffcasted patterns increase by a small bit?
+        --- could have a health HUD overlay, amethyst dust sprinkled on top of one's hearts
 
 
 QUALIA (kwah-lee-uh):
@@ -92,4 +93,4 @@ QUALIA (kwah-lee-uh):
     Qualia is increased by:
         - staffcasting
         - bloodcasting(?)
-        -
+        - activating spell circles

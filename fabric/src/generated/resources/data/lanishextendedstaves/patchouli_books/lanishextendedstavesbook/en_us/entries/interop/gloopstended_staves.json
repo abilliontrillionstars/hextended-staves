@@ -1,0 +1,31 @@
+{
+  "name": "lanishextendedstaves.entry.gloopstended_staves",
+  "category": "hexcasting:interop",
+  "flag": "mod:hexgloop",
+  "icon": "hexgloop:quartz_staff",
+  "sortnum": 3,
+  "advancement": "hexcasting:root",
+  "read_by_default": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "lanishextendedstaves.page.gloopstended_staves.0"
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "lanishextendedstaves.page.gloopstended_staves.crafting.header.0",
+      "text": "lanishextendedstaves.page.gloopstended_staves.crafting.desc.0",
+      "recipes": [
+
+      ]
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "lanishextendedstaves.page.gloopstended_staves.crafting.header.1",
+      "text": "lanishextendedstaves.page.gloopstended_staves.crafting.desc.1",
+      "recipes": [
+
+      ]
+    }
+  ]
+}

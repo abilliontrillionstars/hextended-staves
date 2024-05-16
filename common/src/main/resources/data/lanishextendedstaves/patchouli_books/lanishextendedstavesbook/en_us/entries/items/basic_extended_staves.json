@@ -15,16 +15,16 @@
       "heading": "lanishextendedstaves.page.basic_extended_staves.crafting.header.0",
       "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.0",
       "recipes": [
-        "lanishextendedstaves:extended_oak",
-        "lanishextendedstaves:extended_spruce",
-        "lanishextendedstaves:extended_birch",
-        "lanishextendedstaves:extended_jungle",
-        "lanishextendedstaves:extended_acacia",
-        "lanishextendedstaves:extended_dark_oak",
-        "lanishextendedstaves:extended_crimson",
-        "lanishextendedstaves:extended_warped",
-        "lanishextendedstaves:extended_mangrove",
-        "lanishextendedstaves:extended_edified"
+        "lanishextendedstaves:long/extended_oak",
+        "lanishextendedstaves:long/extended_spruce",
+        "lanishextendedstaves:long/extended_birch",
+        "lanishextendedstaves:long/extended_jungle",
+        "lanishextendedstaves:long/extended_acacia",
+        "lanishextendedstaves:long/extended_dark_oak",
+        "lanishextendedstaves:long/extended_crimson",
+        "lanishextendedstaves:long/extended_warped",
+        "lanishextendedstaves:long/extended_mangrove",
+        "lanishextendedstaves:long/extended_edified"
       ]
     },
     {
@@ -34,8 +34,8 @@
       "recipes": [
         "lanishextendedstaves:moss_staff",
         "lanishextendedstaves:flowered_moss_staff",
-        "lanishextendedstaves:extended_moss_staff",
-        "lanishextendedstaves:extended_flowered_moss_staff"
+        "lanishextendedstaves:long/extended_moss_staff",
+        "lanishextendedstaves:long/extended_flowered_moss_staff"
       ]
     },
     {
@@ -45,8 +45,8 @@
       "recipes": [
         "lanishextendedstaves:prismarine_staff",
         "lanishextendedstaves:dark_prismarine_staff",
-        "lanishextendedstaves:extended_prismarine_staff",
-        "lanishextendedstaves:extended_dark_prismarine_staff"
+        "lanishextendedstaves:long/extended_prismarine_staff",
+        "lanishextendedstaves:long/extended_dark_prismarine_staff"
       ]
     },
     {
@@ -55,7 +55,7 @@
       "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.3",
       "recipes": [
         "lanishextendedstaves:obsidian_staff",
-        "lanishextendedstaves:extended_obsidian_staff"
+        "lanishextendedstaves:long/extended_obsidian_staff"
       ]
     },
     {
@@ -64,7 +64,7 @@
       "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.4",
       "recipes": [
         "lanishextendedstaves:purpur_staff",
-        "lanishextendedstaves:extended_purpur_staff"
+        "lanishextendedstaves:long/extended_purpur_staff"
       ]
     }
   ]

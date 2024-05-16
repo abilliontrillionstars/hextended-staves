@@ -24,8 +24,9 @@ public class LanisHextendedStavesItems
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(LanisHextendedStaves.MOD_ID, Registry.ITEM_REGISTRY);
     public static void init()
     {
-        ITEMS.register();
+        registerExtendedStaves();
         registerConditionalItems();
+        ITEMS.register();
     }
 
     // A new creative tab. Notice how it is one of the few things that are not deferred
@@ -45,16 +46,18 @@ public class LanisHextendedStavesItems
     public static final RegistrySupplier<Item> SEALED_LESSER_BATTERY_STAFF = ITEMS.register("sealed_lesser_battery_staff", () -> new ItemStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     public static final RegistrySupplier<Item> LESSER_BATTERY_EXTENDED_STAFF = ITEMS.register("lesser_battery_extended_staff", () -> new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
 
-    public static final String[] EXTENDED_STAFF_IDS = {"extended_staff_oak", "extended_staff_spruce",
-            "extended_staff_birch", "extended_staff_jungle", "extended_staff_dark_oak", "extended_staff_acacia",
-            "extended_staff_crimson", "extended_staff_warped", "extended_staff_edified", "sealed_lesser_battery_extended_staff",
-            "extended_moss_staff", "extended_flowered_moss_staff", "extended_prismarine_staff", "extended_dark_prismarine_staff",
-            "extended_obsidian_staff", "extended_purpur_staff",};
-    static
-    {
-        for(String id : EXTENDED_STAFF_IDS)
-            ITEMS.register(id, () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
-    }
+    public static RegistrySupplier<Item> EXTENDED_QUARTZ_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_BLAZE_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_WITHER_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_OWLBERT_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_GHOST_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_CELESTIAL_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_ICE_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_LONGINUS_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_CARROT_STAFF;
+    public static RegistrySupplier<Item> EXTENDED_BEE_STAFF;
+
+    public static RegistrySupplier<Item> _STAFF;
 
 
     private static void registerConditionalItems()
@@ -64,9 +67,20 @@ public class LanisHextendedStavesItems
 
         if (Platform.isModLoaded("hexgloop"))
         {
-            System.out.println("Oh my stars! If it isn't HexGloop! We finally load!");
+            System.out.println("Oh my stars! If it isn't Hex Gloop! We finally meet!");
+             EXTENDED_QUARTZ_STAFF = ITEMS.register("extended_quartz_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
 
         }
+    }
 
+    private static void registerExtendedStaves()
+    {
+        String[] EXTENDED_STAFF_IDS = {"extended_staff_oak", "extended_staff_spruce",
+                "extended_staff_birch", "extended_staff_jungle", "extended_staff_dark_oak", "extended_staff_acacia",
+                "extended_staff_crimson", "extended_staff_warped", "extended_staff_edified", "sealed_lesser_battery_extended_staff",
+                "extended_moss_staff", "extended_flowered_moss_staff", "extended_prismarine_staff", "extended_dark_prismarine_staff",
+                "extended_obsidian_staff", "extended_purpur_staff",};
+        for(String id : EXTENDED_STAFF_IDS)
+            ITEMS.register(id, () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     }
 }
