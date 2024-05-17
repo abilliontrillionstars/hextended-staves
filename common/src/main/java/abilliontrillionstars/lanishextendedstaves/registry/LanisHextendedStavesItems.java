@@ -45,6 +45,7 @@ public class LanisHextendedStavesItems
     public static final RegistrySupplier<Item> LESSER_BATTERY_STAFF = ITEMS.register("lesser_battery_staff", () -> new ItemBatteryStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     public static final RegistrySupplier<Item> SEALED_LESSER_BATTERY_STAFF = ITEMS.register("sealed_lesser_battery_staff", () -> new ItemStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
     public static final RegistrySupplier<Item> LESSER_BATTERY_EXTENDED_STAFF = ITEMS.register("lesser_battery_extended_staff", () -> new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+    public static final RegistrySupplier<Item> SEALED_LESSER_BATTERY_EXTENDED_STAFF = ITEMS.register("sealed_lesser_battery_extended_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
 
     public static RegistrySupplier<Item> EXTENDED_QUARTZ_STAFF;
     public static RegistrySupplier<Item> EXTENDED_BLAZE_STAFF;
@@ -68,8 +69,16 @@ public class LanisHextendedStavesItems
         if (Platform.isModLoaded("hexgloop"))
         {
             System.out.println("Oh my stars! If it isn't Hex Gloop! We finally meet!");
-             EXTENDED_QUARTZ_STAFF = ITEMS.register("extended_quartz_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
-
+            EXTENDED_QUARTZ_STAFF = ITEMS.register("extended_quartz_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_BLAZE_STAFF = ITEMS.register("extended_blaze_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_WITHER_STAFF = ITEMS.register("extended_wither_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_OWLBERT_STAFF = ITEMS.register("extended_owlbert_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_GHOST_STAFF = ITEMS.register("extended_ghost_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_CELESTIAL_STAFF = ITEMS.register("extended_celestial_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_LONGINUS_STAFF = ITEMS.register("extended_longinus_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_ICE_STAFF = ITEMS.register("extended_ice_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_CARROT_STAFF = ITEMS.register("extended_carrot_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
+            EXTENDED_BEE_STAFF = ITEMS.register("extended_bee_staff", () -> new ItemExtendedStaff(new Item.Properties().stacksTo(1).tab(HEXTENDED_GEAR)));
         }
     }
 
@@ -77,7 +86,7 @@ public class LanisHextendedStavesItems
     {
         String[] EXTENDED_STAFF_IDS = {"extended_staff_oak", "extended_staff_spruce",
                 "extended_staff_birch", "extended_staff_jungle", "extended_staff_dark_oak", "extended_staff_acacia",
-                "extended_staff_crimson", "extended_staff_warped", "extended_staff_edified", "sealed_lesser_battery_extended_staff",
+                "extended_staff_crimson", "extended_staff_warped", "extended_staff_edified",
                 "extended_moss_staff", "extended_flowered_moss_staff", "extended_prismarine_staff", "extended_dark_prismarine_staff",
                 "extended_obsidian_staff", "extended_purpur_staff",};
         for(String id : EXTENDED_STAFF_IDS)

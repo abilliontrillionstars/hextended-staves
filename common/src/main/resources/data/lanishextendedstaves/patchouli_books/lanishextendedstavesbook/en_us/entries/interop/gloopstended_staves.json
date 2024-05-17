@@ -16,7 +16,9 @@
       "heading": "lanishextendedstaves.page.gloopstended_staves.crafting.header.0",
       "text": "lanishextendedstaves.page.gloopstended_staves.crafting.desc.0",
       "recipes": [
-
+        "lanishextendedstaves:gloopy/extended_quartz_staff",
+        "lanishextendedstaves:gloopy/extended_blaze_staff",
+        "lanishextendedstaves:gloopy/extended_wither_staff"
       ]
     },
     {
@@ -24,8 +26,25 @@
       "heading": "lanishextendedstaves.page.gloopstended_staves.crafting.header.1",
       "text": "lanishextendedstaves.page.gloopstended_staves.crafting.desc.1",
       "recipes": [
-
+        "lanishextendedstaves:gloopy/extended_owlbert_staff",
+        "lanishextendedstaves:gloopy/extended_ghost_staff",
+        "lanishextendedstaves:gloopy/extended_celestial_staff"
       ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "lanishextendedstaves:gloopy/extended_carrot_staff",
+      "text": "lanishextendedstaves.page.gloopstended_staves.crafting.desc.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "lanishextendedstaves:gloopy/extended_longinus_staff",
+      "recipe2": "lanishextendedstaves:gloopy/extended_ice_staff"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "lanishextendedstaves:gloopy/extended_bee_staff",
+      "text": "lanishextendedstaves.page.gloopstended_staves.crafting.desc.3"
     }
   ]
 }

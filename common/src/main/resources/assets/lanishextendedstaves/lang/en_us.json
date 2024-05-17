@@ -28,6 +28,16 @@
   "item.lanishextendedstaves.extended_obsidian_staff": "Extended Obsidian Staff",
   "item.lanishextendedstaves.extended_purpur_staff": "Extended Purpur Staff",
 
+  "item.lanishextendedstaves.extended_quartz_staff": "Extended Quartz Staff",
+  "item.lanishextendedstaves.extended_blaze_staff": "Extended Blaze Staff",
+  "item.lanishextendedstaves.extended_wither_staff": "Extended Wither Staff",
+  "item.lanishextendedstaves.extended_owlbert_staff": "Extended Owl Staff",
+  "item.lanishextendedstaves.extended_ghost_staff": "Extended Ghost Staff",
+  "item.lanishextendedstaves.extended_celestial_staff": "Extended Celestial Staff",
+  "item.lanishextendedstaves.extended_longinus_staff": "Extended Longinus Staff",
+  "item.lanishextendedstaves.extended_ice_staff": "Extended Ice Staff",
+  "item.lanishextendedstaves.extended_carrot_staff": "Extended Carrot Staff",
+  "item.lanishextendedstaves.extended_bee_staff": "Extended Bee Staff",
 
 
 
@@ -64,10 +74,11 @@
   "lanishextendedstaves.entry.gloopstended_staves": "Gloop-stended Staves",
   "lanishextendedstaves.page.gloopstended_staves.0": "$(o)\"Gloop\"! Ha! Wondrous./$$(br2)Recently I've caught wind of a curious substance simply dubbed \"gloop\". Along with it, even more staff designs have $(m)glooped/$ blown my way.",
   "lanishextendedstaves.page.gloopstended_staves.crafting.header.0": "Nether Staves",
-  "lanishextendedstaves.page.gloopstended_staves.crafting.desc.0": "",
+  "lanishextendedstaves.page.gloopstended_staves.crafting.desc.0": "Hm. Not much seems to elicit foreboding strength $(o)quite/$ like waving around half a wither.$(br2)(note the lack of skulls in this recipe, dear reader!)",
   "lanishextendedstaves.page.gloopstended_staves.crafting.header.1": "Mept Staves",
-  "lanishextendedstaves.page.gloopstended_staves.crafting.desc.1": "Some legends tell of staves that made use of circular patterns. Sounds nothing short of wild witchery!",
-
+  "lanishextendedstaves.page.gloopstended_staves.crafting.desc.1": "\"Say goodnight, sister!\"$(br2)Some legends tell of staves that made use of circular patterns. Sounds nothing short of wild witchery!",
+  "lanishextendedstaves.page.gloopstended_staves.crafting.desc.2": "Nicknamed the \"Garden Staff\", it lets you cast the Revive Magick withou-- er, it's very... healthy to wield?",
+  "lanishextendedstaves.page.gloopstended_staves.crafting.desc.3": "Likewise to the Garden Staff, you may instead refer to this staff as the Hive Staff. Now populated with the hum of media $(o)and/$ the hum of busy friends!",
 
   "itemGroup.lanishextendedstaves.hextended_gear": "Hextended's Gear"
 }
