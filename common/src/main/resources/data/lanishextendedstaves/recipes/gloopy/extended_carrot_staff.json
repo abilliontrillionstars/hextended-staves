@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {"item": "hexgloop:carrot_staff"},
+    "Y": {"item": "minecraft:beetroot"},
+    "Z": {"item": "minecraft:wheat"},
+    "A": {"item": "minecraft:potato"},
+    "B": {"item": "minecraft:sugar_cane"}
+  },
+  "pattern": [
+    " YX",
+    " AZ",
+    "B  "
+  ],
+  "result": {"item": "lanishextendedstaves:extended_carrot_staff"},
+  "show_notification": true
+}

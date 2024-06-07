@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {"item": "hexgloop:ghost_staff"},
+    "Y": {"item": "minecraft:phantom_membrane"},
+    "Z": {"item": "hexgloop:mept_log"}
+  },
+  "pattern": [
+    " YX",
+    " ZY",
+    "Y  "
+  ],
+  "result": {"item": "lanishextendedstaves:extended_ghost_staff"},
+  "show_notification": true
+}

@@ -1,6 +1,7 @@
 {
   "name": "lanishextendedstaves.entry.crossmod_staves_1",
   "category": "hexcasting:interop",
+  "flag": "debug",
   "icon": "lanishextendedstaves:livingwood_staff",
   "sortnum": 3,
   "advancement": "hexcasting:root",

@@ -58,8 +58,6 @@ public class LanisHextendedStavesItems
     public static RegistrySupplier<Item> EXTENDED_CARROT_STAFF;
     public static RegistrySupplier<Item> EXTENDED_BEE_STAFF;
 
-    public static RegistrySupplier<Item> _STAFF;
-
 
     private static void registerConditionalItems()
     {
