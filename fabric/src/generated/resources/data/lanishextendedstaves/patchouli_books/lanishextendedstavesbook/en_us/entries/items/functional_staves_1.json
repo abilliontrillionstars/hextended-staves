@@ -16,7 +16,7 @@
       "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.0",
       "recipes": [
         "lanishextendedstaves:lesser_battery_staff",
-        "lanishextendedstaves:lesser_battery_extended_staff"
+        "lanishextendedstaves:long/lesser_battery_extended_staff"
       ]
     },
     {
@@ -29,7 +29,7 @@
       "text": "lanishextendedstaves.page.functional_staves_1.crafting.desc.1",
       "recipes": [
         "lanishextendedstaves:sealed_lesser_battery_staff",
-        "lanishextendedstaves:sealed_lesser_battery_extended_staff"
+        "lanishextendedstaves:long/sealed_lesser_battery_extended_staff"
       ]
     }
   ]

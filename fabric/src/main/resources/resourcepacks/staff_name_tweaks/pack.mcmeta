@@ -1,6 +1,6 @@
 {
   "pack": {
     "pack_format": 9,
-    "description": "Renames base Hex staves to 'Wands' and Hextended's to just 'Staves'. (Built-in)"
+    "description": "Base Hex staves -> 'Wands' and Hextended's -> just 'Staves'. (Built-in)"
   }
 }

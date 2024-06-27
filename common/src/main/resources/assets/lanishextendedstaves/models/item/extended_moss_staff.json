@@ -1,6 +1,6 @@
 {
   "parent": "lanishextendedstaves:item/extended_staff",
   "textures": {
-    "layer0": "lanishextendedstaves:item/extended_moss_staff"
+    "layer0": "lanishextendedstaves:item/long/extended_moss_staff"
   }
 }
