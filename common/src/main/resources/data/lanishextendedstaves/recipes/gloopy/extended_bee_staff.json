@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {"item": "hexgloop:bee_staff"},
+    "Y": {"item": "minecraft:honeycomb"},
+    "Z": {"item": "minecraft:honey_block"}
+  },
+  "pattern": [
+    " YX",
+    " ZY",
+    "Y  "
+  ],
+  "result": {"item": "lanishextendedstaves:extended_bee_staff"},
+  "show_notification": true
+}

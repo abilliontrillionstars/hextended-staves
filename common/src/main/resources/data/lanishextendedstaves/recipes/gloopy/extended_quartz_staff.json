@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {"item": "hexgloop:quartz_staff"},
+    "Y": {"item": "minecraft:quartz_slab"},
+    "Z": {"item": "minecraft:quartz_block"},
+    "A": {"item": "minecraft:quartz"}
+  },
+  "pattern": [
+    " YX",
+    " ZY",
+    "A  "
+  ],
+  "result": {"item": "lanishextendedstaves:extended_quartz_staff"},
+  "show_notification": true
+}

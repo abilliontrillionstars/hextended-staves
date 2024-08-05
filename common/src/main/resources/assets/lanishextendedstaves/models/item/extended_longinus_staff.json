@@ -1,0 +1,6 @@
+{
+  "parent": "lanishextendedstaves:item/extended_staff",
+  "textures": {
+    "layer0": "lanishextendedstaves:item/gloopy/extended_longinus_staff"
+  }
+}
