@@ -32,9 +32,9 @@ pip install -e .[dev]
 
 For local testing, create a file called `.env` in the repo root following this template:
 ```sh
-GITHUB_REPOSITORY=just_laniakea/hextended-staves
+GITHUB_REPOSITORY=abilliontrillionstars/hextended-staves
 GITHUB_SHA=main
-GITHUB_PAGES_URL=https://just_laniakea.github.io/hextended-staves
+GITHUB_PAGES_URL=https://abilliontrillionstars.github.io/hextended-staves/
 ```
 
 Useful commands:

@@ -12,15 +12,15 @@ name = "hexdoc-lanishextendedstaves"
 description = "Python web book docgen and hexdoc plugin for Hextended Staves."
 readme = "doc/README.md"
 authors = [
-    { name="just_laniakea" },
+    { name="abilliontrillionstars" },
 ]
 keywords = ["hexdoc"]
 requires-python = ">=3.11"
 dynamic = ["version", "dependencies", "optional-dependencies"]
 
 [project.urls]
-Homepage = "https://just_laniakea.github.io/hextended-staves"
-Source = "https://github.com/just_laniakea/hextended-staves"
+Homepage = "https://abilliontrillionstars.github.io/hextended-staves/"
+Source = "https://github.com/abilliontrillionstars/hextended-staves"
 
 # Gradle version/deps
 
