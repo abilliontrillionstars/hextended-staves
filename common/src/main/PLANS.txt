@@ -22,11 +22,9 @@ Staves!! long ones!!
         - Botania
             - manasteel, terrasteel, elementium, livingrock, livingwood and dreamwood
         - Ars Nouveau? (no, added by Ars Scalaes)
-	- Add extended variants of Gloop's staves
-
-	The Old Serpent on discord requested "Bewitchment, Haema, and the entire Spell Engine Suite 
-	... The Graveyard might be interesting too .."
-
+    	- Add extended variants of Gloop's staves
+	    The Old Serpent on discord requested "Bewitchment, Haema, and the entire Spell Engine Suite
+	    ... The Graveyard might be interesting too .."
         - gchpaco suggested Hexerei. that's a good one.
 
 
@@ -38,6 +36,9 @@ Staves!! long ones!!
 	    - copper staves?
 	    - nether-related staves (not quartz, sam covered that), netherrack?
 	    - end staves > purpur, obsidian?
+
+    Combat Staves!
+        staves with small
 
     Grand/Great(?) Staves
         implements ItemPackagedHex (is a casting device) BUT:
