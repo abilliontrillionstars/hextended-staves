@@ -20,7 +20,7 @@ package_export_root: doc/src/hexdoc_lanishextendedstaves/_export
 package_name: hexdoc-lanishextendedstaves
 package_slug: hexdoc_lanishextendedstaves
 package_src: doc/src/hexdoc_lanishextendedstaves
-pages_url: https://just_laniakea.github.io/hextended-staves
+pages_url: https://abilliontrillionstars.github.io/hextended-staves/
 pattern_regex:
     per_world_value: registerPerWorld
     regex: (?P<is_per_world>register|registerPerWorld)\(HexPattern\.fromAngles\("(?P<signature>[qweasd]+)",\s*HexDir\.(?P<startdir>\w+)\),\s*"(?P<name>[^"]+)"?
