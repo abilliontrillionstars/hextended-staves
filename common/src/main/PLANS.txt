@@ -38,7 +38,7 @@ Staves!! long ones!!
 	    - end staves > purpur, obsidian?
 
     Combat Staves!
-        staves with small
+        staves with small attack damage bonuses, made from specific materials
 
     Grand/Great(?) Staves
         implements ItemPackagedHex (is a casting device) BUT:
@@ -63,11 +63,12 @@ Staves!! long ones!!
 
 Bookbinding! Customized spellbooks
     Custom Spellbooks that have varying page counts, but with other effects
-    - spellbook with lessened pages, but built-in hexbook
+    - spellbook with lessened pages, but built-in hexbook (rmb opens patchouli book)
+    - similar spellbook, that opens a book-and-quill on rmb
     - spellbooks can be made with a specific number of pages
     
 
-Other hex gear:
+---------Other hex gear:--------
 
     Caster's Head Mirror:
 	head trinket, based on the old doctor's headband
@@ -88,6 +89,19 @@ Other hex gear:
         -- flay minds into it? staffcasted patterns increase by a small bit?
         --- could have a health HUD overlay, amethyst dust sprinkled on top of one's hearts
 
+Hex Gear: Rings!
+    - one to make Overgrowth cheaper (and maybe some for others)
+    - Silk Touch/Fortune rings (make them work in the offhand as well, for automation)
+    - reach ring, that adds some proportion of your reach distance to your ambit
+        could be a hand slot item
+
+
+Hex Gear: Armor!
+    Chloe suggested armor that moves the play:
+    - Boots have a spell to jump,
+    - Leggings can make you walk,
+    - Chestplate can make you right-click/punch
+    - Helmet can make you... look?     
 
 QUALIA (kwah-lee-uh):
     a multiplicative bonus stat with beneficial effects, like a Hexing Streak! tm

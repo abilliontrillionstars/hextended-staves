@@ -14,6 +14,7 @@ resource_dirs = [  # top takes priority
     { modid="hexcasting" },
     { modid="minecraft" },
     { modid="hexdoc" },
+    { modid="hexgloop" },
 ]
 export_dir = "src/hexdoc_lanishextendedstaves/_export/generated"
 
@@ -33,13 +34,21 @@ show_landing_text = false
 [extra.hexcasting]
 # regexes for parsing pattern registry files - try running copier update and picking a different regex if your patterns aren't loading
 # NOTE: "!Raw" means "don't apply variable interpolation to this value"
-_pattern_regex = { "!Raw"='(?P<is_per_world>register|registerPerWorld)\(HexPattern\.fromAngles\("(?P<signature>[qweasd]+)",\s*HexDir\.(?P<startdir>\w+)\),\s*"(?P<name>[^"]+)"?' }
-_per_world_value = "registerPerWorld"
+pattern_stubs = []
 
-[[extra.hexcasting.pattern_stubs]]
-path = "{^^^_common.package}/registry/LanisHextendedStavesPatternRegistry.java"
-regex = "{^_pattern_regex}"
-per_world_value = "{^_per_world_value}"
+
+[textures]
+# make hexdoc ignore something that doesn't have a texture (if it's present in the book, it'll be given the purple-black checker)
+missing = [
+    "lanishextendedstaves:extended_staff",
+    "lanishextendedstaves:livingwood_staff",
+    "hexcasting:mangrove_staff"
+]
+
+[textures.override]
+# use when you want hexdoc to sub in a texture for something when serving
+# ex: "hexgloop:fake_spellbook_for_rei" = { texture = "hexcasting:textures/item/spellbook_empty.png" }
+
 
 # platforms
 
