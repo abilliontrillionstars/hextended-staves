@@ -34,6 +34,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     with:
       python-version: '3.11'
+      pip-extras: " --find-links ./doc/libs"
       release: |-
         ${{
           github.event_name != 'push' && inputs.release
