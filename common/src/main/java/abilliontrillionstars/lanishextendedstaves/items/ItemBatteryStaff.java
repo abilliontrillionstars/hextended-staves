@@ -27,7 +27,7 @@ import static at.petrak.hexcasting.common.items.magic.ItemMediaHolder.*;
 public class ItemBatteryStaff extends ItemStaff implements MediaHolderItem
 {
 
-    public static final int CAPACITY_IN_DUST = 30;
+    public static final long CAPACITY_IN_DUST = 30;
     private static final DecimalFormat DUST_AMOUNT = new DecimalFormat("###,###.##");
     private static final DecimalFormat PERCENTAGE = new DecimalFormat("####");
 
@@ -38,11 +38,11 @@ public class ItemBatteryStaff extends ItemStaff implements MediaHolderItem
 
 
     @Override
-    public int getMedia(ItemStack stack)  { return NBTHelper.getInt(stack, TAG_MEDIA); }
+    public long getMedia(ItemStack stack)  { return NBTHelper.getInt(stack, TAG_MEDIA); }
     @Override
-    public int getMaxMedia(ItemStack stack)  { return MediaConstants.DUST_UNIT * this.CAPACITY_IN_DUST; }
+    public long getMaxMedia(ItemStack stack)  { return MediaConstants.DUST_UNIT * this.CAPACITY_IN_DUST; }
     @Override
-    public void setMedia(ItemStack stack, int media)  { NBTHelper.putInt(stack, TAG_MEDIA, Mth.clamp(media, 0, getMaxMedia(stack))); }
+    public void setMedia(ItemStack stack, long media)  { NBTHelper.putLong(stack, TAG_MEDIA, Mth.clamp(media, 0, getMaxMedia(stack))); }
     @Override
     public boolean canProvideMedia(ItemStack stack)  { return true; }
     @Override
@@ -50,9 +50,8 @@ public class ItemBatteryStaff extends ItemStaff implements MediaHolderItem
 
 
     public float getMediaFullness(ItemStack stack) {
-        int max = getMaxMedia(stack);
+        long max = getMaxMedia(stack);
         if (max == 0)  { return 0; }
-
         return (float) getMedia(stack) / (float) max;
     }
     public boolean isBarVisible(ItemStack stack)  { return getMaxMedia(stack) > 0; }
@@ -64,8 +63,7 @@ public class ItemBatteryStaff extends ItemStaff implements MediaHolderItem
     }
     public int getBarColor(ItemStack stack)  { return MediaHelper.mediaBarColor(this.getMedia(stack), this.getMaxMedia(stack)); }
 
-
-    public int withdrawMedia(ItemStack stack, int cost, boolean simulate) {
+    public long withdrawMedia(ItemStack stack, long cost, boolean simulate) {
         var mediaHere = getMedia(stack);
         if (cost < 0)  { cost = mediaHere; }
         if (!simulate)
