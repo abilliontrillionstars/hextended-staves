@@ -1,7 +1,7 @@
 plugins {
     id "architectury-plugin" version "3.4.+"
 
-    id "dev.architectury.loom" version "1.2.+" apply false
+    id "dev.architectury.loom" version "1.6.+" apply false
 
     id "org.jetbrains.kotlin.jvm" version "1.8.0" apply false
 
@@ -33,6 +33,8 @@ subprojects {
         annotationProcessor "org.ow2.asm:asm-commons:${project.asmVersion}"
         annotationProcessor "org.ow2.asm:asm-tree:${project.asmVersion}"
         annotationProcessor "org.ow2.asm:asm-util:${project.asmVersion}"
+        // EE OO EE OO
+        include modImplementation(files("${rootProject.rootDir}/lib/serialization-hooks-0.4.99999.jar"))
     }
 
     sourceSets.main.kotlin.srcDirs += 'src/main/java'
