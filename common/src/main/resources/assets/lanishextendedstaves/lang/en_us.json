@@ -9,6 +9,7 @@
   "item.lanishextendedstaves.extended_staff_warped": "Extended Warped Staff",
   "item.lanishextendedstaves.extended_staff_mangrove": "Extended Mangrove Staff",
   "item.lanishextendedstaves.extended_staff_edified": "Extended Edified Staff",
+  "item.lanishextendedstaves.extended_staff_cherry": "Extended Cherry Staff",
 
   "item.lanishextendedstaves.lesser_battery_staff": "Improvised Amethyst Staff",
   "item.lanishextendedstaves.lesser_battery_extended_staff": "Improvised Extended Amethyst Staff",
@@ -80,5 +81,5 @@
   "lanishextendedstaves.page.gloopstended_staves.crafting.desc.2": "Nicknamed the \"Garden Staff\", it lets you cast the Revive Magick withou-- er, it's very... healthy to wield?",
   "lanishextendedstaves.page.gloopstended_staves.crafting.desc.3": "Likewise to the Garden Staff, you may instead refer to this staff as the Hive Staff. Now populated with the hum of media $(o)and/$ the hum of busy friends!",
 
-  "itemGroup.lanishextendedstaves.hextended_gear": "Hextended's Gear"
+  "itemGroup.lanishextendedstaves": "Hextended's Gear"
 }
