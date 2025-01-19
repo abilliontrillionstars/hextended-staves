@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "hexcasting:warped_staff"
+      "item": "hexcasting:staff/warped"
     },
     "Y": {
       "item": "minecraft:stick"

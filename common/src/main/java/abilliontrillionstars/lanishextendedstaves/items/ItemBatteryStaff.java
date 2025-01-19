@@ -2,6 +2,7 @@ package abilliontrillionstars.lanishextendedstaves.items;
 
 import at.petrak.hexcasting.api.item.MediaHolderItem;
 import at.petrak.hexcasting.api.misc.MediaConstants;
+import at.petrak.hexcasting.api.utils.MathUtils;
 import at.petrak.hexcasting.api.utils.MediaHelper;
 import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.common.items.ItemStaff;
@@ -42,7 +43,7 @@ public class ItemBatteryStaff extends ItemStaff implements MediaHolderItem
     @Override
     public long getMaxMedia(ItemStack stack)  { return MediaConstants.DUST_UNIT * this.CAPACITY_IN_DUST; }
     @Override
-    public void setMedia(ItemStack stack, long media)  { NBTHelper.putLong(stack, TAG_MEDIA, Mth.clamp(media, 0, getMaxMedia(stack))); }
+    public void setMedia(ItemStack stack, long media)  { NBTHelper.putLong(stack, TAG_MEDIA, MathUtils.clamp(media, 0, getMaxMedia(stack))); }
     @Override
     public boolean canProvideMedia(ItemStack stack)  { return true; }
     @Override

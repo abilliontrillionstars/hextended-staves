@@ -17,11 +17,13 @@ import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
+import static abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves.id;
 import static at.petrak.hexcasting.api.HexAPI.modLoc;
 import static at.petrak.hexcasting.common.lib.hex.HexActions.make;
 
 public class LanisHextendedStavesItems
 {
+
 
     public static void registerItems(BiConsumer<Item, ResourceLocation> r) {
         for (var e : ITEMS.entrySet()) {
@@ -38,14 +40,12 @@ public class LanisHextendedStavesItems
     private static final Map<ResourceLocation, Item> ITEMS = new LinkedHashMap<>(); // preserve insertion order
     private static final Map<CreativeModeTab, List<LanisHextendedStavesItems.TabEntry>> ITEM_TABS = new LinkedHashMap<>();
 
-    /*
+
     public static void init()
     {
         registerExtendedStaves();
-        registerConditionalItems();
-        make();
+        //registerConditionalItems();
     }
-    */
 
     public static final ItemStaff MOSS_STAFF = make("moss_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
     public static final ItemStaff FLOWERED_MOSS_STAFF = make("flowered_moss_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
@@ -115,11 +115,11 @@ public class LanisHextendedStavesItems
     }
 
     private static <T extends Item> T make(String id, T item, @Nullable CreativeModeTab tab) {
-        return make(modLoc(id), item, tab);
+        return make(id(id), item, tab);
     }
 
     private static <T extends Item> T make(String id, T item) {
-        return make(modLoc(id), item, LanisHextendedStavesCreativeTabs.STAVES);
+        return make(id(id), item, LanisHextendedStavesCreativeTabs.STAVES);
     }
 
     private static Supplier<ItemStack> addToTab(Supplier<ItemStack> stack, CreativeModeTab tab) {

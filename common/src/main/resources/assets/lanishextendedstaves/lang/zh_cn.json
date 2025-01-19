@@ -56,7 +56,7 @@
 
 
   "lanishextendedstaves.entry.functional_staves_1": "功能性法杖",
-  "lanishextendedstaves.page.functional_staves_1.0": "当然，考虑到我的聪明才智，法杖的延伸仅具$(l:lanishextendedstaves:items/basic_extended_staves)物理意义$(/l)的话，就太过循规蹈矩。若我要研习的技艺灵活而泛用，那么我的工具也应如此。第一件作品，便是一杆紫水晶法杖，构思精细但做工粗糙。奇异的是，这支法杖上紫水晶块的碎裂程度远超同类，因此能够直接用作$(media)媒质/$施放$(hex)咒术/$。",
+  "lanishextendedstaves.page.functional_staves_1.0": "当然，考虑到我的聪明才智，法杖的延伸仅具$(l:hexcasting:items/basic_extended_staves)物理意义$(/l)的话，就太过循规蹈矩。若我要研习的技艺灵活而泛用，那么我的工具也应如此。第一件作品，便是一杆紫水晶法杖，构思精细但做工粗糙。奇异的是，这支法杖上紫水晶块的碎裂程度远超同类，因此能够直接用作$(media)媒质/$施放$(hex)咒术/$。",
   "lanishextendedstaves.page.functional_staves_1.crafting.header.0": "临时紫水晶法杖",
   "lanishextendedstaves.page.functional_staves_1.crafting.desc.0": "专为身处地底百来格的晶洞中忘记带木头的情景准备",
   "lanishextendedstaves.page.functional_staves_1.crafting.header.1": "密封的临时紫水晶法杖",

@@ -1,7 +1,15 @@
 package abilliontrillionstars.lanishextendedstaves.fabric;
 
+
+import abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves
+import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesCreativeTabs
+import abilliontrillionstars.lanishextendedstaves.registry.LanisHextendedStavesItems
 import net.fabricmc.api.ModInitializer;
-import abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.core.Registry
+import net.minecraft.core.registries.BuiltInRegistries
+import net.minecraft.resources.ResourceLocation
+import java.util.function.BiConsumer
 
 /**
  * This is your loading entrypoint on fabric(-likes), in case you need to initialize
@@ -11,13 +19,18 @@ import abilliontrillionstars.lanishextendedstaves.LanisHextendedStaves;
  * Feel free to check out the <a href="https://github.com/architectury/architectury-templates">Architectury templates</a>
  * if you want to see how to add quilt-specific code.
  */
-public class LanisHextendedStavesFabric implements ModInitializer {
-    @Override
-    public void onInitialize()
-    {
-        LanisHextendedStaves.init();
+class LanisHextendedStavesFabric : ModInitializer {
 
-        // can't make a class with a register function and not call it!!!!! WAHOO!
-        BundledResourcePackFabric.register();
+    override fun onInitialize() {
+        LanisHextendedStaves.init();
+        LanisHextendedStavesItems.init();
+
+        ItemGroupEvents.MODIFY_ENTRIES_ALL.register {tab, entries ->
+            LanisHextendedStavesItems.registerItemCreativeTab(entries::accept, tab)
+        }
+        LanisHextendedStavesItems.registerItems(bind(BuiltInRegistries.ITEM))
+        LanisHextendedStavesCreativeTabs.registerCreativeTabs(bind(BuiltInRegistries.CREATIVE_MODE_TAB))
     }
+    private fun <T> bind(registry: Registry<in T>): BiConsumer<T, ResourceLocation> =
+        BiConsumer<T, ResourceLocation> { t, id -> Registry.register(registry, id, t) }
 }

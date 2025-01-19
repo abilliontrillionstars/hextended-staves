@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "hexcasting:mangrove_staff"
+      "item": "hexcasting:staff/mangrove"
     },
     "Y": {
       "item": "minecraft:stick"
