@@ -17,6 +17,8 @@ subprojects {
     apply plugin: "org.jetbrains.kotlin.jvm"
     apply plugin: "dev.architectury.loom"
 
+    archivesBaseName = "${project.modID}-${project.minecraftVersion}"
+
     // Uncomment to silence the mojmap license warning
     // loom {
     //     silentMojangMappingsLicense()

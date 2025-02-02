@@ -14,7 +14,7 @@ public class ItemExtendedStaff extends ItemStaff
 {
     public static final AttributeModifier GRID_ZOOM = new AttributeModifier(
             UUID.fromString("a370ec84-ea18-4de6-8730-4271516dcf9c"),
-            "Scrying Lens Zoom", 0.33, AttributeModifier.Operation.MULTIPLY_BASE);
+            "Scrying Lens Zoom", 0.15, AttributeModifier.Operation.MULTIPLY_BASE);
 
     public ItemExtendedStaff(Properties properties)  { super(properties); }
 
