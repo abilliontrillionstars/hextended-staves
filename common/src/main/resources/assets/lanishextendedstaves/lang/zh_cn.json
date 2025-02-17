@@ -9,8 +9,7 @@
   "item.lanishextendedstaves.extended_staff_warped": "诡异木长法杖",
   "item.lanishextendedstaves.extended_staff_mangrove": "红树木长法杖",
   "item.lanishextendedstaves.extended_staff_edified": "启迪木长法杖",
-  "item.lanishextendedstaves.extended_staff_cherry": "启迪木长法杖",
-
+  "item.lanishextendedstaves.extended_staff_cherry": "樱花木长法杖",
 
   "item.lanishextendedstaves.lesser_battery_staff": "临时紫水晶法杖",
   "item.lanishextendedstaves.lesser_battery_extended_staff": "临时紫水晶长法杖",
@@ -82,5 +81,5 @@
   "lanishextendedstaves.page.gloopstended_staves.crafting.desc.2": "昵称“花园法杖”，它能让你更轻松地施放复活魔能技，而不需——呃，它……拿着就很健康？",
   "lanishextendedstaves.page.gloopstended_staves.crafting.desc.3": "和花园法杖类似，你也可以将这支法杖称作蜂巢法杖。其中住着的，不仅有蜂鸣的媒质，$(o)还有/$蜂鸣的忙碌伙伴！",
 
-  "itemGroup.lanishextendedstaves.hextended_gear": "咒法装备拓展"
+  "itemGroup.lanishextendedstaves": "咒法装备拓展"
 }
