@@ -7,6 +7,7 @@ import com.google.common.collect.Multimap;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
@@ -14,14 +15,15 @@ public class ItemExtendedStaff extends ItemStaff
 {
     public static final AttributeModifier GRID_ZOOM = new AttributeModifier(
             UUID.fromString("a370ec84-ea18-4de6-8730-4271516dcf9c"),
-            "Scrying Lens Zoom", 0.15, AttributeModifier.Operation.MULTIPLY_BASE);
+            "Scrying Lens Zoom", 0.15, AttributeModifier.Operation.ADDITION);
 
     public ItemExtendedStaff(Properties properties)  { super(properties); }
 
+
     @Override
-    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot slot) {
+    public @NotNull Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot slot) {
         var out = HashMultimap.create(super.getDefaultAttributeModifiers(slot));
-        if (slot == EquipmentSlot.HEAD || slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.OFFHAND) {
+        if (slot == EquipmentSlot.MAINHAND || slot == EquipmentSlot.OFFHAND) {
             out.put(HexAttributes.GRID_ZOOM, GRID_ZOOM);
         }
         return out;
