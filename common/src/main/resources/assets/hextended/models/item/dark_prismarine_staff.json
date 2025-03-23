@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:item/handheld_rod",
+  "overrides": [
+    {
+      "model": "hextended:item/dyed/dark_prismarine_staff_dyeable",
+      "predicate": { "hexgloop:is_casting": 0.0 }
+    }
+  ],
+  "textures": { "layer0": "hextended:item/dark_prismarine_staff" }
+}

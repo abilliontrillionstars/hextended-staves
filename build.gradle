@@ -149,7 +149,7 @@ ext.getLatestChangelog = {
     return changelog.trim()
 }
 
-ext.bookPath = "data/lanishextendedstaves/patchouli_books/lanishextendedstavesbook"
+ext.bookPath = "data/hextended/patchouli_books/hextendedbook"
 
 tasks.register("viewLatestChangelog") {
     group "documentation"

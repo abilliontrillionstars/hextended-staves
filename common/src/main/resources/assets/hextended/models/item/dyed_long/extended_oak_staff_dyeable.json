@@ -1,0 +1,7 @@
+{
+  "parent": "hextended:item/extended_staff",
+  "textures": {
+    "layer0": "hextended:item/dyed_long/extended_oak_base",
+    "layer1": "hextended:item/dyed_long/extended_oak_dyepart"
+  }
+}

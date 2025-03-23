@@ -1,71 +1,71 @@
 {
-  "name": "lanishextendedstaves.entry.basic_extended_staves",
+  "name": "hextended.entry.basic_extended_staves",
   "category": "hexcasting:items",
-  "icon": "lanishextendedstaves:extended_staff_spruce",
+  "icon": "hextended:extended_staff_spruce",
   "sortnum": 7,
   "advancement": "hexcasting:root",
   "read_by_default": false,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "lanishextendedstaves.page.basic_extended_staves.0"
+      "text": "hextended.page.basic_extended_staves.0"
     },
     {
       "type": "hexcasting:crafting_multi",
-      "heading": "lanishextendedstaves.page.basic_extended_staves.crafting.header.0",
-      "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.0",
+      "heading": "hextended.page.basic_extended_staves.crafting.header.0",
+      "text": "hextended.page.basic_extended_staves.crafting.desc.0",
       "recipes": [
-        "lanishextendedstaves:long/extended_oak",
-        "lanishextendedstaves:long/extended_spruce",
-        "lanishextendedstaves:long/extended_birch",
-        "lanishextendedstaves:long/extended_jungle",
-        "lanishextendedstaves:long/extended_acacia",
-        "lanishextendedstaves:long/extended_dark_oak",
-        "lanishextendedstaves:long/extended_crimson",
-        "lanishextendedstaves:long/extended_warped",
-        "lanishextendedstaves:long/extended_mangrove",
-        "lanishextendedstaves:long/extended_edified",
-        "lanishextendedstaves:long/extended_cherry"
+        "hextended:long/extended_oak",
+        "hextended:long/extended_spruce",
+        "hextended:long/extended_birch",
+        "hextended:long/extended_jungle",
+        "hextended:long/extended_acacia",
+        "hextended:long/extended_dark_oak",
+        "hextended:long/extended_crimson",
+        "hextended:long/extended_warped",
+        "hextended:long/extended_mangrove",
+        "hextended:long/extended_edified",
+        "hextended:long/extended_cherry"
       ]
     },
     {
       "type": "hexcasting:crafting_multi",
-      "heading": "lanishextendedstaves.page.basic_extended_staves.crafting.header.1",
-      "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.1",
+      "heading": "hextended.page.basic_extended_staves.crafting.header.1",
+      "text": "hextended.page.basic_extended_staves.crafting.desc.1",
       "recipes": [
-        "lanishextendedstaves:moss_staff",
-        "lanishextendedstaves:flowered_moss_staff",
-        "lanishextendedstaves:long/extended_moss_staff",
-        "lanishextendedstaves:long/extended_flowered_moss_staff"
+        "hextended:moss_staff",
+        "hextended:flowered_moss_staff",
+        "hextended:long/extended_moss_staff",
+        "hextended:long/extended_flowered_moss_staff"
       ]
     },
     {
       "type": "hexcasting:crafting_multi",
-      "heading": "lanishextendedstaves.page.basic_extended_staves.crafting.header.2",
-      "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.2",
+      "heading": "hextended.page.basic_extended_staves.crafting.header.2",
+      "text": "hextended.page.basic_extended_staves.crafting.desc.2",
       "recipes": [
-        "lanishextendedstaves:prismarine_staff",
-        "lanishextendedstaves:dark_prismarine_staff",
-        "lanishextendedstaves:long/extended_prismarine_staff",
-        "lanishextendedstaves:long/extended_dark_prismarine_staff"
+        "hextended:prismarine_staff",
+        "hextended:dark_prismarine_staff",
+        "hextended:long/extended_prismarine_staff",
+        "hextended:long/extended_dark_prismarine_staff"
       ]
     },
     {
       "type": "hexcasting:crafting_multi",
-      "heading": "lanishextendedstaves.page.basic_extended_staves.crafting.header.3",
-      "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.3",
+      "heading": "hextended.page.basic_extended_staves.crafting.header.3",
+      "text": "hextended.page.basic_extended_staves.crafting.desc.3",
       "recipes": [
-        "lanishextendedstaves:obsidian_staff",
-        "lanishextendedstaves:long/extended_obsidian_staff"
+        "hextended:obsidian_staff",
+        "hextended:long/extended_obsidian_staff"
       ]
     },
     {
       "type": "hexcasting:crafting_multi",
-      "heading": "lanishextendedstaves.page.basic_extended_staves.crafting.header.4",
-      "text": "lanishextendedstaves.page.basic_extended_staves.crafting.desc.4",
+      "heading": "hextended.page.basic_extended_staves.crafting.header.4",
+      "text": "hextended.page.basic_extended_staves.crafting.desc.4",
       "recipes": [
-        "lanishextendedstaves:purpur_staff",
-        "lanishextendedstaves:long/extended_purpur_staff"
+        "hextended:purpur_staff",
+        "hextended:long/extended_purpur_staff"
       ]
     }
   ]

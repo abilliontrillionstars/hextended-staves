@@ -8,7 +8,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/lanishextendedstaves.accesswidener")
+    accessWidenerPath = file("src/main/resources/hextended.accesswidener")
 }
 
 dependencies {
