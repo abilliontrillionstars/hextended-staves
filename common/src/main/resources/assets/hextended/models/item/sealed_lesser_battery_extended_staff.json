@@ -1,0 +1,10 @@
+{
+  "parent": "hextended:item/extended_staff",
+  "overrides": [
+    {
+      "model": "hextended:item/dyed_long/sealed_lesser_battery_extended_staff_dyeable",
+      "predicate": { "hexgloop:is_casting": 0.0 }
+    }
+  ],
+  "textures": { "layer0": "hextended:item/long/sealed_lesser_battery_extended_staff" }
+}

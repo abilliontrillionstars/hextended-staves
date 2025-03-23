@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "hextended:lesser_battery_staff"
+    },
+    "Y": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "Z": {
+      "item": "minecraft:amethyst_block"
+    },
+    "A": {
+      "item": "minecraft:honeycomb"
+    }
+  },
+  "pattern": [
+    " YX",
+    "AZY",
+    "YA "
+  ],
+  "result": {
+    "item": "hextended:sealed_lesser_battery_extended_staff"
+  }
+}

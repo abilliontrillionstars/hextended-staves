@@ -1,7 +1,0 @@
-{
-  "parent": "lanishextendedstaves:item/extended_staff",
-  "textures": {
-    "layer0": "lanishextendedstaves:item/dyed_long/extended_dark_oak_base",
-    "layer1": "lanishextendedstaves:item/dyed_long/extended_dark_oak_dyepart"
-  }
-}
