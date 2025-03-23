@@ -1,4 +1,6 @@
 {
+  "itemGroup.hextended": "Hextended's Gear",
+
   "item.hextended.extended_staff_oak": "Extended Oak Staff",
   "item.hextended.extended_staff_spruce": "Extended Spruce Staff",
   "item.hextended.extended_staff_birch": "Extended Birch Staff",
@@ -10,6 +12,9 @@
   "item.hextended.extended_staff_mangrove": "Extended Mangrove Staff",
   "item.hextended.extended_staff_edified": "Extended Edified Staff",
   "item.hextended.extended_staff_cherry": "Extended Cherry Staff",
+  "item.hextended.extended_staff_bamboo": "Extended Bamboo Staff",
+  "item.hextended.extended_staff_mindsplice": "Extended Mindsplice Staff",
+  "item.hextended.extended_staff_quenched": "Extended Quenched Shard Staff",
 
   "item.hextended.lesser_battery_staff": "Improvised Amethyst Staff",
   "item.hextended.lesser_battery_extended_staff": "Improvised Extended Amethyst Staff",
@@ -79,7 +84,5 @@
   "hextended.page.gloopstended_staves.crafting.header.1": "Mept Staves",
   "hextended.page.gloopstended_staves.crafting.desc.1": "\"Say goodnight, sister!\"$(br2)Some legends tell of staves that made use of circular patterns. Sounds nothing short of wild witchery!",
   "hextended.page.gloopstended_staves.crafting.desc.2": "Nicknamed the \"Garden Staff\", it lets you cast the Revive Magick withou-- er, it's very... healthy to wield?",
-  "hextended.page.gloopstended_staves.crafting.desc.3": "Likewise to the Garden Staff, you may instead refer to this staff as the Hive Staff. Now populated with the hum of media $(o)and/$ the hum of busy friends!",
-
-  "itemGroup.hextended": "Hextended's Gear"
+  "hextended.page.gloopstended_staves.crafting.desc.3": "Likewise to the Garden Staff, you may instead refer to this staff as the Hive Staff. Now populated with the hum of media $(o)and/$ the hum of busy friends!"
 }

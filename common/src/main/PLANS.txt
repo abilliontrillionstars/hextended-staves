@@ -39,6 +39,8 @@ Staves!! long ones!!
 
     Combat Staves!
         staves with small attack damage bonuses, made from specific materials
+        iron combat staff, caster's glamour to change skins
+        - "caster's caestus", amethyst mace, tonfa-like, baton,
 
     Grand/Great(?) Staves
         implements ItemPackagedHex (is a casting device) BUT:
@@ -76,6 +78,7 @@ Bookbinding! Customized spellbooks
 
     Charged Amethyst Diadem:
         a wearable phial? maybe an inert bud diadem that needs another step to craft?
+        - no item flaying? use an akashic record for the recipe, make flaying required that way!
 
     Budding Amethyst Diadem: (bud diadem)
         a headband that grows tiny clusters from its wearer's brain activity

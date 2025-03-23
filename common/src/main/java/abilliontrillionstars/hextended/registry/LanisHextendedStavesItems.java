@@ -93,9 +93,10 @@ public class LanisHextendedStavesItems
     {
         String[] EXTENDED_STAFF_IDS = {"extended_staff_oak", "extended_staff_spruce",
                 "extended_staff_birch", "extended_staff_jungle", "extended_staff_dark_oak", "extended_staff_acacia",
-                "extended_staff_crimson", "extended_staff_warped", "extended_staff_edified", "extended_staff_cherry",
-                "extended_moss_staff", "extended_flowered_moss_staff", "extended_prismarine_staff", "extended_dark_prismarine_staff",
-                "extended_obsidian_staff", "extended_purpur_staff",};
+                "extended_staff_crimson", "extended_staff_warped", "extended_staff_mangrove", "extended_staff_bamboo",
+                "extended_staff_cherry","extended_staff_edified", "extended_staff_mindsplice", "extended_staff_quenched", "extended_moss_staff",
+                "extended_flowered_moss_staff", "extended_prismarine_staff", "extended_dark_prismarine_staff",
+                "extended_obsidian_staff", "extended_purpur_staff"};
         for(String id : EXTENDED_STAFF_IDS)
             make(id, new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
     }

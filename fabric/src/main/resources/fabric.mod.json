@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "hextended",
-  "version": "${version}",
+  "version": "1.0.1",
   "name": "Hextended Gear",
   "description": "Bolsters your stick collection with some nice-looking staves, with extra casting properties!",
   "authors": [

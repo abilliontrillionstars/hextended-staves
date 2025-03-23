@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
+import abilliontrillionstars.hextended.LanisHextendedStaves;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,7 +22,7 @@ public class LanisHextendedStavesCreativeTabs {
 
     private static final Map<ResourceLocation, CreativeModeTab> TABS = new LinkedHashMap<>();
 
-    public static final CreativeModeTab STAVES = register("lanishextendedstaves", CreativeModeTab.builder(CreativeModeTab.Row.TOP, 7)
+    public static final CreativeModeTab STAVES = register(LanisHextendedStaves.MOD_ID, CreativeModeTab.builder(CreativeModeTab.Row.TOP, 7)
             .icon(() -> new ItemStack(LanisHextendedStavesItems.MOSS_STAFF)));
 
     private static CreativeModeTab register(String name, CreativeModeTab.Builder tabBuilder) {
