@@ -1,11 +1,11 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[${forgeDependencyVersion},)"
 #issueTrackerURL = ""
 license = "MIT"
 
 [[mods]]
 modId = "lanishextendedstaves"
-version = "${version}"
+version = "1.0.1"
 displayName = "Hextended Staves"
 logoFile = "icon.png"
 authors = "just_laniakea"
@@ -16,27 +16,27 @@ Bolsters your stick collection with some nice-looking staves with extra casting 
 [[dependencies.lanishextendedstaves]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[${forgeDependencyVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.lanishextendedstaves]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,)"
+versionRange = "[${minecraftVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.lanishextendedstaves]]
 modId = "architectury"
 mandatory = true
-versionRange = "[6.5.85,)"
+versionRange = "[${architecturyVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.lanishextendedstaves]]
 modId = "hexcasting"
 mandatory = true
-versionRange = "[0.10.3,)"
+versionRange = "{${hexcastingVersion},)"
 ordering = "NONE"
 side = "BOTH"

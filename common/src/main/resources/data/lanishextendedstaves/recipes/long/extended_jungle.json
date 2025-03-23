@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "hexcasting:jungle_staff"
+      "item": "hexcasting:staff/jungle"
     },
     "Y": {
       "item": "minecraft:stick"

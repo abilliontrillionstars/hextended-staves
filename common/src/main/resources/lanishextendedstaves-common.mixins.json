@@ -3,11 +3,8 @@
   "package": "abilliontrillionstars.lanishextendedstaves.mixin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
-  "client": [
-    "LanisHextendedStavesMixin"
-  ],
-  "mixins": [
-  ],
+  "client": [],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 1
   }

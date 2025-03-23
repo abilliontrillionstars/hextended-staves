@@ -4,7 +4,7 @@
   "icon": "lanishextendedstaves:extended_staff_spruce",
   "sortnum": 7,
   "advancement": "hexcasting:root",
-  "read_by_default": true,
+  "read_by_default": false,
   "pages": [
     {
       "type": "patchouli:text",
@@ -24,7 +24,8 @@
         "lanishextendedstaves:long/extended_crimson",
         "lanishextendedstaves:long/extended_warped",
         "lanishextendedstaves:long/extended_mangrove",
-        "lanishextendedstaves:long/extended_edified"
+        "lanishextendedstaves:long/extended_edified",
+        "lanishextendedstaves:long/extended_cherry"
       ]
     },
     {

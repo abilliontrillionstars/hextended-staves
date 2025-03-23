@@ -16,7 +16,7 @@ public class LanisHextendedStaves {
 
     public static void init()
     {
-        LanisHextendedStavesItems.init();
+        //LanisHextendedStavesItems.init();
         LOGGER.info(LanisHextendedStavesAbstractions.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
 

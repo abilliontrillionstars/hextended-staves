@@ -9,6 +9,7 @@
   "item.lanishextendedstaves.extended_staff_warped": "Extended Warped Staff",
   "item.lanishextendedstaves.extended_staff_mangrove": "Extended Mangrove Staff",
   "item.lanishextendedstaves.extended_staff_edified": "Extended Edified Staff",
+  "item.lanishextendedstaves.extended_staff_cherry": "Extended Cherry Staff",
 
   "item.lanishextendedstaves.lesser_battery_staff": "Improvised Amethyst Staff",
   "item.lanishextendedstaves.lesser_battery_extended_staff": "Improvised Extended Amethyst Staff",
@@ -56,7 +57,7 @@
 
 
   "lanishextendedstaves.entry.functional_staves_1": "Functional Staves",
-  "lanishextendedstaves.page.functional_staves_1.0": "Of course, in my ingenuity, it would be narrow-minded to craft extensions of my staff only in the $(l:lanishextendedstaves:items/basic_extended_staves)physical sense$(/l). If I'm to cultivate a flexible and oh so utile art, my tools must so be as well. The first, a cleverly-thought but crudely built staff of amethyst. Peculiarly, the amethyst block will more readily crumble when directly used to weave the _media, providing itself to my _Hexes.",
+  "lanishextendedstaves.page.functional_staves_1.0": "Of course, in my ingenuity, it would be narrow-minded to craft extensions of my staff only in the $(l:hexcasting:items/basic_extended_staves)physical sense$(/l). If I'm to cultivate a flexible and oh so utile art, my tools must so be as well. The first, a cleverly-thought but crudely built staff of amethyst. Peculiarly, the amethyst block will more readily crumble when directly used to weave the _media, providing itself to my _Hexes.",
   "lanishextendedstaves.page.functional_staves_1.crafting.header.0": "Improvised Amethyst Staff",
   "lanishextendedstaves.page.functional_staves_1.crafting.desc.0": "For when you forget wood and you're already ~100 blocks deep in the geode",
   "lanishextendedstaves.page.functional_staves_1.crafting.header.1": "Sealed Improvised Amethyst Staff",
@@ -80,5 +81,5 @@
   "lanishextendedstaves.page.gloopstended_staves.crafting.desc.2": "Nicknamed the \"Garden Staff\", it lets you cast the Revive Magick withou-- er, it's very... healthy to wield?",
   "lanishextendedstaves.page.gloopstended_staves.crafting.desc.3": "Likewise to the Garden Staff, you may instead refer to this staff as the Hive Staff. Now populated with the hum of media $(o)and/$ the hum of busy friends!",
 
-  "itemGroup.lanishextendedstaves.hextended_gear": "Hextended's Gear"
+  "itemGroup.lanishextendedstaves": "Hextended's Gear"
 }

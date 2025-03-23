@@ -2,9 +2,9 @@
   "name": "lanishextendedstaves.entry.functional_staves_1",
   "category": "hexcasting:items",
   "icon": "lanishextendedstaves:lesser_battery_staff",
-  "sortnum": 8,
+  "sortnum": 7,
   "advancement": "hexcasting:root",
-  "read_by_default": true,
+  "read_by_default": false,
   "pages": [
     {
       "type": "patchouli:text",

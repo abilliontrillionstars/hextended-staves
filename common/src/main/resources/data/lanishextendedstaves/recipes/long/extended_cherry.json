@@ -3,13 +3,13 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "hexcasting:staff/oak"
+      "item": "hexcasting:staff/cherry"
     },
     "Y": {
       "item": "minecraft:stick"
     },
     "Z": {
-      "item": "minecraft:oak_planks"
+      "item": "minecraft:cherry_planks"
     }
   },
   "pattern": [
@@ -18,6 +18,6 @@
     "Y  "
   ],
   "result": {
-    "item": "lanishextendedstaves:extended_staff_oak"
+    "item": "lanishextendedstaves:extended_staff_cherry"
   }
 }
