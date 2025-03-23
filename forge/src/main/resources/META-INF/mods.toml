@@ -5,7 +5,7 @@ license = "MIT"
 
 [[mods]]
 modId = "lanishextendedstaves"
-version = "${version}"
+version = "1.0.1"
 displayName = "Hextended Staves"
 logoFile = "icon.png"
 authors = "just_laniakea"
