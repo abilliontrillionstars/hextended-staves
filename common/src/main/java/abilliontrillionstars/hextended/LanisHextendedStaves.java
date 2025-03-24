@@ -1,5 +1,7 @@
 package abilliontrillionstars.hextended;
 
+import abilliontrillionstars.hextended.items.DrawingOrbAmbit;
+import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
 import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,6 +19,9 @@ public class LanisHextendedStaves {
     {
         //LanisHextendedStavesItems.init();
         LOGGER.info(LanisHextendedStavesAbstractions.getConfigDirectory().toAbsolutePath().normalize().toString());
+        CastingEnvironment.addCreateEventListener(
+                (CastingEnvironment castenv) -> { castenv.addExtension(new DrawingOrbAmbit(castenv)); }
+        );
     }
 
     /**

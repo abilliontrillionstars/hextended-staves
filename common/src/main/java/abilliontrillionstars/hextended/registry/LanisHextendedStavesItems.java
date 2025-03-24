@@ -1,6 +1,7 @@
 package abilliontrillionstars.hextended.registry;
 
 import abilliontrillionstars.hextended.items.ItemBatteryStaff;
+import abilliontrillionstars.hextended.items.ItemDrawingOrb;
 import abilliontrillionstars.hextended.items.ItemExtendedAmethystStaff;
 import abilliontrillionstars.hextended.items.ItemExtendedStaff;
 import at.petrak.hexcasting.common.items.ItemStaff;
@@ -58,6 +59,7 @@ public class LanisHextendedStavesItems
 
     public static final ItemStaff EXTENDED_QUENCHED_STAFF = make("extended_staff_quenched", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
 
+    public static final ItemStaff DRAWING_ORB = make("drawing_orb", new ItemDrawingOrb(new Item.Properties().stacksTo(1)));
 
 
     //public static RegistrySupplier<Item> EXTENDED_QUARTZ_STAFF;
