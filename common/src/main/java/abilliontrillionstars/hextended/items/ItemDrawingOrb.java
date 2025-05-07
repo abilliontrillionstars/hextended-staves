@@ -16,19 +16,19 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static at.petrak.hexcasting.common.items.storage.ItemFocus.TAG_DATA;
-import static at.petrak.hexcasting.common.items.storage.ItemFocus.TAG_SEALED;
-
 public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
 {
     public ItemDrawingOrb(Properties pProperties)  { super(pProperties); }
 
+    public static final String TAG_DATA = "data";
+    public static final String TAG_SEALED = "sealed";
 
     @Override
     public @Nullable CompoundTag readIotaTag(ItemStack stack)
     {
         return NBTHelper.getCompound(stack, TAG_DATA);
     }
+
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced)
@@ -61,6 +61,6 @@ public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
             NBTHelper.put(stack, TAG_DATA, IotaType.serialize(iota));
         }
 
-        LanisHextendedStaves.LOGGER.info("Wrote Iota: " + iota);
+        LanisHextendedStaves.LOGGER.info("Wrote Iota: {}", iota);
     }
 }
