@@ -57,10 +57,8 @@ public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
             stack.removeTagKey(TAG_SEALED);
         }
         else if (!isSealed(stack))
-        {
             NBTHelper.put(stack, TAG_DATA, IotaType.serialize(iota));
-        }
 
-        LanisHextendedStaves.LOGGER.info("Wrote Iota: {}", iota);
+        //LanisHextendedStaves.LOGGER.info("Wrote Iota: {}", iota);
     }
 }
