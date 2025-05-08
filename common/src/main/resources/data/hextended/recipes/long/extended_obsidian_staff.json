@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "hextended:obsidian_staff"
+      "item": "hextended:staff/obsidian"
     },
     "Y": {
       "item": "minecraft:stick"
@@ -18,6 +18,6 @@
     "Y  "
   ],
   "result": {
-    "item": "hextended:extended_obsidian_staff"
+    "item": "hextended:staff/long/obsidian"
   }
 }

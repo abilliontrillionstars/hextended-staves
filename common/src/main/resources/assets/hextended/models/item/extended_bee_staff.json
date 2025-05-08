@@ -1,6 +1,0 @@
-{
-  "parent": "hextended:item/extended_staff",
-  "textures": {
-    "layer0": "hextended:item/gloopy/extended_bee_staff"
-  }
-}

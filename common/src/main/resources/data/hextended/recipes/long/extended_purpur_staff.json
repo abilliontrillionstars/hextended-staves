@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "hextended:purpur_staff"
+      "item": "hextended:staff/purpur"
     },
     "Y": {
       "item": "minecraft:stick"
@@ -18,6 +18,6 @@
     "Y  "
   ],
   "result": {
-    "item": "hextended:extended_purpur_staff"
+    "item": "hextended:staff/long/purpur"
   }
 }

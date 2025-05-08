@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "hextended:lesser_battery_staff"
+      "item": "hextended:staff/lesser_battery"
     },
     "Y": {
       "item": "minecraft:amethyst_shard"
@@ -18,6 +18,6 @@
     "Y  "
   ],
   "result": {
-    "item": "hextended:lesser_battery_extended_staff"
+    "item": "hextended:staff/long/lesser_battery"
   }
 }

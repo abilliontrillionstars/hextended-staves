@@ -45,21 +45,21 @@ public class LanisHextendedStavesItems
         //registerConditionalItems();
     }
 
-    public static final ItemStaff MOSS_STAFF = make("moss_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff FLOWERED_MOSS_STAFF = make("flowered_moss_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff PRISMARINE_STAFF = make("prismarine_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff DARK_PRISMARINE_STAFF = make("dark_prismarine_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff OBSIDIAN_STAFF = make("obsidian_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff PURPUR_STAFF = make("purpur_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff MOSS_STAFF = makeStaff("moss", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff FLOWERED_MOSS_STAFF = makeStaff("flowered_moss", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff PRISMARINE_STAFF = makeStaff("prismarine", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff DARK_PRISMARINE_STAFF = makeStaff("dark_prismarine", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff OBSIDIAN_STAFF = makeStaff("obsidian", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff PURPUR_STAFF = makeStaff("purpur", new ItemStaff(new Item.Properties().stacksTo(1)));
 
-    public static final ItemStaff LESSER_BATTERY_STAFF = make("lesser_battery_staff", new ItemBatteryStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff SEALED_LESSER_BATTERY_STAFF = make("sealed_lesser_battery_staff", new ItemStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff LESSER_BATTERY_EXTENDED_STAFF = make("lesser_battery_extended_staff", new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1)));
-    public static final ItemStaff SEALED_LESSER_BATTERY_EXTENDED_STAFF = make("sealed_lesser_battery_extended_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff LESSER_BATTERY_STAFF = makeStaff("lesser_battery", new ItemBatteryStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff SEALED_LESSER_BATTERY_STAFF = makeStaff("sealed_lesser_battery", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff LESSER_BATTERY_EXTENDED_STAFF = makeLongStaff("lesser_battery", new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff SEALED_LESSER_BATTERY_EXTENDED_STAFF = makeLongStaff("sealed_lesser_battery", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
 
-    public static final ItemStaff EXTENDED_QUENCHED_STAFF = make("extended_staff_quenched", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff EXTENDED_QUENCHED_STAFF = makeLongStaff("quenched", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
 
-    public static final ItemStaff DRAWING_ORB = make("drawing_orb", new ItemDrawingOrb(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff DRAWING_ORB = makeStaff("drawing_orb", new ItemDrawingOrb(new Item.Properties().stacksTo(1)));
 
 
     //public static RegistrySupplier<Item> EXTENDED_QUARTZ_STAFF;
@@ -97,14 +97,11 @@ public class LanisHextendedStavesItems
 
     private static void registerExtendedStaves()
     {
-        String[] EXTENDED_STAFF_IDS = {"extended_staff_oak", "extended_staff_spruce",
-                "extended_staff_birch", "extended_staff_jungle", "extended_staff_dark_oak", "extended_staff_acacia",
-                "extended_staff_crimson", "extended_staff_warped", "extended_staff_mangrove", "extended_staff_bamboo",
-                "extended_staff_cherry","extended_staff_edified", "extended_staff_mindsplice", "extended_moss_staff",
-                "extended_flowered_moss_staff", "extended_prismarine_staff", "extended_dark_prismarine_staff",
-                "extended_obsidian_staff", "extended_purpur_staff"};
+        String[] EXTENDED_STAFF_IDS = {"oak", "spruce", "birch", "jungle", "dark_oak", "acacia",
+                "crimson", "warped", "mangrove", "bamboo", "cherry", "edified", "mindsplice",
+                "moss", "flowered_moss", "prismarine", "dark_prismarine", "obsidian", "purpur"};
         for(String id : EXTENDED_STAFF_IDS)
-            make(id, new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+            makeLongStaff(id, new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
     }
 
     private static <T extends Item> T make(ResourceLocation id, T item, @Nullable CreativeModeTab tab) {
@@ -124,6 +121,12 @@ public class LanisHextendedStavesItems
 
     private static <T extends Item> T make(String id, T item) {
         return make(id(id), item, LanisHextendedStavesCreativeTabs.STAVES);
+    }
+    private static <T extends Item> T makeStaff(String id, T item) {
+        return make(id("staff/" + id), item, LanisHextendedStavesCreativeTabs.STAVES);
+    }
+    private static <T extends Item> T makeLongStaff(String id, T item) {
+        return make(id("staff/long/" + id), item, LanisHextendedStavesCreativeTabs.STAVES);
     }
 
     private static Supplier<ItemStack> addToTab(Supplier<ItemStack> stack, CreativeModeTab tab) {
