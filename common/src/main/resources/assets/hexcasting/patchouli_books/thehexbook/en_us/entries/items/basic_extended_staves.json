@@ -1,7 +1,7 @@
 {
   "name": "hextended.entry.basic_extended_staves",
   "category": "hexcasting:items",
-  "icon": "hextended:extended_staff_spruce",
+  "icon": "hextended:staff/long/spruce",
   "sortnum": 7,
   "advancement": "hexcasting:root",
   "read_by_default": false,
@@ -24,8 +24,10 @@
         "hextended:long/extended_crimson",
         "hextended:long/extended_warped",
         "hextended:long/extended_mangrove",
-        "hextended:long/extended_edified",
-        "hextended:long/extended_cherry"
+        "hextended:long/extended_cherry",
+        "hextended:long/extended_bamboo",
+        "hextended:long/extended_cherry",
+        "hextended:long/extended_edified"
       ]
     },
     {

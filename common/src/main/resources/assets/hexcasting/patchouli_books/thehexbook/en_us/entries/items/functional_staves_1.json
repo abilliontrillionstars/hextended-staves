@@ -1,7 +1,7 @@
 {
   "name": "hextended.entry.functional_staves_1",
   "category": "hexcasting:items",
-  "icon": "hextended:lesser_battery_staff",
+  "icon": "hextended:staff/sealed_lesser_battery",
   "sortnum": 7,
   "advancement": "hexcasting:root",
   "read_by_default": false,
@@ -31,6 +31,15 @@
         "hextended:sealed_lesser_battery_staff",
         "hextended:long/sealed_lesser_battery_extended_staff"
       ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextended.page.functional_staves_1.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hextended:drawing_orb",
+      "text": "hextended.page.functional_staves_1.crafting.desc.2"
     }
   ]
 }
