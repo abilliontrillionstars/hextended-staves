@@ -1,0 +1,6 @@
+{
+  "parent": "hextended:item/staff/long/extended_staff",
+  "textures": {
+    "layer0": "hextended:item/long/lesser_battery_extended_staff"
+  }
+}
