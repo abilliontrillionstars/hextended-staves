@@ -9,7 +9,7 @@ Staves!! long ones!!
         - has a media buffer (like a phial, implements MediaHolderItem)
         - breaks like a cypher (cannot be recharged)
 
-    Drawing Orb
+    Drawing Orb - DONE
         staff with less grid space
         - you can set it to scry/ponder a position
         - extends ambit to a single entity(?) or block
@@ -41,6 +41,7 @@ Staves!! long ones!!
         staves with small attack damage bonuses, made from specific materials
         iron combat staff, caster's glamour to change skins
         - "caster's caestus", amethyst mace, tonfa-like, baton,
+        - dancer sword w/ shards as blades
 
     Grand/Great(?) Staves
         implements ItemPackagedHex (is a casting device) BUT:

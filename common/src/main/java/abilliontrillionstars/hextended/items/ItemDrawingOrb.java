@@ -8,6 +8,7 @@ import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.common.items.ItemStaff;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -16,10 +17,13 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+import static at.petrak.hexcasting.api.HexAPI.modLoc;
+
 public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
 {
     public ItemDrawingOrb(Properties pProperties)  { super(pProperties); }
 
+    public static final ResourceLocation OVERLAY_PRED = modLoc("overlay_layer");
     public static final String TAG_DATA = "data";
     public static final String TAG_SEALED = "sealed";
 
