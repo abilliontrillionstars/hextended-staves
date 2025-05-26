@@ -7,10 +7,16 @@ import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.client.render.GaslightingTracker;
 import at.petrak.hexcasting.common.items.storage.ItemFocus;
 import at.petrak.hexcasting.xplat.IClientXplatAbstractions;
+import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 
+import java.util.function.BiConsumer;
 import java.util.function.Predicate;
+
+import static at.petrak.hexcasting.client.RegisterClientStuff.makeIotaStorageColorizer;
 
 /**
  * Common client loading entrypoint.
@@ -43,5 +49,9 @@ public class LanisHextendedStavesClient
                         return 1;
                     return 2;
                 });
+    }
+    public static void registerColorProviders(BiConsumer<ItemColor, Item> itemColorRegistry)
+    {
+        itemColorRegistry.accept(makeIotaStorageColorizer(LanisHextendedStavesItems.DRAWING_ORB::getColor), LanisHextendedStavesItems.DRAWING_ORB);
     }
 }
