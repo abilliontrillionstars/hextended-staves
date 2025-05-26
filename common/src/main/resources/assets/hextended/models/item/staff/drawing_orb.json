@@ -14,7 +14,7 @@
       }
     },
     {
-      "model": "hexcasting:item/staff/drawing_orb_0_sealed",
+      "model": "hextended:item/staff/drawing_orb_0_sealed",
       "predicate": {
         "hexcasting:overlay_layer": 2.0
       }
