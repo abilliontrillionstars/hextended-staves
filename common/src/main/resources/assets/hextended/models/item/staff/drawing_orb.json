@@ -4,22 +4,19 @@
     {
       "model": "hextended:item/staff/drawing_orb",
       "predicate": {
-        "hexcasting:overlay_layer": 0.0,
-        "hexcasting:variant": 0.0
+        "hexcasting:overlay_layer": 0.0
       }
     },
     {
       "model": "hextended:item/staff/drawing_orb_0_filled",
       "predicate": {
-        "hexcasting:overlay_layer": 1.0,
-        "hexcasting:variant": 0.0
+        "hexcasting:overlay_layer": 1.0
       }
     },
     {
-      "model": "hexcasting:item/staff/drawing_orb_0_sealed",
+      "model": "hextended:item/staff/drawing_orb_0_sealed",
       "predicate": {
-        "hexcasting:overlay_layer": 2.0,
-        "hexcasting:variant": 0.0
+        "hexcasting:overlay_layer": 2.0
       }
     }
   ],
