@@ -92,7 +92,6 @@ public class LanisSealThingsRecipe extends CustomRecipe {
         }
 
         public boolean isCorrectSealee(ItemStack stack) {
-            LOGGER.info();
             return stack.is(LanisHextendedStavesItems.DRAWING_ORB)
                     && LanisHextendedStavesItems.DRAWING_ORB.readIotaTag(stack) != null
                     && !ItemDrawingOrb.isSealed(stack);
