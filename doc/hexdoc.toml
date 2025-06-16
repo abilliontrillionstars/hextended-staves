@@ -39,9 +39,9 @@ pattern_stubs = []
 [textures]
 # make hexdoc ignore something that doesn't have a texture (if it's present in the book, it'll be given the purple-black checker)
 missing = [
-    "lanishextendedstaves:extended_staff",
-    "lanishextendedstaves:livingwood_staff",
-    "hexcasting:mangrove_staff"
+    "lanishextendedstaves:staff/long/extended_staff",
+    "lanishextendedstaves:staff/livingwood",
+    "hexcasting:staff/mangrove"
 ]
 
 [textures.override]
