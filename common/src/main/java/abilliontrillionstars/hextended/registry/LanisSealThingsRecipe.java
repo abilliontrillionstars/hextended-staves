@@ -1,6 +1,8 @@
 package abilliontrillionstars.hextended.registry;
 
 import abilliontrillionstars.hextended.items.ItemDrawingOrb;
+import static abilliontrillionstars.hextended.LanisHextendedStaves.LOGGER;
+
 import at.petrak.hexcasting.api.mod.HexTags;
 import at.petrak.hexcasting.common.items.storage.ItemFocus;
 import at.petrak.hexcasting.common.items.storage.ItemSpellbook;
@@ -51,7 +53,6 @@ public class LanisSealThingsRecipe extends CustomRecipe {
                 foundComb = true;
             }
         }
-
         return foundComb && foundSealee;
     }
 
@@ -75,9 +76,7 @@ public class LanisSealThingsRecipe extends CustomRecipe {
 
     @Override
     public @NotNull RecipeSerializer<?> getSerializer() {
-        return switch (this.sealee) {
-            case DRAWING_ORB -> DRAWING_ORB_SERIALIZER;
-        };
+        return DRAWING_ORB_SERIALIZER;
     }
 
     public static LanisSealThingsRecipe drawingOrb(ResourceLocation id, CraftingBookCategory category) {
@@ -93,6 +92,7 @@ public class LanisSealThingsRecipe extends CustomRecipe {
         }
 
         public boolean isCorrectSealee(ItemStack stack) {
+            LOGGER.info();
             return stack.is(LanisHextendedStavesItems.DRAWING_ORB)
                     && LanisHextendedStavesItems.DRAWING_ORB.readIotaTag(stack) != null
                     && !ItemDrawingOrb.isSealed(stack);
