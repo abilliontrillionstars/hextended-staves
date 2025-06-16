@@ -1,5 +1,5 @@
-modid = "lanishextendedstaves"
-book = "lanishextendedstaves:lanishextendedstavesbook"
+modid = "hextended"
+book = "hextended:hextendedbook"
 default_lang = "en_us"
 default_branch = "main"
 
@@ -15,12 +15,12 @@ resource_dirs = [  # top takes priority
     { modid="minecraft" },
     { modid="hexdoc" },
 ]
-export_dir = "src/hexdoc_lanishextendedstaves/_export/generated"
+export_dir = "src/hexdoc_hextended/_export/generated"
 
 [template]
 icon = "icon.png"
 include = [
-    "lanishextendedstaves",
+    "hextended",
     "hexcasting",
     "hexdoc",
 ]
@@ -39,8 +39,8 @@ pattern_stubs = []
 [textures]
 # make hexdoc ignore something that doesn't have a texture (if it's present in the book, it'll be given the purple-black checker)
 missing = [
-    "lanishextendedstaves:staff/long/extended_staff",
-    "lanishextendedstaves:staff/livingwood",
+    "hextended:staff/long/extended_staff",
+    "hextended:staff/livingwood",
     "hexcasting:staff/mangrove"
 ]
 
@@ -53,12 +53,12 @@ missing = [
 
 [_common]
 src = "../common/src"
-package = "{src}/main/java/abilliontrillionstars/lanishextendedstaves"
+package = "{src}/main/java/abilliontrillionstars/hextended"
 
 [_fabric]
 src = "../fabric/src"
-package = "{src}/main/java/abilliontrillionstars/lanishextendedstaves/fabric"
+package = "{src}/main/java/abilliontrillionstars/hextended/fabric"
 
 [_forge]
 src = "../forge/src"
-package = "{src}/main/java/abilliontrillionstars/lanishextendedstaves/forge"
+package = "{src}/main/java/abilliontrillionstars/hextended/forge"
