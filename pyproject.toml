@@ -8,7 +8,7 @@ build-backend = "hatchling.build"
 # project metadata
 
 [project]
-name = "hexdoc-lanishextendedstaves"
+name = "hexdoc-hextended"
 description = "Python web book docgen and hexdoc plugin for Hextended Staves."
 readme = "doc/README.md"
 authors = [
@@ -27,7 +27,7 @@ Source = "https://github.com/abilliontrillionstars/hextended-staves"
 [tool.hatch.version]
 scheme = "gradle"
 source = "gradle-properties"
-py-path = "doc/src/hexdoc_lanishextendedstaves/__version__.py"
+py-path = "doc/src/hexdoc_hextended/__version__.py"
 key = "modVersion"
 
 [tool.hatch.metadata.hooks.gradle-properties]
@@ -44,12 +44,12 @@ dev = [
 
 [tool.hatch.build]
 only-include = [
-    "doc/src/hexdoc_lanishextendedstaves",
+    "doc/src/hexdoc_hextended",
     "gradle.properties",
 ]
 artifacts = [
-    "/doc/src/hexdoc_lanishextendedstaves/_export/generated",
-    "/doc/src/hexdoc_lanishextendedstaves/__gradle_version__.py",
+    "/doc/src/hexdoc_hextended/_export/generated",
+    "/doc/src/hexdoc_hextended/__gradle_version__.py",
 ]
 
 [tool.hatch.build.targets.wheel]
@@ -58,7 +58,7 @@ sources = ["doc/src"]
 # hexdoc entry points
 
 [project.entry-points.hexdoc]
-lanishextendedstaves = "hexdoc_lanishextendedstaves._hooks:LanisHextendedStavesPlugin"
+hextended = "hexdoc_hextended._hooks:HextendedPlugin"
 
 # linting
 
