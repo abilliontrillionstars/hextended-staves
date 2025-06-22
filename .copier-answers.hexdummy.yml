@@ -8,14 +8,14 @@ classname: LanisHextendedStaves
 default_branch: main
 description: Bolsters your stick collection with some nice-looking staves with extra
     casting properties!
-display_name: Hextended Staves
+display_name: Hextended Gear
 github_repo: hextended-staves
-hexcasting_version: 0.10.3
+hexcasting_version: 0.11.2
 homepage_url: https://abilliontrillionstars.github.io/hextended-staves
-initial_mod_version: 0.0.1
+initial_mod_version: 1.0.1
 java_version: 17
 license: MIT
 mappings_name: Mojmap
-modid: lanishextendedstaves
-package: abilliontrillionstars.lanishextendedstaves
+modid: hextended
+package: abilliontrillionstars.hextended
 sources_url: github.com/abilliontrillionstars/hextended-staves
