@@ -1,33 +1,35 @@
 {
-  "name": "lanishextendedstaves.entry.crossmod_staves_1",
+  "name": "hextended.entry.crossmod_staves_1",
   "category": "hexcasting:interop",
-  "icon": "lanishextendedstaves:livingwood_staff",
+  "flag": "debug",
+  "icon": "hextended:livingwood_staff",
   "sortnum": 3,
   "advancement": "hexcasting:root",
   "read_by_default": false,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "lanishextendedstaves.page.crossmod_staves_1.0"
+      "text": "hextended.page.crossmod_staves_1.0"
     },
     {
       "type": "patchouli:text",
-      "text": "lanishextendedstaves.page.crossmod_staves_1.1"
+      "text": "hextended.page.crossmod_staves_1.1"
     },
     {
       "type": "hexcasting:crafting_multi",
       "flag": "mod:botania",
-      "heading": "lanishextendedstaves.page.crossmod_staves_1.crafting.header.botania",
-      "text": "lanishextendedstaves.page.crossmod_staves_1.crafting.desc.botania",
-      "recipes": []
+      "heading": "hextended.page.crossmod_staves_1.crafting.header.botania",
+      "text": "hextended.page.crossmod_staves_1.crafting.desc.botania",
+      "recipes": [
+
+      ]
     },
     {
       "type": "hexcasting:crafting_multi",
       "flag": "mod:arsnouveau",
-      "heading": "lanishextendedstaves.page.crossmod_staves_1.crafting.header.arsnouveau",
-      "text": "lanishextendedstaves.page.crossmod_staves_1.crafting.desc.arsnouveau",
+      "heading": "hextended.page.crossmod_staves_1.crafting.header.arsnouveau",
+      "text": "hextended.page.crossmod_staves_1.crafting.desc.arsnouveau",
       "recipes": [
-
       ]
     }
   ]
