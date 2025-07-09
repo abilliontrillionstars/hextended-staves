@@ -3,6 +3,8 @@ plugins {
     id "me.modmuss50.mod-publish-plugin" version "0.3.0"
 }
 
+archivesBaseName = getArtifactId("forge")
+
 architectury {
     platformSetupLoomIde()
     forge()
@@ -15,8 +17,8 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-        mixinConfig "lanishextendedstaves-common.mixins.json"
-        mixinConfig "lanishextendedstaves-forge.mixins.json"
+        mixinConfig "hextended-common.mixins.json"
+        mixinConfig "hextended.mixins.json"
     }
 }
 
@@ -42,7 +44,10 @@ dependencies {
 
     // // Hex Casting Dependencies
     modCompileOnly "at.petra-k.paucal:paucal-forge-${minecraftVersion}:${paucalVersion}"
-    modCompileOnly "vazkii.patchouli:Patchouli:${minecraftVersion}-${patchouliVersion}-FORGE"
+    modCompileOnly "vazkii.patchouli:Patchouli:${minecraftVersion}-${patchouliVersion}"
+
+    modRuntimeOnly "at.petra-k.paucal:paucal-forge-${minecraftVersion}:${paucalVersion}"
+    modRuntimeOnly "vazkii.patchouli:Patchouli:${minecraftVersion}-${patchouliVersion}"
 
     runtimeOnly "thedarkcolour:kotlinforforge:$project.forgeKotlinVersion"
 
@@ -52,8 +57,10 @@ dependencies {
 }
 
 processResources {
-    from(rootProject.file("common/src/main/resources")) {
-        include("data/*/patchouli_books/")
+    inputs.property "version", project.version
+
+    filesMatching("META-INF/mods.toml") {
+        expand "version": project.version
     }
 }
 
@@ -61,7 +68,7 @@ shadowJar {
     exclude "fabric.mod.json"
     exclude "architectury.common.json"
 
-    configurations = [project.configurations.shadowCommon, project.configurations.shade]
+    configurations = [project.configurations.shadowCommon]
     archiveClassifier.set "dev-shadow"
 }
 
@@ -87,6 +94,25 @@ components.java {
     }
 }
 
+// this fixes mod's hex notebook additions missing in dev runtime because of something with how patchouli handles its data
+// the only other thing that could fix it was adding common's resources to srcDirs directly,
+// but that lead to the built jar causing mixin injection crashes in non-dev environments
+// feel free to reach out if you manage to fix this without copying the book data
+tasks.register("clearGeneratedBook", Delete) {
+    description "Clear the book in generated resources."
+
+    delete "src/generated/resources/$bookPath"
+}
+tasks.register("copyBookToGenerated", Copy) {
+    description "Copy the book from resources to generated resources."
+
+    from "../common/src/main/resources/$bookPath"
+    into "src/generated/resources/$bookPath"
+}
+tasks.copyBookToGenerated.dependsOn(tasks.clearGeneratedBook)
+tasks.processResources.dependsOn(tasks.copyBookToGenerated)
+tasks.sourcesJar.dependsOn(tasks.copyBookToGenerated)
+
 publishing {
     publications {
         mavenForge(MavenPublication) {
@@ -99,4 +125,49 @@ publishing {
     repositories {
         // Add repositories to publish to here.
     }
+}
+
+publishMods {
+    file = remapJar.archiveFile
+    additionalFiles.from(sourcesJar.archiveFile)
+    changelog = getLatestChangelog()
+    type = STABLE
+    modLoaders.add("forge")
+
+    version = project.version + "-forge"
+    displayName = "Hextended Gear $project.version [Forge]"
+
+    // Uncomment your desired platform(s)
+//    curseforge {
+//        accessToken = project.curseforgeApiToken
+//        println accessToken.get()
+//        projectId = project.curseforgeId
+//        minecraftVersions.add(minecraftVersion)
+//
+//        requires {
+//            slug = "architectury-api"
+//        }
+//        requires {
+//            slug = "kotlin-for-forge"
+//        }
+//        requires {
+//            slug = "hexcasting"
+//        }
+//    }
+//
+//    modrinth {
+//        accessToken = project.modrinthApiToken
+//        projectId = project.modrinthId
+//        minecraftVersions.add("1.19.2")
+//
+//        requires {
+//            slug = "architectury-api"
+//        }
+//        requires {
+//            slug = "kotlin-for-forge"
+//        }
+//        requires {
+//            slug = "hex-casting"
+//        }
+//    }
 }

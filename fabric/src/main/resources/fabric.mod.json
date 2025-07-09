@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "hextended",
-  "version": "1.0.1",
+  "version": "${version}",
   "name": "Hextended Gear",
-  "description": "Bolsters your stick collection with some nice-looking staves, with extra casting properties!",
+  "description": "Bolsters your stick collection with some nice-looking staves with extra casting properties!",
   "authors": [
     "just_laniakea, with the help of the Hex Casting Discord Server <3"
   ],
@@ -32,6 +32,6 @@
     "fabric-api": "*",
     "fabric-language-kotlin": ">=1.9.0+kotlin.1.8.0",
     "architectury": ">=6.5.85",
-    "hexcasting": ">=0.10.3"
+    "hexcasting": ">=0.11.2"
   }
 }
