@@ -36,8 +36,8 @@ class LanisHextendedStavesFabric : ModInitializer {
 
         // orb things
         LanisHextendedStavesClient.registerColorProviders(
-            { colorizer, item -> ColorProviderRegistry.ITEM.register(colorizer, item) })
-
+            { colorizer, item -> ColorProviderRegistry.ITEM.register(colorizer, item) }
+        )
         LanisHextendedStavesRecipes.registerSerializers(bind(BuiltInRegistries.RECIPE_SERIALIZER))
     }
     private fun <T> bind(registry: Registry<in T>): BiConsumer<T, ResourceLocation> =
