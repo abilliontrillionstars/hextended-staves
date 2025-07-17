@@ -1,7 +1,8 @@
-package abilliontrillionstars.hextended.registry;
+package abilliontrillionstars.hextended.recipe;
 
 import abilliontrillionstars.hextended.items.ItemDrawingOrb;
 
+import abilliontrillionstars.hextended.registry.LanisHextendedStavesItems;
 import at.petrak.hexcasting.api.mod.HexTags;
 import org.jetbrains.annotations.NotNull;
 

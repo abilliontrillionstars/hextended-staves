@@ -1,10 +1,9 @@
 package abilliontrillionstars.hextended.registry;
 
-import at.petrak.hexcasting.common.recipe.SealThingsRecipe;
+import abilliontrillionstars.hextended.recipe.LanisSealThingsRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
