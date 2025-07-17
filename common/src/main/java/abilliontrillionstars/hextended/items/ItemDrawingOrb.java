@@ -10,8 +10,13 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
@@ -33,6 +38,18 @@ public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
         return NBTHelper.getCompound(stack, TAG_DATA);
     }
 
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
+    {
+        int slot;
+        if(hand==InteractionHand.MAIN_HAND)
+            slot = 98;
+        else
+            slot = 99;
+        ItemStack stack = player.getSlot(slot).get();
+        seal(stack);
+        return super.use(world, player, hand);
+    }
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced)
@@ -43,15 +60,11 @@ public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
     {
         return NBTHelper.getBoolean(stack, TAG_SEALED);
     }
-    public static void seal(ItemStack stack)
-    {
-        NBTHelper.putBoolean(stack, TAG_SEALED, true);
-    }
-
+    public static void seal(ItemStack stack) { NBTHelper.putBoolean(stack, TAG_SEALED, true); }
     @Override
-    public boolean writeable(ItemStack stack)  { return true; }
+    public boolean writeable(ItemStack stack)  { return !isSealed(stack); }
     @Override
-    public boolean canWrite(ItemStack stack, @Nullable Iota iota)  { return true; }
+    public boolean canWrite(ItemStack stack, @Nullable Iota iota)  { return iota == null || !isSealed(stack); }
     @Override
     public void writeDatum(ItemStack stack, @Nullable Iota iota)
     {
@@ -62,7 +75,5 @@ public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
         }
         else if (!isSealed(stack))
             NBTHelper.put(stack, TAG_DATA, IotaType.serialize(iota));
-
-        //LanisHextendedStaves.LOGGER.info("Wrote Iota: {}", iota);
     }
 }
