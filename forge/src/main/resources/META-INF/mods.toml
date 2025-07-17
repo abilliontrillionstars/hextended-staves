@@ -4,39 +4,39 @@ loaderVersion = "[${forgeDependencyVersion},)"
 license = "MIT"
 
 [[mods]]
-modId = "lanishextendedstaves"
-version = "1.0.1"
-displayName = "Hextended Staves"
+modId = "hextended"
+version = "${version}"
+displayName = "Hextended Gear"
 logoFile = "icon.png"
 authors = "just_laniakea"
 description = '''
 Bolsters your stick collection with some nice-looking staves with extra casting properties!
 '''
 
-[[dependencies.lanishextendedstaves]]
+[[dependencies.hextended]]
 modId = "forge"
 mandatory = true
 versionRange = "[${forgeDependencyVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.lanishextendedstaves]]
+[[dependencies.hextended]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[${minecraftVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.lanishextendedstaves]]
+[[dependencies.hextended]]
 modId = "architectury"
 mandatory = true
 versionRange = "[${architecturyVersion},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.lanishextendedstaves]]
+[[dependencies.hextended]]
 modId = "hexcasting"
 mandatory = true
-versionRange = "{${hexcastingVersion},)"
+versionRange = "[0.11.2,)"
 ordering = "NONE"
 side = "BOTH"

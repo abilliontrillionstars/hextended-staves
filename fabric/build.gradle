@@ -3,6 +3,8 @@ plugins {
     id "me.modmuss50.mod-publish-plugin" version "0.3.0"
 }
 
+archivesBaseName = getArtifactId("fabric")
+
 architectury {
     platformSetupLoomIde()
     fabric()
@@ -54,8 +56,10 @@ dependencies {
 }
 
 processResources {
-    from(rootProject.file("common/src/main/resources")) {
-        include("data/*/patchouli_books/")
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
     }
 }
 
@@ -88,6 +92,25 @@ components.java {
         skip()
     }
 }
+
+// this fixes mod's hex notebook additions missing in dev runtime because of something with how patchouli handles its data
+// the only other thing that could fix it was adding common's resources to srcDirs directly,
+// but that lead to the built jar causing mixin injection crashes in non-dev environments
+// feel free to reach out if you manage to fix this without copying the book data
+tasks.register("clearGeneratedBook", Delete) {
+    description "Clear the book in generated resources."
+
+    delete "src/generated/resources/$bookPath"
+}
+tasks.register("copyBookToGenerated", Copy) {
+    description "Copy the book from resources to generated resources."
+
+    from "../common/src/main/resources/$bookPath"
+    into "src/generated/resources/$bookPath"
+}
+tasks.copyBookToGenerated.dependsOn(tasks.clearGeneratedBook)
+tasks.processResources.dependsOn(tasks.copyBookToGenerated)
+tasks.sourcesJar.dependsOn(tasks.copyBookToGenerated)
 
 publishing {
     publications {
