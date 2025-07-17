@@ -13,7 +13,5 @@ import static at.petrak.hexcasting.interop.HexInterop.PATCHOULI_ANY_INTEROP_FLAG
 @Mixin(HexInterop.class)
 public class LanisHextendedStavesMixin {
     @Inject(at = @At(value = "HEAD"), method = "initPatchouli()V", remap = false)
-    private static void init(CallbackInfo info) {
-        PatchouliAPI.get().setConfigFlag(PATCHOULI_ANY_INTEROP_FLAG, true);
-    }
+    private static void init(CallbackInfo info) { /* removed for now! */ }
 }

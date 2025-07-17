@@ -1,7 +1,7 @@
 {
   "name": "hextended.entry.crossmod_staves_1",
   "category": "hexcasting:interop",
-  "flag": "debug",
+  "flag": "hexcasting:any_interop",
   "icon": "hextended:livingwood_staff",
   "sortnum": 3,
   "advancement": "hexcasting:root",

@@ -2,10 +2,12 @@ package abilliontrillionstars.hextended;
 
 import abilliontrillionstars.hextended.items.DrawingOrbAmbit;
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment;
+import at.petrak.hexcasting.interop.HexInterop;
+import dev.architectury.platform.Platform;
 import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import vazkii.patchouli.api.PatchouliAPI;
 
 /**
  * This is effectively the loading entrypoint for most of your code, at least
@@ -22,6 +24,11 @@ public class LanisHextendedStaves {
         CastingEnvironment.addCreateEventListener(
                 (CastingEnvironment castenv) -> { castenv.addExtension(new DrawingOrbAmbit(castenv)); }
         );
+
+        String[] interopMods = {};
+        for(String mod : interopMods)
+            if(Platform.isModLoaded(mod))
+                PatchouliAPI.get().setConfigFlag(HexInterop.PATCHOULI_ANY_INTEROP_FLAG, true);
     }
 
     /**
