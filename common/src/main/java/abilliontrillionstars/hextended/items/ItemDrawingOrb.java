@@ -37,20 +37,6 @@ public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
     {
         return NBTHelper.getCompound(stack, TAG_DATA);
     }
-
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
-    {
-        int slot;
-        if(hand==InteractionHand.MAIN_HAND)
-            slot = 98;
-        else
-            slot = 99;
-        ItemStack stack = player.getSlot(slot).get();
-        seal(stack);
-        return super.use(world, player, hand);
-    }
-
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced)
     {
