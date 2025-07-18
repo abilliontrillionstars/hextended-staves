@@ -1,0 +1,19 @@
+{
+  "name": "hextended.entry.extended_fanciful_staves",
+  "category": "hexcasting:greatwork",
+  "icon": "hextended:staff/long/mindsplice",
+  "sortnum": 7,
+  "advancement": "hexcasting:enlightenment",
+  "entry_color": "54398a",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hextended.page.extended_fanciful_staves.1"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hextended:long/extended_quenched",
+      "recipe2": "hextended:long/extended_mindsplice"
+    }
+  ]
+}
