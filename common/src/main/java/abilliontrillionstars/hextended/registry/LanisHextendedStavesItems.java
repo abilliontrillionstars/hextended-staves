@@ -6,6 +6,7 @@ import abilliontrillionstars.hextended.items.ItemExtendedAmethystStaff;
 import abilliontrillionstars.hextended.items.ItemExtendedStaff;
 import at.petrak.hexcasting.common.items.ItemStaff;
 import com.google.common.base.Suppliers;
+import dev.architectury.platform.Platform;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -21,14 +22,11 @@ import static at.petrak.hexcasting.common.lib.hex.HexActions.make;
 
 public class LanisHextendedStavesItems
 {
-
-
     public static void registerItems(BiConsumer<Item, ResourceLocation> r) {
         for (var e : ITEMS.entrySet()) {
             r.accept(e.getValue(), e.getKey());
         }
     }
-
     public static void registerItemCreativeTab(CreativeModeTab.Output r, CreativeModeTab tab) {
         for (var item : ITEM_TABS.getOrDefault(tab, List.of())) {
             item.register(r);
@@ -38,11 +36,10 @@ public class LanisHextendedStavesItems
     private static final Map<ResourceLocation, Item> ITEMS = new LinkedHashMap<>(); // preserve insertion order
     private static final Map<CreativeModeTab, List<LanisHextendedStavesItems.TabEntry>> ITEM_TABS = new LinkedHashMap<>();
 
-
     public static void init()
     {
         registerExtendedStaves();
-        //registerConditionalItems();
+        registerConditionalItems();
     }
 
     public static final ItemStaff MOSS_STAFF = makeStaff("moss", new ItemStaff(new Item.Properties().stacksTo(1)));
@@ -61,39 +58,12 @@ public class LanisHextendedStavesItems
 
     public static final ItemDrawingOrb DRAWING_ORB = makeStaff("drawing_orb", new ItemDrawingOrb(new Item.Properties().stacksTo(1)));
 
+    private static void registerConditionalItems()
+    {
+        if (Platform.isModLoaded("hexcasting"))
+            System.out.println("this is the LOVELY lanishextendedstaves coming to you UH-LIVE from the soon-to-be-former Registration Event! How are y'all doin' tonight?");
 
-    //public static RegistrySupplier<Item> EXTENDED_QUARTZ_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_BLAZE_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_WITHER_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_OWLBERT_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_GHOST_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_CELESTIAL_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_ICE_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_LONGINUS_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_CARROT_STAFF;
-    //public static RegistrySupplier<Item> EXTENDED_BEE_STAFF;
-
-
-    //private static void registerConditionalItems()
-    //{
-    //    if (Platform.isModLoaded("hexcasting"))
-    //        System.out.println("this is the LOVELY lanishextendedstaves coming to you UH-LIVE from the soon-to-be-former Registration Event! How are y'all doin' tonight?");
-//
-    //    if (Platform.isModLoaded("hexgloop"))
-    //    {
-    //        System.out.println("Oh my stars! If it isn't Hex Gloop! We finally meet!");
-    //        EXTENDED_QUARTZ_STAFF = make("extended_quartz_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_BLAZE_STAFF = make("extended_blaze_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_WITHER_STAFF = make("extended_wither_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_OWLBERT_STAFF = make("extended_owlbert_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_GHOST_STAFF = make("extended_ghost_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_CELESTIAL_STAFF = make("extended_celestial_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_LONGINUS_STAFF = make("extended_longinus_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_ICE_STAFF = make("extended_ice_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_CARROT_STAFF = make("extended_carrot_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //        EXTENDED_BEE_STAFF = make("extended_bee_staff", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
-    //    }
-    //}
+    }
 
     private static void registerExtendedStaves()
     {
@@ -119,15 +89,9 @@ public class LanisHextendedStavesItems
         return make(id(id), item, tab);
     }
 
-    private static <T extends Item> T make(String id, T item) {
-        return make(id(id), item, LanisHextendedStavesCreativeTabs.STAVES);
-    }
-    private static <T extends Item> T makeStaff(String id, T item) {
-        return make(id("staff/" + id), item, LanisHextendedStavesCreativeTabs.STAVES);
-    }
-    private static <T extends Item> T makeLongStaff(String id, T item) {
-        return make(id("staff/long/" + id), item, LanisHextendedStavesCreativeTabs.STAVES);
-    }
+    private static <T extends Item> T make(String id, T item) { return make(id(id), item, LanisHextendedStavesCreativeTabs.STAVES); }
+    private static <T extends Item> T makeStaff(String id, T item) { return make(id("staff/" + id), item, LanisHextendedStavesCreativeTabs.STAVES); }
+    private static <T extends Item> T makeLongStaff(String id, T item) { return make(id("staff/long/" + id), item, LanisHextendedStavesCreativeTabs.STAVES); }
 
     private static Supplier<ItemStack> addToTab(Supplier<ItemStack> stack, CreativeModeTab tab) {
         var memoised = Suppliers.memoize(stack::get);

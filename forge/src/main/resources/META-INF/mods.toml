@@ -37,6 +37,6 @@ side = "BOTH"
 [[dependencies.hextended]]
 modId = "hexcasting"
 mandatory = true
-versionRange = "[0.11.2,)"
+versionRange = "[0.10.3,)"
 ordering = "NONE"
 side = "BOTH"
