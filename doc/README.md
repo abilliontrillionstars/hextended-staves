@@ -1,4 +1,4 @@
-# hexdoc-lanishextendedstaves
+# hexdoc-hextended
 
 Python web book docgen and [hexdoc](https://pypi.org/project/hexdoc) plugin for Hextended Staves.
 

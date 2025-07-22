@@ -9,24 +9,24 @@ from hexdoc.plugin import (
     hookimpl,
 )
 
-import hexdoc_lanishextendedstaves
+import hexdoc_hextended
 
 from .__gradle_version__ import FULL_VERSION, GRADLE_VERSION
 from .__version__ import PY_VERSION
 
 
-class LanisHextendedStavesPlugin(ModPluginImpl):
+class HextendedPlugin(ModPluginImpl):
     @staticmethod
     @hookimpl
     def hexdoc_mod_plugin(branch: str) -> ModPlugin:
-        return LanisHextendedStavesModPlugin(branch=branch)
+        return HextendedModPlugin(branch=branch)
 
 
-class LanisHextendedStavesModPlugin(ModPluginWithBook):
+class HextendedModPlugin(ModPluginWithBook):
     @property
     @override
     def modid(self) -> str:
-        return "lanishextendedstaves"
+        return "hextended"
 
     @property
     @override
@@ -54,4 +54,4 @@ class LanisHextendedStavesModPlugin(ModPluginWithBook):
     
     @override
     def jinja_template_root(self) -> tuple[Package, str]:
-        return hexdoc_lanishextendedstaves, "_templates"
+        return hexdoc_hextended, "_templates"

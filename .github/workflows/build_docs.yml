@@ -19,7 +19,7 @@ on:
           # - TestPyPI
 
 env:
-  PYPI_PACKAGE: hexdoc-lanishextendedstaves
+  PYPI_PACKAGE: hexdoc-hextended
 
 permissions:
   contents: read
