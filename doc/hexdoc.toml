@@ -1,5 +1,5 @@
 modid = "hextended"
-book = "hextended:hextendedbook"
+book = "hexcasting:thehexbook"
 default_lang = "en_us"
 default_branch = "main"
 
@@ -41,7 +41,9 @@ pattern_stubs = []
 missing = [
     "hextended:staff/long/extended_staff",
     "hextended:staff/livingwood",
-    "hexcasting:staff/mangrove"
+    "hexcasting:staff/mangrove",
+
+    "hextended:livingwood_staff"
 ]
 
 [textures.override]
