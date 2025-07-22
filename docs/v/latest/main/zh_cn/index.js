@@ -3,8 +3,8 @@ import semver from 'https://cdn.jsdelivr.net/npm/semver@7.5.4/+esm';
 // these are filled by Jinja
 const RELATIVE_SITE_URL = "../../../..";
 const VERSION = "latest/main";
-const MINECRAFT_VERSION = "1.19.2";
-const FULL_VERSION = "0.2.0.1.0.dev0";
+const MINECRAFT_VERSION = "1.20.1";
+const FULL_VERSION = "2.0.0.1.0.dev0";
 const LANG = "zh_cn";
 const SHOW_DROPDOWN_MINECRAFT_VERSION = `true` === "true";
 const DROPDOWN_MINECRAFT_TEMPLATE = "Minecraft {version}";
