@@ -17,15 +17,22 @@ Staves!! long ones!!
 
     Crossmod Staves
         mostly cosmetic, for aesthetic matching
-        - Ice and Fire
-            - dragonscale,
         - Botania
-            - manasteel, terrasteel, elementium, livingrock, livingwood and dreamwood
+            - manasteel, terrasteel, elementium,
+            - livingrock, livingwood and dreamwood
+        - Gloop's staves
+	    - Spectrum
+            - azurite (suggested by pantheon)
+        - Bewitchment (suggested by The Old Serpent)
+        - Haema (suggested by The Old Serpent)
+        - Spell Engine Suite (suggested by The Old Serpent)
+
+        # Forge mods:
         - Ars Nouveau? (no, added by Ars Scalaes)
-    	- Add extended variants of Gloop's staves
-	    The Old Serpent on discord requested "Bewitchment, Haema, and the entire Spell Engine Suite
-	    ... The Graveyard might be interesting too .."
-        - gchpaco suggested Hexerei. that's a good one.
+    	- Ice and Fire
+            - dragonscale,
+        - Hexerei (suggested by gchpaco)
+        - The Graveyard (suggested by The Old Serpent)
 
 
     Other Staves - DONE
@@ -69,6 +76,20 @@ Bookbinding! Customized spellbooks
     - spellbook with lessened pages, but built-in hexbook (rmb opens patchouli book)
     - similar spellbook, that opens a book-and-quill on rmb
     - spellbooks can be made with a specific number of pages
+
+    - crafted from a base item (empty cover)
+    - shapeless recipe like a firework to add features
+        - focus for 8 pages,
+        - & other items for <8
+            - (4,2,1?) for granularity
+        - hexbook for hexbook on rmb
+        - book and quill for gui on rmb
+            - maybe make this its own page
+              so it has compat with scribes etc
+        - artifact maybe? but idk if balanced
+
+
+    - use nbt data to store rclick action & page count
     
 
 ---------Other hex gear:--------
