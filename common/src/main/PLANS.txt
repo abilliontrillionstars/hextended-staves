@@ -1,8 +1,12 @@
-Staves!! long ones!!
-
+-------- Staves!! the mainstay. --------
     Extended(?) - DONE
         Normal staff but lorj, offers slightly more grid space (configurable)
         maybe I should change the lang for hex's staves to "wands" instead of calling it extended
+	Notes:
+	""like the long staves would come with 1 level of a grid expanding enchant for free, but
+	you could still go out and apply the enchant manually if you wanted to use one of the
+	small staves and get the same functionality"" -Chloe
+
 
     Impermanent Staff / Improviser's Staff - DONE
         staff made from amethyst, for people who didn't bring wood into the geode
@@ -20,9 +24,9 @@ Staves!! long ones!!
         - Botania
             - manasteel, terrasteel, elementium,
             - livingrock, livingwood and dreamwood
-        - Gloop's staves
-	    - Spectrum
-            - azurite (suggested by pantheon)
+	- Gloop's staves
+	- Spectrum
+	    - azurite (suggested by pantheon)
         - Bewitchment (suggested by The Old Serpent)
         - Haema (suggested by The Old Serpent)
         - Spell Engine Suite (suggested by The Old Serpent)
@@ -36,19 +40,19 @@ Staves!! long ones!!
 
 
     Other Staves - DONE
-	    - spoon staff but the extended version is comically large
-		    "this staff's name is 'Spoon Theory' look him up on google"
-	    - also moss staff. need. flowering azalea variants. maybe an glow berrie?
-	    - prismarine staves for matching to aquatic players, dark variant
-	    - copper staves?
-	    - nether-related staves (not quartz, sam covered that), netherrack?
-	    - end staves > purpur, obsidian?
+	- spoon staff but the extended version is comically large
+		"this staff's name is 'Spoon Theory' look him up on google"
+	- also moss staff. need. flowering azalea variants. maybe an glow berrie?
+	- prismarine staves for matching to aquatic players, dark variant
+	- copper staves?
+	- nether-related staves (not quartz, sam covered that), netherrack?
+	- end staves > purpur, obsidian?
 
     Combat Staves!
         staves with small attack damage bonuses, made from specific materials
         iron combat staff, caster's glamour to change skins
         - "caster's caestus", amethyst mace, tonfa-like, baton,
-        - dancer sword w/ shards as blades
+        - dancer sword w/ shards as blades, amethyst mjolnir
 
     Grand/Great(?) Staves
         implements ItemPackagedHex (is a casting device) BUT:
@@ -59,19 +63,8 @@ Staves!! long ones!!
         Maybe takes the form of being etched into the wood, a trusty hex the wielder knows by heart
 	alternatively, instead of the 
 
-    Reverberating Staff
-        depend on Oneironaut/Miyu's addon, casts the hex every tick
-        - maybe add an extra couple flow control patterns
-        - require a reverb rod in the recipe ofc
 
-    Notes:
-    ""like the long staves would come with 1 level of a grid expanding enchant for free, but
-     you could still go out and apply the enchant manually if you wanted to use one of the
-     small staves and get the same functionality"" -Chloe
-
-
-
-Bookbinding! Customized spellbooks
+-------- Bookbinding! Customized Spellbooks --------
     Custom Spellbooks that have varying page counts, but with other effects
     - spellbook with lessened pages, but built-in hexbook (rmb opens patchouli book)
     - similar spellbook, that opens a book-and-quill on rmb
@@ -87,46 +80,51 @@ Bookbinding! Customized spellbooks
             - maybe make this its own page
               so it has compat with scribes etc
         - artifact maybe? but idk if balanced
+	- map for carbon-copy things
+	    - rclick to write to shelves
+	    - copy to the offand item
 
 
     - use nbt data to store rclick action & page count
     
 
----------Other hex gear:--------
-
+---------Other Hex gear and trinkets --------
     Caster's Head Mirror:
 	head trinket, based on the old doctor's headband
 	- maybe reflects raycasts?
 
     Charged Amethyst Diadem:
-        a wearable phial? maybe an inert bud diadem that needs another step to craft?
-        - no item flaying? use an akashic record for the recipe, make flaying required that way!
+	- crafted with an empty diadem and charged
+	- amethyst on it shatters to prevent hex-related damage 
+	    - one-time, turns back into empty diadem after (recraft)
+	    - includes bloodcasting and damaging mishaps (like div0)
+	- can be made pre-enlighten but is decorative at first, like slates
 
     Budding Amethyst Diadem: (bud diadem)
         a headband that grows tiny clusters from its wearer's brain activity
         - doing certain things can make it briefly go faster (qualia)
 
     Bloodletter's Diadem: (blood diadem)
-        mechanics related to bloodcasting, made using the bud diadem
-        - makes bloodcasting more feasible, possibly increasing the amount
-         of media one can get out of their health
-        -- malleability theme, some event will progressively increase its capacity
-        -- flay minds into it? staffcasted patterns increase by a small bit?
-        --- could have a health HUD overlay, amethyst dust sprinkled on top of one's hearts
+	- a use for the Butcher in flaying!
+	- keeps the wearer below a set amount of health, and refunds it as media
+	    - grants more media per hp the lower the limit is (player chooses limit)
+	        - range is 1/hp to 2/hp? tentative
+	- will have like, spikes that lead into the skull (metal af)
+	- "it aches, OH HOW IT **ACHES**, but it fills my pockets..."
+	- might charge to an internal reservoir, or to held items like rumination
+	    - choose which depending on what was flaid (base vs phial one?)
 
 Hex Gear: Rings!
-    - one to make Overgrowth cheaper (and maybe some for others)
-    - Silk Touch/Fortune rings (make them work in the offhand as well, for automation)
+    - one to make a given spell cheaper
+	- write a spell pattern to it, reduces the cost
+	- constant or percentage? start with half & tweak/config
+	- call it the "Ring of Signature Spells"? (D&D reference)
+	
+    - Silk Touch/Fortune rings (modifies break block)
+	- made obselete by hexical patterns, though may be useful for not incurring cost
     - reach ring, that adds some proportion of your reach distance to your ambit
         could be a hand slot item
 
-
-Hex Gear: Armor!
-    Chloe suggested armor that moves the play:
-    - Boots have a spell to jump,
-    - Leggings can make you walk,
-    - Chestplate can make you right-click/punch
-    - Helmet can make you... look?     
 
 QUALIA (kwah-lee-uh):
     a multiplicative bonus stat with beneficial effects, like a Hexing Streak! tm
