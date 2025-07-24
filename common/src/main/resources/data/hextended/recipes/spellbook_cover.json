@@ -5,8 +5,11 @@
     "A": {"item": "hexcasting:amethyst_dust"},
     "L": {"item": "minecraft:leather"},
     "F": {"item": "minecraft:chorus_fruit"},
-    "N": {"tag": "forge:nuggets/gold"},
-    "S": {"tag": "minecraft:string"}
+    "N": [
+      {"item": "minecraft:gold_nugget"},
+      {"tag": "c:gold_nuggets"}
+    ],
+    "S": {"item": "minecraft:string"}
   },
   "pattern": [
     "NLS",
