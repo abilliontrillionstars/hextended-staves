@@ -4,6 +4,7 @@ import abilliontrillionstars.hextended.items.ItemBatteryStaff;
 import abilliontrillionstars.hextended.items.ItemDrawingOrb;
 import abilliontrillionstars.hextended.items.ItemExtendedAmethystStaff;
 import abilliontrillionstars.hextended.items.ItemExtendedStaff;
+import abilliontrillionstars.hextended.items.bookbinding.ItemSpellbookCover;
 import at.petrak.hexcasting.common.items.ItemStaff;
 import com.google.common.base.Suppliers;
 import dev.architectury.platform.Platform;
@@ -58,10 +59,12 @@ public class LanisHextendedStavesItems
 
     public static final ItemDrawingOrb DRAWING_ORB = makeStaff("drawing_orb", new ItemDrawingOrb(new Item.Properties().stacksTo(1)));
 
+    public static final ItemSpellbookCover SPELLBOOK_COVER = make("spellbook_cover", new ItemSpellbookCover(new Item.Properties().stacksTo(Item.MAX_STACK_SIZE)));
+
     private static void registerConditionalItems()
     {
         if (Platform.isModLoaded("hexcasting"))
-            System.out.println("this is the LOVELY lanishextendedstaves coming to you UH-LIVE from the soon-to-be-former Registration Event! How are y'all doin' tonight?");
+            System.out.println("GOOOOOOOOOD evening everybody! this is the LOVELY hextended coming to you UH-LIVE from the soon-to-be-former Registration Event! How are y'all doin' tonight?");
 
     }
 
@@ -76,19 +79,12 @@ public class LanisHextendedStavesItems
 
     private static <T extends Item> T make(ResourceLocation id, T item, @Nullable CreativeModeTab tab) {
         var old = ITEMS.put(id, item);
-        if (old != null) {
+        if (old != null)
             throw new IllegalArgumentException("Typo? Duplicate id " + id);
-        }
-        if (tab != null) {
+        if (tab != null)
             ITEM_TABS.computeIfAbsent(tab, t -> new ArrayList<>()).add(new LanisHextendedStavesItems.TabEntry.ItemEntry(item));
-        }
         return item;
     }
-
-    private static <T extends Item> T make(String id, T item, @Nullable CreativeModeTab tab) {
-        return make(id(id), item, tab);
-    }
-
     private static <T extends Item> T make(String id, T item) { return make(id(id), item, LanisHextendedStavesCreativeTabs.STAVES); }
     private static <T extends Item> T makeStaff(String id, T item) { return make(id("staff/" + id), item, LanisHextendedStavesCreativeTabs.STAVES); }
     private static <T extends Item> T makeLongStaff(String id, T item) { return make(id("staff/long/" + id), item, LanisHextendedStavesCreativeTabs.STAVES); }
