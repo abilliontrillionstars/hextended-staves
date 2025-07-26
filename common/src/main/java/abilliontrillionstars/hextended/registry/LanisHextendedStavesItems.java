@@ -4,6 +4,7 @@ import abilliontrillionstars.hextended.items.ItemBatteryStaff;
 import abilliontrillionstars.hextended.items.ItemDrawingOrb;
 import abilliontrillionstars.hextended.items.ItemExtendedAmethystStaff;
 import abilliontrillionstars.hextended.items.ItemExtendedStaff;
+import abilliontrillionstars.hextended.items.bookbinding.ItemBoundSpellbook;
 import abilliontrillionstars.hextended.items.bookbinding.ItemSpellbookCover;
 import at.petrak.hexcasting.common.items.ItemStaff;
 import com.google.common.base.Suppliers;
@@ -60,6 +61,8 @@ public class LanisHextendedStavesItems
     public static final ItemDrawingOrb DRAWING_ORB = makeStaff("drawing_orb", new ItemDrawingOrb(new Item.Properties().stacksTo(1)));
 
     public static final ItemSpellbookCover SPELLBOOK_COVER = make("spellbook_cover", new ItemSpellbookCover(new Item.Properties().stacksTo(Item.MAX_STACK_SIZE)));
+    public static final ItemBoundSpellbook BOUND_SPELLBOOK_TEST = make("bound_spellbook", new ItemBoundSpellbook(new Item.Properties().stacksTo(1)));
+
 
     private static void registerConditionalItems()
     {
