@@ -7,6 +7,14 @@
 	you could still go out and apply the enchant manually if you wanted to use one of the
 	small staves and get the same functionality"" -Chloe
 
+    Original Staves - DONE
+	- spoon staff but the extended version is comically large
+		"this staff's name is 'Spoon Theory' look him up on google"
+	- also moss staff. need. flowering azalea variants. maybe an glow berrie?
+	- prismarine staves for matching to aquatic players, dark variant
+	- copper staves?
+	- nether-related staves (not quartz, sam covered that), netherrack?
+	- end staves > purpur, obsidian?
 
     Impermanent Staff / Improviser's Staff - DONE
         staff made from amethyst, for people who didn't bring wood into the geode
@@ -38,16 +46,6 @@
         - Hexerei (suggested by gchpaco)
         - The Graveyard (suggested by The Old Serpent)
 
-
-    Other Staves - DONE
-	- spoon staff but the extended version is comically large
-		"this staff's name is 'Spoon Theory' look him up on google"
-	- also moss staff. need. flowering azalea variants. maybe an glow berrie?
-	- prismarine staves for matching to aquatic players, dark variant
-	- copper staves?
-	- nether-related staves (not quartz, sam covered that), netherrack?
-	- end staves > purpur, obsidian?
-
     Combat Staves!
         staves with small attack damage bonuses, made from specific materials
         iron combat staff, caster's glamour to change skins
@@ -55,14 +53,14 @@
         - dancer sword w/ shards as blades, amethyst mjolnir
 
     Grand/Great(?) Staves
+	casts a hex for each pattern drawn?
+		--or--
         implements ItemPackagedHex (is a casting device) BUT:
         - does not have a media buffer of its own
         - has a chargeup time to cast its bound hex(?), as well as the usual cooldown
         - needs a music disc (or similar expensive item) to craft along with
         - cannot be cast from while in the grid
-        Maybe takes the form of being etched into the wood, a trusty hex the wielder knows by heart
-	alternatively, instead of the 
-
+        takes the form of being etched into the wood, a trusty hex the wielder knows by heart
 
 -------- Bookbinding! Customized Spellbooks --------
     Custom Spellbooks that have varying page counts, but with other effects
@@ -83,8 +81,6 @@
 	- map for carbon-copy things
 	    - rclick to write to shelves
 	    - copy to the offand item
-
-
     - use nbt data to store rclick action & page count
     
 
@@ -92,6 +88,8 @@
     Caster's Head Mirror:
 	head trinket, based on the old doctor's headband
 	- maybe reflects raycasts?
+	    - return null if they hit the wearer
+	    - only when originating from a point in the caster's vision?
 
     Charged Amethyst Diadem:
 	- crafted with an empty diadem and charged
@@ -99,6 +97,9 @@
 	    - one-time, turns back into empty diadem after (recraft)
 	    - includes bloodcasting and damaging mishaps (like div0)
 	- can be made pre-enlighten but is decorative at first, like slates
+	- advancement for having it break for the first time
+	    - challenge for breaking it as your first bloodcast
+	- "It... saved me. ..."
 
     Budding Amethyst Diadem: (bud diadem)
         a headband that grows tiny clusters from its wearer's brain activity
@@ -123,7 +124,7 @@ Hex Gear: Rings!
     - Silk Touch/Fortune rings (modifies break block)
 	- made obselete by hexical patterns, though may be useful for not incurring cost
     - reach ring, that adds some proportion of your reach distance to your ambit
-        could be a hand slot item
+        - could be a hand slot item
 
 
 QUALIA (kwah-lee-uh):
