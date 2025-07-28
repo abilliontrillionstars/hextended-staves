@@ -4,7 +4,11 @@
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "client": [],
-  "mixins": ["LanisHextendedStavesMixin"],
+  "mixins": [
+    "LanisHextendedStavesMixin",
+    "MsgShiftScrollMixin",
+    "AccessorMsgShiftScrollC2S"
+  ],
   "injectors": {
     "defaultRequire": 1
   }
