@@ -6,8 +6,7 @@
   "client": [],
   "mixins": [
     "LanisHextendedStavesMixin",
-    "MsgShiftScrollMixin",
-    "AccessorMsgShiftScrollC2S"
+    "MsgShiftScrollMixin"
   ],
   "injectors": {
     "defaultRequire": 1
