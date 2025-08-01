@@ -45,53 +45,6 @@ public class ItemBoundSpellbook extends ItemSpellbook
         // add some extra info here for extra attributes
     }
 
-    public static boolean arePagesEmpty(ItemStack stack) {
-        CompoundTag tag = NBTHelper.getCompound(stack, TAG_PAGES);
-        return tag == null || tag.isEmpty();
-    }
-
-    public static int getPage(ItemStack stack, int ifEmpty) {
-        if (arePagesEmpty(stack)) {
-            return ifEmpty;
-        } else if (NBTHelper.hasNumber(stack, TAG_SELECTED_PAGE)) {
-            int index = NBTHelper.getInt(stack, TAG_SELECTED_PAGE);
-            if (index == 0) {
-                index = 1;
-            }
-            return index;
-        } else {
-            return 1;
-        }
-    }
-
-    public static void setSealed(ItemStack stack, boolean sealed) {
-        int index = getPage(stack, 1);
-
-        String nameKey = String.valueOf(index);
-        CompoundTag names = NBTHelper.getOrCreateCompound(stack, TAG_SEALED);
-
-        if (!sealed) {
-            names.remove(nameKey);
-        } else {
-            names.putBoolean(nameKey, true);
-        }
-
-        if (names.isEmpty()) {
-            NBTHelper.remove(stack, TAG_SEALED);
-        } else {
-            NBTHelper.putCompound(stack, TAG_SEALED, names);
-        }
-
-    }
-
-    public static boolean isSealed(ItemStack stack) {
-        int index = getPage(stack, 1);
-
-        String nameKey = String.valueOf(index);
-        CompoundTag names = NBTHelper.getCompound(stack, TAG_SEALED);
-        return NBTHelper.getBoolean(names, nameKey);
-    }
-
     public static int highestPage(ItemStack stack) {
         CompoundTag tag = NBTHelper.getCompound(stack, TAG_PAGES);
         if (tag == null) {
@@ -108,10 +61,12 @@ public class ItemBoundSpellbook extends ItemSpellbook
 
     public static int rotatePageIdx(ItemStack stack, boolean increase) {
         int idx = getPage(stack, 0);
-        if (idx != 0) {
+        if (idx != 0)
+        {
             idx += increase ? 1 : -1;
             idx = Math.max(1, idx);
         }
+        // TODO: make this get from nbt
         idx = Mth.clamp(idx, 0, MAX_PAGES);
         NBTHelper.putInt(stack, TAG_SELECTED_PAGE, idx);
 
@@ -119,11 +74,10 @@ public class ItemBoundSpellbook extends ItemSpellbook
         int shiftedIdx = Math.max(1, idx);
         String nameKey = String.valueOf(shiftedIdx);
         String name = NBTHelper.getString(names, nameKey);
-        if (name != null) {
+        if (name != null)
             stack.setHoverName(Component.Serializer.fromJson(name));
-        } else {
+        else
             stack.resetHoverName();
-        }
 
         return idx;
     }
