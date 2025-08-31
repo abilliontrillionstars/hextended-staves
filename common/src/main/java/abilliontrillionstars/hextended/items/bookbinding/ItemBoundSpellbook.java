@@ -3,6 +3,7 @@ import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.casting.iota.IotaType;
 import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.common.items.storage.ItemSpellbook;
+import at.petrak.hexcasting.common.lib.HexItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
@@ -89,5 +90,18 @@ public class ItemBoundSpellbook extends ItemSpellbook
             stack.resetHoverName();
 
         return idx;
+    }
+
+    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
+    {
+        ItemStack stack = player.getItemInHand(hand);
+        String useAction = NBTHelper.getString(stack, TAG_BOOK_USE_ACTION);
+
+        if(useAction == null)
+            return super.use(world, player, hand);
+
+        if(useAction.equals("hexbook"))
+            PatchouliAPI.get().openBookGUI(new ResourceLocation("hexcasting", "thehexbook"));
+        return super.use(world, player, hand);
     }
 }

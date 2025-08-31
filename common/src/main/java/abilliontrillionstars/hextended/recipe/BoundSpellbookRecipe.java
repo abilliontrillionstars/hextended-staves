@@ -1,11 +1,8 @@
 package abilliontrillionstars.hextended.recipe;
 
-import abilliontrillionstars.hextended.items.ItemDrawingOrb;
-
 import abilliontrillionstars.hextended.items.bookbinding.ItemBoundSpellbook;
 import abilliontrillionstars.hextended.items.bookbinding.ItemSpellbookCover;
 import abilliontrillionstars.hextended.registry.LanisHextendedStavesItems;
-import at.petrak.hexcasting.api.mod.HexTags;
 import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.common.lib.HexItems;
 import net.minecraft.world.item.Item;
@@ -31,7 +28,8 @@ public class BoundSpellbookRecipe extends CustomRecipe {
             new SimpleCraftingRecipeSerializer<>(BoundSpellbookRecipe::new);
     public BoundSpellbookRecipe(ResourceLocation id, CraftingBookCategory category) { super(id, category); }
 
-    public static final List<Item> BOOK_PARTS = List.of(HexItems.FOCUS, HexItems.SCROLL_LARGE, HexItems.SCROLL_MEDIUM, HexItems.SCROLL_SMOL);
+    public static final List<Item> BOOK_PARTS = List.of(HexItems.FOCUS, HexItems.SCROLL_LARGE, HexItems.SCROLL_MEDIUM, HexItems.SCROLL_SMOL,
+                                                        Items.BOOK);
 
     @Override
     public boolean canCraftInDimensions(int width, int height) {
@@ -76,6 +74,8 @@ public class BoundSpellbookRecipe extends CustomRecipe {
                 pageCount += 2;
             else if(stack.is(HexItems.SCROLL_SMOL))
                 pageCount += 1;
+            else if(stack.is(Items.BOOK))
+                NBTHelper.putString(result, ItemBoundSpellbook.TAG_BOOK_USE_ACTION, "hexbook");
         }
         NBTHelper.putInt(result, ItemBoundSpellbook.TAG_MAX_PAGES, pageCount);
         return result;
