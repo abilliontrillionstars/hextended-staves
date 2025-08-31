@@ -3,14 +3,20 @@ import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.casting.iota.IotaType;
 import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.common.items.storage.ItemSpellbook;
+import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
+import vazkii.patchouli.api.PatchouliAPI;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -26,23 +32,20 @@ public class ItemBoundSpellbook extends ItemSpellbook
     // it is 1-indexed, and the 0-case for TAG_PAGES will be treated as 1
     public static String TAG_PAGE_NAMES = "page_names";
 
-    // this stores the sealed status of each page, to be restored when you scroll
-    // it is 1-indexed, and the 0-case for TAG_PAGES will be treated as 1
-    public static String TAG_SEALED = "sealed_pages";
-
-    // this stores which variant of the spellbook should be rendered
-    public static final String TAG_VARIANT = "variant";
-
+    public static final String TAG_MAX_PAGES = "max_pages";
     public static final int MAX_PAGES = 32;
 
-    public ItemBoundSpellbook(Properties properties) {
-        super(properties);
-    }
+    public static final String TAG_BOOK_USE_ACTION = "book_use_action";
+
+    public ItemBoundSpellbook(Properties properties) {super(properties);}
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced) {
         super.appendHoverText(stack, level, tooltip, isAdvanced);
         // add some extra info here for extra attributes
+//        tooltip.add(Component.translatable("hexcasting.tooltip.spellbook.page.sealed",
+//                    Component.literal(String.valueOf(pageIdx)).withStyle(ChatFormatting.WHITE),
+//                    Component.literal(String.valueOf(highest)).withStyle(ChatFormatting.WHITE),
     }
 
     public static int highestPage(ItemStack stack) {
@@ -66,8 +69,14 @@ public class ItemBoundSpellbook extends ItemSpellbook
             idx += increase ? 1 : -1;
             idx = Math.max(1, idx);
         }
-        // TODO: make this get from nbt
-        idx = Mth.clamp(idx, 0, MAX_PAGES);
+        // get from nbt
+        int max;
+        if(NBTHelper.hasInt(stack, TAG_MAX_PAGES))
+            max = NBTHelper.getInt(stack, TAG_MAX_PAGES);
+        else
+            max = MAX_PAGES;
+
+        idx = Mth.clamp(idx, 0, max);
         NBTHelper.putInt(stack, TAG_SELECTED_PAGE, idx);
 
         CompoundTag names = NBTHelper.getCompound(stack, TAG_PAGE_NAMES);
