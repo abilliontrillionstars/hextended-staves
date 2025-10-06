@@ -6,6 +6,7 @@ import abilliontrillionstars.hextended.items.ItemExtendedAmethystStaff;
 import abilliontrillionstars.hextended.items.ItemExtendedStaff;
 import abilliontrillionstars.hextended.items.bookbinding.ItemBoundSpellbook;
 import abilliontrillionstars.hextended.items.bookbinding.ItemSpellbookCover;
+import abilliontrillionstars.hextended.items.diadem.ItemChargedDiadem;
 import at.petrak.hexcasting.common.items.ItemStaff;
 import com.google.common.base.Suppliers;
 import dev.architectury.platform.Platform;
@@ -40,7 +41,6 @@ public class LanisHextendedStavesItems
 
     public static void init()
     {
-        registerExtendedStaves();
         registerConditionalItems();
     }
 
@@ -50,11 +50,32 @@ public class LanisHextendedStavesItems
     public static final ItemStaff DARK_PRISMARINE_STAFF = makeStaff("dark_prismarine", new ItemStaff(new Item.Properties().stacksTo(1)));
     public static final ItemStaff OBSIDIAN_STAFF = makeStaff("obsidian", new ItemStaff(new Item.Properties().stacksTo(1)));
     public static final ItemStaff PURPUR_STAFF = makeStaff("purpur", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_MOSS_STAFF = makeLongStaff("moss", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_FLOWERED_MOSS_STAFF = makeLongStaff("flowered_moss", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_PRISMARINE_STAFF = makeLongStaff("prismarine", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_DARK_PRISMARINE_STAFF = makeLongStaff("dark_prismarine", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_OBSIDIAN_STAFF = makeLongStaff("obsidian", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_PURPUR_STAFF = makeLongStaff("purpur", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
 
     public static final ItemStaff LESSER_BATTERY_STAFF = makeStaff("lesser_battery", new ItemBatteryStaff(new Item.Properties().stacksTo(1)));
     public static final ItemStaff SEALED_LESSER_BATTERY_STAFF = makeStaff("sealed_lesser_battery", new ItemStaff(new Item.Properties().stacksTo(1)));
     public static final ItemStaff LESSER_BATTERY_EXTENDED_STAFF = makeLongStaff("lesser_battery", new ItemExtendedAmethystStaff(new Item.Properties().stacksTo(1)));
     public static final ItemStaff SEALED_LESSER_BATTERY_EXTENDED_STAFF = makeLongStaff("sealed_lesser_battery", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+
+
+    public static final ItemExtendedStaff EXTENDED_OAK_STAFF = makeLongStaff("oak", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_BIRCH_STAFF = makeLongStaff("spruce", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_SPRUCE_STAFF = makeLongStaff("birch", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_JUNGLE_STAFF = makeLongStaff("jungle", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_DARK_OAK_STAFF = makeLongStaff("dark_oak", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_ACACIA_STAFF = makeLongStaff("acacia", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_CRIMSON_STAFF = makeLongStaff("crimson", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_WARPED_STAFF = makeLongStaff("warped", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_MANGROVE_STAFF = makeLongStaff("mangrove", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_BAMBOO_STAFF = makeLongStaff("bamboo", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_CHERRY_STAFF = makeLongStaff("cherry", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_EDIFIED_STAFF = makeLongStaff("edified", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_MINDSPLICE_STAFF = makeLongStaff("mindsplice", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
 
     public static final ItemStaff EXTENDED_QUENCHED_STAFF = makeLongStaff("quenched", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
 
@@ -64,20 +85,36 @@ public class LanisHextendedStavesItems
     public static final ItemBoundSpellbook BOUND_SPELLBOOK_TEST = make("bound_spellbook", new ItemBoundSpellbook(new Item.Properties().stacksTo(1)));
 
 
+    public static final ItemChargedDiadem CHARGED_AMETHYST_DIADEM = make("charged_amethyst_diadem", new ItemChargedDiadem(new Item.Properties().stacksTo(1)));
+
+
+
+
+
+    public static final ItemStaff LIVINGWOOD_STAFF = makeStaff("livingwood", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff MANASTEEL_STAFF = makeStaff("manasteel", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff TERRASTEEL_STAFF = makeStaff("terrasteel", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff DREAMWOOD_STAFF = makeStaff("dreamwood", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemStaff ELEMENTIUM_STAFF = makeStaff("elementium", new ItemStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_LIVINGWOOD_STAFF = makeLongStaff("livingwood", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_MANASTEEL_STAFF = makeLongStaff("manasteel", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_TERRASTEEL_STAFF = makeLongStaff("terrasteel", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_DREAMWOOD_STAFF = makeLongStaff("dreamwood", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+    public static final ItemExtendedStaff EXTENDED_ELEMENTIUM_STAFF = makeLongStaff("elementium", new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+
+
     private static void registerConditionalItems()
     {
-        if (Platform.isModLoaded("hexcasting"))
+        if(Platform.isModLoaded("hexcasting"))
             System.out.println("GOOOOOOOOOD evening everybody! this is the LOVELY hextended coming to you UH-LIVE from the soon-to-be-former Registration Event! How are y'all doin' tonight?");
+        if(Platform.isModLoaded("botania"))
+        {
 
-    }
+        }
+        else
+        {
 
-    private static void registerExtendedStaves()
-    {
-        String[] EXTENDED_STAFF_IDS = {"oak", "spruce", "birch", "jungle", "dark_oak", "acacia",
-                "crimson", "warped", "mangrove", "bamboo", "cherry", "edified", "mindsplice",
-                "moss", "flowered_moss", "prismarine", "dark_prismarine", "obsidian", "purpur"};
-        for(String id : EXTENDED_STAFF_IDS)
-            makeLongStaff(id, new ItemExtendedStaff(new Item.Properties().stacksTo(1)));
+        }
     }
 
     private static <T extends Item> T make(ResourceLocation id, T item, @Nullable CreativeModeTab tab) {

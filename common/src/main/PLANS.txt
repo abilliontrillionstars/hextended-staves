@@ -98,12 +98,13 @@
 	    - includes bloodcasting and damaging mishaps (like div0)
 	- can be made pre-enlighten but is decorative at first, like slates
 	- advancement for having it break for the first time
-	    - challenge for breaking it as your first bloodcast
+	    - (X) challenge for breaking it as your first bloodcast
+	        - ill-advised, locked forever post-enlightenment
 	- "It... saved me. ..."
 
     Budding Amethyst Diadem: (bud diadem)
         a headband that grows tiny clusters from its wearer's brain activity
-        - doing certain things can make it briefly go faster (qualia)
+        - doing certain things can make it briefly go faster (see qualia)
 
     Bloodletter's Diadem: (blood diadem)
 	- a use for the Butcher in flaying!

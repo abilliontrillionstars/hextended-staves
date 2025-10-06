@@ -1,5 +1,6 @@
 {
   "name": "hextended.entry.base_diadem",
+  "flag": "debug",
   "category": "hexcasting:items",
   "icon": "hextended:charged_amethyst_diadem",
   "sortnum": 16,
@@ -12,7 +13,7 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "hextended:charged_amethyst_diadem",
+      "recipe": "minecraft:diamond_helmet",
       "text": "hextended.page.base_diadem.crafting.desc"
     },
     {
