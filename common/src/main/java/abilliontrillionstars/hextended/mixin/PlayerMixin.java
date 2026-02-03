@@ -1,5 +1,6 @@
 package abilliontrillionstars.hextended.mixin;
 
+import abilliontrillionstars.hextended.LanisHextendedStaves;
 import abilliontrillionstars.hextended.registry.LanisHextendedStavesItems;
 import at.petrak.hexcasting.common.items.HexBaubleItem;
 import net.minecraft.world.damagesource.DamageSource;
@@ -18,12 +19,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Player.class)
 public class PlayerMixin {
     @Inject(method = "actuallyHurt", at = @At("TAIL"))
-    private void fireDamageTriggers(DamageSource source, float f, CallbackInfo ci) {
+    private void onPlayerHurt(DamageSource source, float f, CallbackInfo ci) {
         Player player = (Player) (Object) this;
         if (player.level().isClientSide() || player.isInvulnerableTo(source))
             return;
         String dmgType = source.getMsgId();
         if (dmgType.equals("hexcasting.overcast"))
-            ; // TODO: move this to per-plat (ugh,) so it can change the diadem to empty
+            LanisHextendedStaves.LOGGER.info("player overcasted!");
+            // TODO: move this to per-plat (ugh,) so it can change the diadem to empty
         }
     }
