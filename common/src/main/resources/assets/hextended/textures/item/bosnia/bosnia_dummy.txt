@@ -1,2 +1,0 @@
-in order to make a directory from the web in gh you have to do this
-(for future readers: hit "create file" and put a slash in the name i.e. "bosnia/bosnia_dummy" and it'll make the dir "bosnia" as you type the "/")

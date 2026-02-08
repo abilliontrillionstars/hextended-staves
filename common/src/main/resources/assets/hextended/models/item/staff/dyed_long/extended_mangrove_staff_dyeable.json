@@ -1,7 +1,0 @@
-{
-  "parent": "hextended:item/staff/long/extended_staff",
-  "textures": {
-    "layer0": "hextended:item/dyed_long/extended_mangrove_base",
-    "layer1": "hextended:item/dyed_long/extended_mangrove_dyepart"
-  }
-}
