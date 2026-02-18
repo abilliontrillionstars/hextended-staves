@@ -1,6 +1,7 @@
 plugins {
-	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
-	id 'maven-publish'
+	id("fabric-loom") version "1.10-SNAPSHOT"
+	id("maven-publish")
+	id 'org.jetbrains.kotlin.jvm'
 }
 
 version = project.mod_version
@@ -16,48 +17,76 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
+	mavenCentral()
+	gradlePluginPortal()
+	maven { url = uri("https://jitpack.io") }
+	maven { url = uri("https://maven.blamejared.com") }
+	maven { url = uri("https://maven.fabricmc.net/") }
+	maven { url = uri("https://maven.ladysnake.org/releases") } // Cardinal Components
+	maven { url = uri("https://maven.parchmentmc.org") }
+	maven { url = uri("https://maven.shedaniel.me") }
+	maven { url = uri("https://maven.terraformersmc.com/releases") }
+
+	// add the modrinth maven!
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {includeGroup "maven.modrinth"}
+	}
+	exclusiveContent {
+		filter {includeGroup("libs")}
+		forRepository { flatDir{dir(rootProject.file("libs"))} }
+	}
 }
 
 loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"hextended" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
+		"movesthemind" {
+			sourceSet(sourceSets.main)
+			sourceSet(sourceSets.client)
 		}
 	}
 
 }
 
-fabricApi {
-	configureDataGeneration {
-		client = true
-	}
-}
+fabricApi { configureDataGeneration {client = true} }
 
 dependencies {
-	// To change the versions see the gradle.properties file
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.officialMojangMappings()
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	minecraft("com.mojang:minecraft:${project.minecraft_version}")
+	mappings(loom.officialMojangMappings())
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	
+	modApi(libs.fabric.api)
+	modImplementation(libs.fabric.loader)
+
+	modApi(libs.hexcasting.fabric) {exclude(module: "phosphor")} // If not excluded here, calls a nonexistent method and crashes the dev client
+	// Hex Casting dependencies
+	// we use modLocalRuntime to add these to the development runtime, but not at compile time or for consumers of this project
+	modLocalRuntime(libs.paucal.fabric)
+	modLocalRuntime(libs.patchouli.fabric)
+	modLocalRuntime(libs.cardinalComponents)
+	modLocalRuntime(libs.serializationHooks)
+	modLocalRuntime(libs.trinkets)
+	modLocalRuntime(libs.inline.fabric) { transitive = false }
+	modApi(libs.clothConfig.fabric) {exclude(group: "net.fabricmc.fabric-api") }
+	modImplementation(libs.modMenu)
+
+	modImplementation(libs.kotlin.fabric)
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 processResources {
-	inputs.property "version", project.version
-
-	filesMatching("fabric.mod.json") {
-		expand "version": inputs.properties.version
-	}
+	inputs.property("version", project.version)
+	filesMatching("fabric.mod.json") {expand("version": inputs.properties.version)}
 }
 
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
-}
+tasks.withType(JavaCompile).configureEach {it.options.release = 17}
 
 java {
 	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
@@ -65,15 +94,13 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
-	inputs.property "archivesName", project.base.archivesName
+	inputs.property("archivesName", project.base.archivesName)
 
 	from("LICENSE") {
-		rename { "${it}_${inputs.properties.archivesName}"}
+		rename({ "${it}_${inputs.properties.archivesName}"})
 	}
 }
 
@@ -82,7 +109,7 @@ publishing {
 	publications {
 		create("mavenJava", MavenPublication) {
 			artifactId = project.archives_base_name
-			from components.java
+			from(components.java)
 		}
 	}
 
@@ -93,4 +120,7 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+kotlin {
+	jvmToolchain(17)
 }
