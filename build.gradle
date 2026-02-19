@@ -79,6 +79,8 @@ dependencies {
 
 	modImplementation(libs.kotlin.fabric)
 	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+	// need this for config flag forcing, I think
+	modImplementation("vazkii.patchouli:Patchouli:1.20.1-84-FABRIC")
 }
 
 processResources {

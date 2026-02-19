@@ -1,4 +1,4 @@
-package abilliontrillionstars.mixin.client;
+package abilliontrillionstars.hextended.mixin.client;
 
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;

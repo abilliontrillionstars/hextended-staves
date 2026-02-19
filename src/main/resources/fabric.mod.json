@@ -13,7 +13,9 @@
 	"icon": "assets/hextended/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["abilliontrillionstars.HextendedStaves"],
+		"main": [
+          "abilliontrillionstars.hextended.HextendedStaves"
+        ],
 		"client": ["abilliontrillionstars.HextendedStavesClient"],
 		"fabric-datagen": ["abilliontrillionstars.HextendedStavesDataGenerator"]
 	},
