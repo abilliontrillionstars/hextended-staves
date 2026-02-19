@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hextended:item/orb/0_orb_sealed",
+    "layer1": "hextended:item/orb/0_orb_sealed_overlay"
+  }
+}

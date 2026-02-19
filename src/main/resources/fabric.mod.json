@@ -10,12 +10,10 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/hextended/icon.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-          "abilliontrillionstars.hextended.HextendedStaves"
-        ],
+		"main": ["abilliontrillionstars.hextended.HextendedStaves"],
 		"client": ["abilliontrillionstars.HextendedStavesClient"],
 		"fabric-datagen": ["abilliontrillionstars.HextendedStavesDataGenerator"]
 	},

@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
-import static abilliontrillionstars.hextended.HextendedStaves.id;
+import static abilliontrillionstars.hextended.HextendedStaves.resloc;
 
 public class HextendedStavesItems
 {
@@ -124,9 +124,9 @@ public class HextendedStavesItems
             ITEM_TABS.computeIfAbsent(tab, t -> new ArrayList<>()).add(new HextendedStavesItems.TabEntry.ItemEntry(item));
         return item;
     }
-    private static <T extends Item> T make(String id, T item) { return make(id(id), item, HextendedStavesCreativeTabs.STAVES); }
-    private static <T extends Item> T makeStaff(String id, T item) { return make(id("staff/" + id), item, HextendedStavesCreativeTabs.STAVES); }
-    private static <T extends Item> T makeLongStaff(String id, T item) { return make(id("staff/long/" + id), item, HextendedStavesCreativeTabs.STAVES); }
+    private static <T extends Item> T make(String id, T item) { return make(resloc(id), item, HextendedStavesCreativeTabs.STAVES); }
+    private static <T extends Item> T makeStaff(String id, T item) { return make(resloc("staff/" + id), item, HextendedStavesCreativeTabs.STAVES); }
+    private static <T extends Item> T makeLongStaff(String id, T item) { return make(resloc("staff/long/" + id), item, HextendedStavesCreativeTabs.STAVES); }
 
     private static Supplier<ItemStack> addToTab(Supplier<ItemStack> stack, CreativeModeTab tab) {
         var memoised = Suppliers.memoize(stack::get);

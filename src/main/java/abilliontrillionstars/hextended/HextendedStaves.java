@@ -13,7 +13,6 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import vazkii.patchouli.api.PatchouliAPI;
@@ -50,7 +49,8 @@ public class HextendedStaves implements ModInitializer {
 	}
 
 
-	public static ResourceLocation id(String string) {
+	public static ResourceLocation resloc(String string) {
+		HextendedStaves.LOGGER.info(string);
 		return new ResourceLocation(MOD_ID, string);
 	}
 	private <T> BiConsumer<T, ResourceLocation> bind(Registry<? super T> registry) {

@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "hextended:item/staff/drawing_orb",
+      "predicate": {
+        "hexcasting:overlay_layer": 0.0
+      }
+    },
+    {
+      "model": "hextended:item/staff/drawing_orb_0_filled",
+      "predicate": {
+        "hexcasting:overlay_layer": 1.0
+      }
+    },
+    {
+      "model": "hextended:item/staff/drawing_orb_0_sealed",
+      "predicate": {
+        "hexcasting:overlay_layer": 2.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "hextended:item/orb/0_orb_empty"
+  }
+}

@@ -10,8 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
-import static abilliontrillionstars.hextended.HextendedStaves.LOGGER;
-import static abilliontrillionstars.hextended.HextendedStaves.id;
+import static abilliontrillionstars.hextended.HextendedStaves.resloc;
 
 public class HextendedStavesRecipes
 {
@@ -32,7 +31,7 @@ public class HextendedStavesRecipes
 
 
     private static <T extends Recipe<?>> RecipeSerializer<T> registerSerializer(String name, RecipeSerializer<T> rs) {
-        var old = SERIALIZERS.put(id(name), rs);
+        var old = SERIALIZERS.put(resloc(name), rs);
         if (old != null) throw new IllegalArgumentException("Typo? Duplicate id " + name);
         return rs;
     }
