@@ -41,7 +41,9 @@ public class HextendedStaves implements ModInitializer {
 				PatchouliAPI.get().setConfigFlag(HexInterop.PATCHOULI_ANY_INTEROP_FLAG, true);
 
 		HextendedStavesItems.init();
-
+		ItemGroupEvents.MODIFY_ENTRIES_ALL.register((tab, entries) -> {
+			HextendedStavesItems.registerItemCreativeTab(entries, tab);
+		});
 		HextendedStavesItems.registerItems(bind(BuiltInRegistries.ITEM));
 		HextendedStavesCreativeTabs.registerCreativeTabs(bind(BuiltInRegistries.CREATIVE_MODE_TAB));
 		HextendedStavesRecipes.registerSerializers(bind(BuiltInRegistries.RECIPE_SERIALIZER));

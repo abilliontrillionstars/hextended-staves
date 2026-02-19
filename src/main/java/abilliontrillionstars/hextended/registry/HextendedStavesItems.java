@@ -16,6 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
@@ -29,7 +30,8 @@ public class HextendedStavesItems
         }
     }
     public static void registerItemCreativeTab(CreativeModeTab.Output r, CreativeModeTab tab) {
-        for (var item : ITEM_TABS.getOrDefault(tab, null)) {
+        // idk why this of() method isn't in IDEA but it just lets me build anyway??
+        for (var item : ITEM_TABS.getOrDefault(tab, List.of())) {
             item.register(r);
         }
     }
