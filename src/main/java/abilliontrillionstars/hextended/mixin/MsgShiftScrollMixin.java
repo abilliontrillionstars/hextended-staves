@@ -20,7 +20,7 @@ public abstract class MsgShiftScrollMixin
 {
     @Shadow protected abstract void spellbook(ServerPlayer sender, InteractionHand hand, ItemStack stack, double delta);
 
-    @Inject(method = "handleForHand", at = @At(value = "HEAD"), remap = false)
+    @Inject(method = "handleForHand", at = @At(value = "HEAD"))
     private void handleForHand(ServerPlayer sender, InteractionHand hand, double delta, CallbackInfo ci)
     {
         if (delta != 0)
@@ -38,7 +38,7 @@ public abstract class MsgShiftScrollMixin
     }
 
     @WrapOperation(method = "spellbook",
-            at = @At(value = "INVOKE", target = "Lat/petrak/hexcasting/common/items/storage/ItemSpellbook;highestPage(Lnet/minecraft/world/item/ItemStack;)I", remap = false))
+            at = @At(value = "INVOKE", target = "Lat/petrak/hexcasting/common/items/storage/ItemSpellbook;highestPage(Lnet/minecraft/world/item/ItemStack;)I"))
     private int boundHighestPage(ItemStack stack, Operation<Integer> original)
     {
         if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK_TEST)
@@ -48,7 +48,7 @@ public abstract class MsgShiftScrollMixin
     }
 
     @WrapOperation(method = "spellbook",
-            at = @At(value = "INVOKE", target = "Lat/petrak/hexcasting/common/items/storage/ItemSpellbook;rotatePageIdx(Lnet/minecraft/world/item/ItemStack;Z)I", remap = false))
+            at = @At(value = "INVOKE", target = "Lat/petrak/hexcasting/common/items/storage/ItemSpellbook;rotatePageIdx(Lnet/minecraft/world/item/ItemStack;Z)I"))
     private int boundRotateIdx(ItemStack stack, boolean increase, Operation<Integer> original)
     {
         if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK_TEST)
