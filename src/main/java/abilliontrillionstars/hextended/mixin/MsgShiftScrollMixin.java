@@ -42,7 +42,6 @@ public abstract class MsgShiftScrollMixin
     private int boundHighestPage(ItemStack stack, Operation<Integer> original)
     {
         if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK_TEST)
-            // TODO: switch to instance method
             return ItemBoundSpellbook.highestPage(stack);
         return original.call(stack);
     }
@@ -52,7 +51,6 @@ public abstract class MsgShiftScrollMixin
     private int boundRotateIdx(ItemStack stack, boolean increase, Operation<Integer> original)
     {
         if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK_TEST)
-            // TODO: switch to instance method
             return ItemBoundSpellbook.rotatePageIdx(stack, increase);
         return original.call(stack, increase);
     }

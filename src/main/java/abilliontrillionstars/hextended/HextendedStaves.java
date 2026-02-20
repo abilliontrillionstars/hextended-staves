@@ -50,7 +50,6 @@ public class HextendedStaves implements ModInitializer {
 
 
 	public static ResourceLocation resloc(String string) {
-		HextendedStaves.LOGGER.info(string);
 		return new ResourceLocation(MOD_ID, string);
 	}
 	private <T> BiConsumer<T, ResourceLocation> bind(Registry<? super T> registry) {
