@@ -1,8 +1,8 @@
 hello dear source-diver! welcome to the Hextended Staves repository. stuff is different here after the rewrite, so enjoy this new and different readme. 
 #
-Hextended Staves is an addon mod for Hex Casting that primarily adds new tools for casters to play with. It was my gateway to modding, thanks to the templates and guides created by Object-object and others in the Hex Casting. As such, it's been a learning experience through and through, so do pardon my dust! Nowadays, with a little more experience under my belt, I've rewritten it from the ground up to be a little easier to work with.
+Hextended Staves is an addon mod for Hex Casting that primarily adds new tools for casters to play with. it was my gateway to modding, thanks to the templates and guides created by Object-object and others in the Hex Casting community. as such, it's been a learning experience through and through, so do pardon my dust! nowadays, with a little more experience under my belt, I've rewritten it from the ground up to be a little easier to work with.
 
-Features include the staves themselves, both aesthetic and mechanical. Second to these are some other gear that try to add more variety to the average caster's loadout. The goal is to make the stuff each caster carries with them a little more personalized and unique, instead of providing mechanical advantages or changing balance.
+features include the staves themselves, both aesthetic and mechanical. second to these are some other gear that try to add more variety to the average caster's loadout. the goal is to make the stuff each caster carries with them a little more personalized and unique, instead of providing mechanical advantages or changing balance.
 #
 before the rewrite, I had this tentative text file for ideas about what to implement, stowed away in the common folder. if you're looking for that plans doc, here it is... 
 ```
