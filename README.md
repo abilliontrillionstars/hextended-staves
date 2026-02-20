@@ -1,0 +1,146 @@
+hello dear source-diver! welcome to the Hextended Staves repository. stuff is different here after the rewrite, so enjoy this new and different readme. 
+#
+Hextended Staves is an addon mod for Hex Casting that primarily adds new tools for casters to play with. It was my gateway to modding, thanks to the templates and guides created by Object-object and others in the Hex Casting. As such, it's been a learning experience through and through, so do pardon my dust! Nowadays, with a little more experience under my belt, I've rewritten it from the ground up to be a little easier to work with.
+
+Features include the staves themselves, both aesthetic and mechanical. Second to these are some other gear that try to add more variety to the average caster's loadout. The goal is to make the stuff each caster carries with them a little more personalized and unique, instead of providing mechanical advantages or changing balance.
+#
+before the rewrite, I had this tentative text file for ideas about what to implement, stowed away in the common folder. if you're looking for that plans doc, here it is... 
+```
+-------- Staves!! the mainstay. --------
+    Extended(?) - DONE
+        Normal staff but lorj, offers slightly more grid space (configurable)
+        maybe I should change the lang for hex's staves to "wands" instead of calling it extended
+	Notes:
+	""like the long staves would come with 1 level of a grid expanding enchant for free, but
+	you could still go out and apply the enchant manually if you wanted to use one of the
+	small staves and get the same functionality"" -Chloe
+
+    Original Staves - DONE
+	- spoon staff but the extended version is comically large
+		"this staff's name is 'Spoon Theory' look him up on google"
+	- also moss staff. need. flowering azalea variants. maybe an glow berrie?
+	- prismarine staves for matching to aquatic players, dark variant
+	- copper staves?
+	- nether-related staves (not quartz, sam covered that), netherrack?
+	- end staves > purpur, obsidian?
+
+    Impermanent Staff / Improviser's Staff - DONE
+        staff made from amethyst, for people who didn't bring wood into the geode
+        - has a media buffer (like a phial, implements MediaHolderItem)
+        - breaks like a cypher (cannot be recharged)
+
+    Drawing Orb - DONE
+        staff with less grid space
+        - you can set it to scry/ponder a position
+        - extends ambit to a single entity(?) or block
+        - ambit is only granted when the orb is held (in either hand)
+
+    Crossmod Staves
+        mostly cosmetic, for aesthetic matching
+        - Botania
+            - manasteel, terrasteel, elementium,
+            - livingrock, livingwood and dreamwood
+	- Gloop's staves
+	- Spectrum
+	    - azurite (suggested by pantheon)
+        - Bewitchment (suggested by The Old Serpent)
+        - Haema (suggested by The Old Serpent)
+        - Spell Engine Suite (suggested by The Old Serpent)
+
+        # Forge mods:
+        - Ars Nouveau? (no, added by Ars Scalaes)
+    	- Ice and Fire
+            - dragonscale,
+        - Hexerei (suggested by gchpaco)
+        - The Graveyard (suggested by The Old Serpent)
+
+    Combat Staves!
+        staves with small attack damage bonuses, made from specific materials
+        iron combat staff, caster's glamour to change skins
+        - "caster's caestus", amethyst mace, tonfa-like, baton,
+        - dancer sword w/ shards as blades, amethyst mjolnir
+
+    Grand/Great(?) Staves
+	casts a hex for each pattern drawn?
+		--or--
+        implements ItemPackagedHex (is a casting device) BUT:
+        - does not have a media buffer of its own
+        - has a chargeup time to cast its bound hex(?), as well as the usual cooldown
+        - needs a music disc (or similar expensive item) to craft along with
+        - cannot be cast from while in the grid
+        takes the form of being etched into the wood, a trusty hex the wielder knows by heart
+
+-------- Bookbinding! Customized Spellbooks --------
+    Custom Spellbooks that have varying page counts, but with other effects
+    - spellbook with lessened pages, but built-in hexbook (rmb opens patchouli book)
+    - similar spellbook, that opens a book-and-quill on rmb
+    - spellbooks can be made with a specific number of pages
+
+    - crafted from a base item (empty cover)
+    - shapeless recipe like a firework to add features
+        - focus for 8 pages,
+        - & other items for <8
+            - (4,2,1?) for granularity
+        - hexbook for hexbook on rmb
+        - book and quill for gui on rmb
+            - maybe make this its own page
+              so it has compat with scribes etc
+        - artifact maybe? but idk if balanced
+	- map for carbon-copy things
+	    - rclick to write to shelves
+	    - copy to the offand item
+    - use nbt data to store rclick action & page count
+    
+
+---------Other Hex gear and trinkets --------
+    Caster's Head Mirror:
+	head trinket, based on the old doctor's headband
+	- maybe reflects raycasts?
+	    - return null if they hit the wearer
+	    - only when originating from a point in the caster's vision?
+
+    Charged Amethyst Diadem:
+	- crafted with an empty diadem and charged
+	- amethyst on it shatters to prevent hex-related damage 
+	    - one-time, turns back into empty diadem after (recraft)
+	    - includes bloodcasting and damaging mishaps (like div0)
+	- can be made pre-enlighten but is decorative at first, like slates
+	- advancement for having it break for the first time
+	    - (X) challenge for breaking it as your first bloodcast
+	        - ill-advised, locked forever post-enlightenment
+	- "It... saved me. ..."
+
+    Budding Amethyst Diadem: (bud diadem)
+        a headband that grows tiny clusters from its wearer's brain activity
+        - doing certain things can make it briefly go faster (see qualia)
+
+    Bloodletter's Diadem: (blood diadem)
+	- a use for the Butcher in flaying!
+	- keeps the wearer below a set amount of health, and refunds it as media
+	    - grants more media per hp the lower the limit is (player chooses limit)
+	        - range is 1/hp to 2/hp? tentative
+	- will have like, spikes that lead into the skull (metal af)
+	- "it aches, OH HOW IT **ACHES**, but it fills my pockets..."
+	- might charge to an internal reservoir, or to held items like rumination
+	    - choose which depending on what was flaid (base vs phial one?)
+
+Hex Gear: Rings!
+    - one to make a given spell cheaper
+	- write a spell pattern to it, reduces the cost
+	- constant or percentage? start with half & tweak/config
+	- call it the "Ring of Signature Spells"? (D&D reference)
+	
+    - Silk Touch/Fortune rings (modifies break block)
+	- made obselete by hexical patterns, though may be useful for not incurring cost
+    - reach ring, that adds some proportion of your reach distance to your ambit
+        - could be a hand slot item
+
+
+QUALIA (kwah-lee-uh):
+    a multiplicative bonus stat with beneficial effects, like a Hexing Streak! tm
+    Qualia is increased by:
+        - staffcasting
+        - bloodcasting(?)
+        - activating spell circles
+```
+wow you really read that whole thing? I'm honored. anyway, this is by no means what is set in stone, but I write things here when I want to keep from forgetting them - so make of that what you will. lol. 
