@@ -2,7 +2,7 @@
   "name": "hextended.entry.extended_fanciful_staves",
   "category": "hexcasting:greatwork",
   "icon": "hextended:staff/long/mindsplice",
-  "sortnum": 7,
+  "sortnum": 6,
   "advancement": "hexcasting:enlightenment",
   "entry_color": "54398a",
   "pages": [
@@ -12,8 +12,8 @@
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "hextended:long/extended_quenched",
-      "recipe2": "hextended:long/extended_mindsplice"
+      "recipe": "hextended:staff/long/extended_quenched",
+      "recipe2": "hextended:staff/long/extended_mindsplice"
     }
   ]
 }

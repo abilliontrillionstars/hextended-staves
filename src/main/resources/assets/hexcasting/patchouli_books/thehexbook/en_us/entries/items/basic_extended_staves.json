@@ -2,7 +2,7 @@
   "name": "hextended.entry.basic_extended_staves",
   "category": "hexcasting:items",
   "icon": "hextended:staff/long/spruce",
-  "sortnum": 7,
+  "sortnum": 1,
   "advancement": "hexcasting:root",
   "read_by_default": false,
   "pages": [
@@ -16,18 +16,18 @@
       "text": "hextended.page.basic_extended_staves.crafting.desc.0",
       "recipes": [
         "hextended:long/extended_oak",
-        "hextended:long/extended_spruce",
-        "hextended:long/extended_birch",
-        "hextended:long/extended_jungle",
-        "hextended:long/extended_acacia",
-        "hextended:long/extended_dark_oak",
-        "hextended:long/extended_crimson",
-        "hextended:long/extended_warped",
-        "hextended:long/extended_mangrove",
-        "hextended:long/extended_cherry",
-        "hextended:long/extended_bamboo",
-        "hextended:long/extended_cherry",
-        "hextended:long/extended_edified"
+        "hextended:staff/long/extended_spruce",
+        "hextended:staff/long/extended_birch",
+        "hextended:staff/long/extended_jungle",
+        "hextended:staff/long/extended_acacia",
+        "hextended:staff/long/extended_dark_oak",
+        "hextended:staff/long/extended_crimson",
+        "hextended:staff/long/extended_warped",
+        "hextended:staff/long/extended_mangrove",
+        "hextended:staff/long/extended_cherry",
+        "hextended:staff/long/extended_bamboo",
+        "hextended:staff/long/extended_cherry",
+        "hextended:staff/long/extended_edified"
       ]
     },
     {
@@ -35,10 +35,10 @@
       "heading": "hextended.page.basic_extended_staves.crafting.header.1",
       "text": "hextended.page.basic_extended_staves.crafting.desc.1",
       "recipes": [
-        "hextended:moss_staff",
-        "hextended:flowered_moss_staff",
-        "hextended:long/extended_moss_staff",
-        "hextended:long/extended_flowered_moss_staff"
+        "hextended:staff/moss_staff",
+        "hextended:staff/flowered_moss_staff",
+        "hextended:staff/long/extended_moss_staff",
+        "hextended:staff/long/extended_flowered_moss_staff"
       ]
     },
     {
@@ -46,10 +46,10 @@
       "heading": "hextended.page.basic_extended_staves.crafting.header.2",
       "text": "hextended.page.basic_extended_staves.crafting.desc.2",
       "recipes": [
-        "hextended:prismarine_staff",
-        "hextended:dark_prismarine_staff",
-        "hextended:long/extended_prismarine_staff",
-        "hextended:long/extended_dark_prismarine_staff"
+        "hextended:staff/prismarine_staff",
+        "hextended:staff/dark_prismarine_staff",
+        "hextended:staff/long/extended_prismarine_staff",
+        "hextended:staff/long/extended_dark_prismarine_staff"
       ]
     },
     {
@@ -57,8 +57,8 @@
       "heading": "hextended.page.basic_extended_staves.crafting.header.3",
       "text": "hextended.page.basic_extended_staves.crafting.desc.3",
       "recipes": [
-        "hextended:obsidian_staff",
-        "hextended:long/extended_obsidian_staff"
+        "hextended:staff/obsidian_staff",
+        "hextended:staff/long/extended_obsidian_staff"
       ]
     },
     {
@@ -66,8 +66,8 @@
       "heading": "hextended.page.basic_extended_staves.crafting.header.4",
       "text": "hextended.page.basic_extended_staves.crafting.desc.4",
       "recipes": [
-        "hextended:purpur_staff",
-        "hextended:long/extended_purpur_staff"
+        "hextended:staff/purpur_staff",
+        "hextended:staff/long/extended_purpur_staff"
       ]
     }
   ]
