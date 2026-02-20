@@ -1,160 +1,128 @@
 plugins {
-    id "architectury-plugin" version "3.4.+"
-
-    id "dev.architectury.loom" version "1.6.+" apply false
-
-    id "org.jetbrains.kotlin.jvm" version "1.8.0" apply false
-
-    // for template.env api keys
-    id "co.uzzu.dotenv.gradle" version "2.0.0"
+	id("fabric-loom") version "1.10-SNAPSHOT"
+	id("maven-publish")
+	id 'org.jetbrains.kotlin.jvm'
 }
 
-architectury {
-    minecraft = project.minecraftVersion
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
 }
 
-subprojects {
-    apply plugin: "org.jetbrains.kotlin.jvm"
-    apply plugin: "dev.architectury.loom"
+repositories {
+	// Add repositories to retrieve artifacts from in here.
+	// You should only use this when depending on other mods because
+	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
+	// for more information about repositories.
 
-    archivesBaseName = "${project.modID}-${project.minecraftVersion}"
+	mavenCentral()
+	gradlePluginPortal()
+	maven { url = uri("https://jitpack.io") }
+	maven { url = uri("https://maven.blamejared.com") }
+	maven { url = uri("https://maven.fabricmc.net/") }
+	maven { url = uri("https://maven.ladysnake.org/releases") } // Cardinal Components
+	maven { url = uri("https://maven.parchmentmc.org") }
+	maven { url = uri("https://maven.shedaniel.me") }
+	maven { url = uri("https://maven.terraformersmc.com/releases") }
 
-    // Uncomment to silence the mojmap license warning
-    // loom {
-    //     silentMojangMappingsLicense()
-    // }
-
-    dependencies {
-        minecraft "com.mojang:minecraft:${project.minecraftVersion}"
-
-        mappings loom.officialMojangMappings()
-        // Or feel free to use any other mappings you prefer
-
-        annotationProcessor "org.ow2.asm:asm:${project.asmVersion}"
-        annotationProcessor "org.ow2.asm:asm-analysis:${project.asmVersion}"
-        annotationProcessor "org.ow2.asm:asm-commons:${project.asmVersion}"
-        annotationProcessor "org.ow2.asm:asm-tree:${project.asmVersion}"
-        annotationProcessor "org.ow2.asm:asm-util:${project.asmVersion}"
-        // EE OO EE OO
-        include modImplementation(files("${rootProject.rootDir}/lib/serialization-hooks-0.4.99999.jar"))
-    }
-
-    sourceSets.main.kotlin.srcDirs += 'src/main/java'
-    sourceSets.main.resources.srcDirs += "src/generated/resources"
+	// add the modrinth maven!
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {includeGroup "maven.modrinth"}
+	}
+	exclusiveContent {
+		filter {includeGroup("libs")}
+		forRepository { flatDir{dir(rootProject.file("libs"))} }
+	}
 }
 
-allprojects {
-    apply plugin: "java"
-    apply plugin: "architectury-plugin"
-    apply plugin: "maven-publish"
+loom {
+	splitEnvironmentSourceSets()
 
-    version = project.modVersion
-    group = project.mavenGroup
+	mods {
+		"movesthemind" {
+			sourceSet(sourceSets.main)
+			sourceSet(sourceSets.client)
+		}
+	}
 
-    repositories {
-        maven { url 'https://jitpack.io' }
-        maven {
-            url "https://squiddev.cc/maven/"
-        }
-        maven { url "https://maven.terraformersmc.com/" }
-        maven { url "https://maven.terraformersmc.com/releases" }
-        maven { url "https://maven.shedaniel.me/" }
-
-        // Hex Casting Dependencies
-        maven { url "https://maven.blamejared.com/" }
-        maven {
-            name "entity reach"
-            url "https://maven.jamieswhiteshirt.com/libs-release/"
-        }
-        maven { url "https://mvn.devos.one/snapshots/" }
-        maven {
-            name = 'Ladysnake Mods'
-            url = 'https://maven.ladysnake.org/releases'
-        }
-        maven {
-            name = 'Kotlin for Forge'
-            url = 'https://thedarkcolour.github.io/KotlinForForge/'
-        }
-        maven {
-            url = "https://maven.theillusivec4.top/"
-        }
-        maven {
-            name = 'GeckoLib'
-            url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
-        }
-        exclusiveContent {
-            forRepository {
-                maven {
-                    name = "Modrinth"
-                    url = "https://api.modrinth.com/maven"
-                }
-            }
-            filter {
-                includeGroup "maven.modrinth"
-            }
-        }
-
-        // Add any other repositories with your cross-platform dependency mods
-    }
-
-    tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
-        options.release = 17
-    }
-
-    java {
-        java.toolchain.languageVersion = JavaLanguageVersion.of(17)
-        java.withSourcesJar()
-        java.withJavadocJar()
-    }
-
-    sourcesJar {
-        duplicatesStrategy 'exclude'
-    }
-
-    tasks.withType(JavaCompile).configureEach {
-        it.options.encoding = 'UTF-8'
-        it.options.release = 17
-    }
-
-    // Disables Gradle's custom module metadata from being published to maven. The
-    // metadata includes mapped dependencies which are not reasonably consumable by
-    // other mod developers.
-    tasks.withType(GenerateModuleMetadata) {
-        enabled = false
-    }
-
-    processResources {
-        exclude '.cache'
-    }
-
-    processTestResources {
-        exclude '.cache'
-    }
 }
 
-ext.getArtifactId = { platform -> return "$modID-$platform-$minecraftVersion" }
+fabricApi { configureDataGeneration {client = true} }
 
-ext.getLatestChangelog = {
-    Collection<String> lines = file("$rootDir/CHANGELOG.md").readLines()
-    String changelog = ""
-    Boolean atSegment = false
-    for (String line : lines) {
-        if (line.startsWith("## ")) {
-            if (atSegment) break // hit next segment
-            atSegment = true
-        }
-        if (atSegment) changelog += "$line\n"
-    }
-    return changelog.trim()
+dependencies {
+	minecraft("com.mojang:minecraft:${project.minecraft_version}")
+	mappings(loom.officialMojangMappings())
+
+	modApi(libs.fabric.api)
+	modImplementation(libs.fabric.loader)
+
+	modApi(libs.hexcasting.fabric) {exclude(module: "phosphor")} // If not excluded here, calls a nonexistent method and crashes the dev client
+	// Hex Casting dependencies
+	// we use modLocalRuntime to add these to the development runtime, but not at compile time or for consumers of this project
+	modLocalRuntime(libs.paucal.fabric)
+	modLocalRuntime(libs.patchouli.fabric)
+	modLocalRuntime(libs.cardinalComponents)
+	modLocalRuntime(libs.serializationHooks)
+	modLocalRuntime(libs.trinkets)
+	modLocalRuntime(libs.inline.fabric) { transitive = false }
+	modApi(libs.clothConfig.fabric) {exclude(group: "net.fabricmc.fabric-api") }
+	modImplementation(libs.modMenu)
+
+	modImplementation(libs.kotlin.fabric)
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+	// need this for config flag forcing, I think
+	modImplementation("vazkii.patchouli:Patchouli:1.20.1-84-FABRIC")
 }
 
-ext.bookPath = "data/hextended/patchouli_books/hextendedbook"
+processResources {
+	inputs.property("version", project.version)
+	filesMatching("fabric.mod.json") {expand("version": inputs.properties.version)}
+}
 
-tasks.register("viewLatestChangelog") {
-    group "documentation"
-    description "Print the topmost single version section from the full CHANGELOG.md file."
-    doLast {
-        println(getLatestChangelog())
-    }
+tasks.withType(JavaCompile).configureEach {it.options.release = 17}
+
+java {
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
+	// If you remove this line, sources will not be generated.
+	withSourcesJar()
+
+}
+
+jar {
+	inputs.property("archivesName", project.base.archivesName)
+
+	from("LICENSE") {
+		rename({ "${it}_${inputs.properties.archivesName}"})
+	}
+}
+
+// configure the maven publication
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from(components.java)
+		}
+	}
+
+	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+	repositories {
+		// Add repositories to publish to here.
+		// Notice: This block does NOT have the same function as the block in the top level.
+		// The repositories here will be used for publishing your artifact, not for
+		// retrieving dependencies.
+	}
+}
+kotlin {
+	jvmToolchain(17)
 }

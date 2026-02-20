@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "hextended",
+	"version": "1.0.0",
+	"name": "Hextended Staves",
+	"description": "Bolster your magic stick collection.",
+	"authors": ["just_laniakea"],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["abilliontrillionstars.hextended.HextendedStaves"],
+		"client": ["abilliontrillionstars.HextendedStavesClient"],
+		"fabric-datagen": ["abilliontrillionstars.HextendedStavesDataGenerator"]
+	},
+	"mixins": [
+		"hextended.mixins.json",
+		{
+			"config": "hextended.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
