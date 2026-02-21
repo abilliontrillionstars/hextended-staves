@@ -15,7 +15,7 @@
       "heading": "hextended.page.basic_extended_staves.crafting.header.0",
       "text": "hextended.page.basic_extended_staves.crafting.desc.0",
       "recipes": [
-        "hextended:long/extended_oak",
+        "hextended:staff/long/extended_oak",
         "hextended:staff/long/extended_spruce",
         "hextended:staff/long/extended_birch",
         "hextended:staff/long/extended_jungle",
@@ -26,7 +26,6 @@
         "hextended:staff/long/extended_mangrove",
         "hextended:staff/long/extended_cherry",
         "hextended:staff/long/extended_bamboo",
-        "hextended:staff/long/extended_cherry",
         "hextended:staff/long/extended_edified"
       ]
     },

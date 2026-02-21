@@ -18,6 +18,7 @@ import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.minecraft.world.level.Level;
+import vazkii.patchouli.common.item.PatchouliItems;
 
 import java.util.List;
 
@@ -28,8 +29,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
     public BoundSpellbookRecipe(ResourceLocation id, CraftingBookCategory category) { super(id, category); }
 
     public static final List<Item> BOOK_PARTS = List.of(HexItems.FOCUS, HexItems.SCROLL_LARGE, HexItems.SCROLL_MEDIUM, HexItems.SCROLL_SMOL,
-                                                        Items.BOOK);
-
+                                                        PatchouliItems.BOOK);
     @Override
     public boolean canCraftInDimensions(int width, int height) {
         return width * height >= 9;
@@ -39,14 +39,20 @@ public class BoundSpellbookRecipe extends CustomRecipe {
     public boolean matches(CraftingContainer container, Level level) {
         boolean foundCover = false;
         int foundParts = 0;
-        // mutually exclusive and/or non-stackable parts
-
-        for (int i = 0; i < container.getContainerSize(); i++) {
+        // required parts
+        for (int i = 0; i < container.getContainerSize(); i++)
+        {
             var stack = container.getItem(i);
-            if (stack.is(HextendedStavesItems.SPELLBOOK_COVER)) {
+            if (stack.is(HextendedStavesItems.SPELLBOOK_COVER))
+            {
+                // no multiple covers
                 if (foundCover) return false;
                 foundCover = true;
-            } else if(BOOK_PARTS.contains(stack.getItem())){
+            }
+            // TODO: make this enforce a max of one rclick action part
+            else if(BOOK_PARTS.contains(stack.getItem()))
+            {
+                // for wierd large crafting tables
                 if (foundParts > 8) return false;
                 foundParts++;
             }
@@ -65,6 +71,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
         {
             var stack = inv.getItem(i);
 
+            // can't do switch case with items I guess? oh well
             if (stack.is(HexItems.FOCUS))
                 pageCount += 8;
             else if(stack.is(HexItems.SCROLL_LARGE))
@@ -73,7 +80,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
                 pageCount += 2;
             else if(stack.is(HexItems.SCROLL_SMOL))
                 pageCount += 1;
-            else if(stack.is(Items.BOOK))
+            else if(stack.is(PatchouliItems.BOOK))
                 NBTHelper.putString(result, ItemBoundSpellbook.TAG_BOOK_USE_ACTION, "hexbook");
         }
         NBTHelper.putInt(result, ItemBoundSpellbook.TAG_MAX_PAGES, pageCount);

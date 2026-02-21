@@ -41,31 +41,33 @@ public class ItemBoundSpellbook extends ItemSpellbook
     public ItemBoundSpellbook(Properties properties) {super(properties);}
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced) {
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced)
+    {
         super.appendHoverText(stack, level, tooltip, isAdvanced);
         // add some extra info here for extra attributes
 //        tooltip.add(Component.translatable("hexcasting.tooltip.spellbook.page.sealed",
 //                    Component.literal(String.valueOf(pageIdx)).withStyle(ChatFormatting.WHITE),
 //                    Component.literal(String.valueOf(highest)).withStyle(ChatFormatting.WHITE),
+        //tooltip.add(Component.literal("test!!"));
+        //tooltip.add(Component.literal(NBTHelper.getString(stack, ItemBoundSpellbook.TAG_BOOK_USE_ACTION)));
     }
 
-    public static int highestPage(ItemStack stack) {
+    public static int highestPage(ItemStack stack)
+    {
         CompoundTag tag = NBTHelper.getCompound(stack, TAG_PAGES);
-        if (tag == null) {
+        if(tag == null)
             return 0;
-        }
-        return tag.getAllKeys().stream().flatMap(s -> {
-            try {
-                return Stream.of(Integer.parseInt(s));
-            } catch (NumberFormatException e) {
-                return Stream.empty();
-            }
+        return tag.getAllKeys().stream().flatMap(s ->
+        {
+            try {return Stream.of(Integer.parseInt(s));}
+            catch(NumberFormatException e) {return Stream.empty();}
         }).max(Integer::compare).orElse(0);
     }
 
-    public static int rotatePageIdx(ItemStack stack, boolean increase) {
+    public static int rotatePageIdx(ItemStack stack, boolean increase)
+    {
         int idx = getPage(stack, 0);
-        if (idx != 0)
+        if(idx != 0)
         {
             idx += increase ? 1 : -1;
             idx = Math.max(1, idx);
@@ -84,7 +86,7 @@ public class ItemBoundSpellbook extends ItemSpellbook
         int shiftedIdx = Math.max(1, idx);
         String nameKey = String.valueOf(shiftedIdx);
         String name = NBTHelper.getString(names, nameKey);
-        if (name != null)
+        if(name != null)
             stack.setHoverName(Component.Serializer.fromJson(name));
         else
             stack.resetHoverName();
@@ -96,12 +98,14 @@ public class ItemBoundSpellbook extends ItemSpellbook
     {
         ItemStack stack = player.getItemInHand(hand);
         String useAction = NBTHelper.getString(stack, TAG_BOOK_USE_ACTION);
-
         if(useAction == null)
             return super.use(world, player, hand);
 
+        // TODO: code hotswapping would be DIVINE for troubleshooting this
+        // https://wiki.fabricmc.net/tutorial:hotswapping
         if(useAction.equals("hexbook"))
             PatchouliAPI.get().openBookGUI(new ResourceLocation("hexcasting", "thehexbook"));
+
         return super.use(world, player, hand);
     }
 }
