@@ -5,6 +5,7 @@ import abilliontrillionstars.hextended.items.bookbinding.ItemSpellbookCover;
 import abilliontrillionstars.hextended.registry.HextendedStavesItems;
 import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.common.lib.HexItems;
+import net.minecraft.util.datafix.fixes.ItemWrittenBookPagesStrictJsonFix;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
@@ -29,7 +30,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
     public BoundSpellbookRecipe(ResourceLocation id, CraftingBookCategory category) { super(id, category); }
 
     public static final List<Item> BOOK_PARTS = List.of(HexItems.FOCUS, HexItems.SCROLL_LARGE, HexItems.SCROLL_MEDIUM, HexItems.SCROLL_SMOL,
-                                                        PatchouliItems.BOOK);
+                                                        PatchouliItems.BOOK, Items.WRITABLE_BOOK);
     @Override
     public boolean canCraftInDimensions(int width, int height) {
         return width * height >= 9;
@@ -82,6 +83,8 @@ public class BoundSpellbookRecipe extends CustomRecipe {
                 pageCount += 1;
             else if(stack.is(PatchouliItems.BOOK))
                 NBTHelper.putString(result, ItemBoundSpellbook.TAG_BOOK_USE_ACTION, "hexbook");
+            else if(stack.is(Items.WRITABLE_BOOK))
+                NBTHelper.putString(result, ItemBoundSpellbook.TAG_BOOK_USE_ACTION, "book_and_quill");
         }
         NBTHelper.putInt(result, ItemBoundSpellbook.TAG_MAX_PAGES, pageCount);
         return result;

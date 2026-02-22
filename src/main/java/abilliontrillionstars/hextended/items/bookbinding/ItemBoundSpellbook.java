@@ -14,7 +14,9 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.WritableBookItem;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import vazkii.patchouli.api.PatchouliAPI;
@@ -106,6 +108,14 @@ public class ItemBoundSpellbook extends ItemSpellbook
         if(useAction.equals("hexbook"))
             PatchouliAPI.get().openBookGUI(new ResourceLocation("hexcasting", "thehexbook"));
 
+        if(useAction.equals("book_and_quill"))
+        {
+            // fake book and quill to open the gooey
+            // TODO: make a custom gooey and open it here, to store the text to
+            ItemStack quillBook = new ItemStack(Items.WRITABLE_BOOK);
+            player.openItemGui(quillBook, hand);
+            return quillBook.use(world, player, hand);
+        }
         return super.use(world, player, hand);
     }
 }

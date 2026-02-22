@@ -1,4 +1,4 @@
-package abilliontrillionstars;
+package abilliontrillionstars.hextended;
 
 import abilliontrillionstars.hextended.items.ItemDrawingOrb;
 import abilliontrillionstars.hextended.registry.HextendedStavesItems;

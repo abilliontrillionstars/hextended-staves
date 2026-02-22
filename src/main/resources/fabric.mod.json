@@ -14,8 +14,12 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": ["abilliontrillionstars.hextended.HextendedStaves"],
-		"client": ["abilliontrillionstars.HextendedStavesClient"],
-		"fabric-datagen": ["abilliontrillionstars.HextendedStavesDataGenerator"]
+		"client": [
+			"abilliontrillionstars.hextended.HextendedStavesClient"
+		],
+		"fabric-datagen": [
+			"abilliontrillionstars.hextended.HextendedStavesDataGenerator"
+		]
 	},
 	"mixins": [
 		"hextended.mixins.json",
