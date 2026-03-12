@@ -100,16 +100,16 @@ before the rewrite, I had this tentative text file for ideas about what to imple
 		- i.e. when norm(raycast) dot lookdir > 0
 
 	DIADEMS - line of head curios
-	    Charged Amethyst Diadem:
-		- crafted with an empty diadem and charged
-		- amethyst on it shatters to prevent hex-related damage 
-		    - one-time, turns back into empty diadem after (recraft)
-		    - includes bloodcasting and damaging mishaps (like div0)
-		- can be made pre-enlighten but is decorative at first, like slates
-		- advancement for having it break for the first time
-		    - (X) challenge for breaking it as your first bloodcast
-		        - ill-advised, locked forever post-enlightenment
-		- "It... saved me. ..."
+		Charged Amethyst Diadem:
+			- crafted with an empty diadem and charged
+			- amethyst on it shatters to prevent hex-related damage 
+				- one-time, turns back into empty diadem after (recraft)
+				- includes bloodcasting and damaging mishaps (like div0)
+			- can be made pre-enlighten but is decorative at first, like slates
+			- advancement for having it break for the first time
+				- (X) challenge for breaking it as your first bloodcast
+					- ill-advised, locked forever post-enlightenment
+				- "It... saved me. ..."
 	
 	    Budding Amethyst Diadem: (bud diadem)
 	        a headband that grows tiny clusters from its wearer's brain activity
@@ -118,9 +118,41 @@ before the rewrite, I had this tentative text file for ideas about what to imple
 	    Bloodletter's Diadem: (blood diadem)
 			- a use for the Butcher in flaying!
 			- keeps the wearer below a set amount of health, and refunds it as media
-			    - grants more media per hp the lower the limit is (player chooses limit)
-			        - range is 1/hp to 2/hp? tentative
-			- will have like, spikes that lead into the skull (metal af)
+			    - conversion rate is better the lower the limit is (player chooses limit)
+					- is implied to only be a half heart below max
+						- add puzzle prog where they set it lower
+					- range is 1/hp to 2/hp? tentative
+					- also gets a bonus when a lot of hp is taken at once
+			- "if my Enlightenment came from the grandest siphon my mind could take in a
+				single instant, it follows that the inverse should be the least
+				disruptive to passive thought. I shall design the piece this way,
+				the sensation of breaking away thinned to something I might be able to bear.
+				thus, the diadem siphons from my mind in small, sometimes imperceptible
+				increments. 
+				
+				these increments, they are sometimes blurred by the thresholds
+				I usually feel to determine my health, some twenty sums of amethyst dust.
+				the diadem might award media while only taking some fraction of a dust,
+				or a fraction between one of these thresholds"
+			- but, the player sets the limit lower somehow, unlocking the next part:
+				- tooltip "it seems to be lacking/hungry/only partially full"
+				- flay more butchers into it, perhaps?
+				- "the butcher's task is to apportion my psyche--my synapses. barring more... gruesome diction,
+					it is what decides how much of me to take. through the level of the mind, I must take care
+					to tune its... voracity. ill-accomplishing this control could spell nigh unimaginable pain.
+					... (empty line)
+					though... perhaps it could increase the yield? NO, no. perdition, all for thickened harvest?
+					I should be so foolish.
+					... (empty line, maybe page break?)
+					But."
+				- recipe takes level N (apprentice maybe?), but using >N solves the puzzle
+			--------- after puzzle progression --------
+			- "What might happen if you let it have more?" <- italic, beginning of unlocked page
+			- will have like, spikes that lead into the skull (metal af) (maybe)
+				- maybe these "grow in" after wearing it for an extended period of time?
+					- or maybe they appear once progressing them
+				- x has made the challenge [I... can't... take... this... off... Ever.]
+				- provide aforementioned method of taking it off (other than death)
 			- "it aches, OH HOW IT **ACHES**, but it fills my pockets..."
 			- might charge to an internal reservoir, or to held items like rumination
 				- choose which depending on what was flaid (base vs phial one?)
