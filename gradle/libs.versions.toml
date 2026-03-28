@@ -1,0 +1,75 @@
+# This file is a version catalog - a central place where you can declare all of your dependencies and their versions.
+# In your build scripts, you can reference it with the `libs` accessor. For example: `libs.hexcasting.fabric`
+# https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+
+[versions]
+java = "17" # must be an integer
+
+# Minecraft
+minecraft = "1.20.1"
+parchment = "2023.09.03"
+
+kotlin = "1.9.22"
+kotlin-fabric = "1.10.18+kotlin.1.9.22"
+
+fabric-loader = "0.16.14"
+fabric-api = "0.87.0+1.20.1"
+
+# 0.11.2-pre-701 corresponds to the build of 0.11.2 on CurseForge/Modrinth
+hexcasting = "0.11.2-pre-701"
+# FIXME: this should be 0.11.2, but that breaks the dev environment
+hexcasting-dependency = "0.11.1"
+paucal = "0.6.0-pre-118"
+pkpcpbp = "0.2.0-pre-95"
+
+patchouli-fabric = "1.20.1-84-FABRIC"
+trinkets = "3.7.0"
+
+cardinalComponents = "5.2.1"
+serializationHooks = "0.4.99999"
+clothConfig = "11.1.106"
+modMenu = "7.1.0"
+inline = "1.20.1-1.0.1"
+
+# other dependencies
+
+asm = "9.5"
+shadow = "7.1.2"
+modPublish = "0.5.1"
+
+[bundles]
+asm = ["asm", "asm-analysis", "asm-commons", "asm-tree", "asm-util"]
+
+[libraries]
+minecraft = { module="com.mojang:minecraft", version.ref="minecraft" }
+parchment = { module="org.parchmentmc.data:parchment-1.20.1", version.ref="parchment" }
+
+fabric-loader = { module="net.fabricmc:fabric-loader", version.ref="fabric-loader" }
+fabric-api    = { module="net.fabricmc.fabric-api:fabric-api", version.ref="fabric-api" }
+
+kotlin-stdlib = { module="org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref="kotlin" }
+kotlin-fabric = { module="net.fabricmc:fabric-language-kotlin", version.ref="kotlin-fabric" }
+
+hexcasting-fabric = { module="at.petra-k.hexcasting:hexcasting-fabric-1.20.1", version.ref="hexcasting" }
+paucal-fabric = { module="at.petra-k.paucal:paucal-fabric-1.20.1", version.ref="paucal" }
+patchouli-fabric = { module="vazkii.patchouli:Patchouli", version.ref="patchouli-fabric" }
+
+trinkets = { module="dev.emi:trinkets", version.ref="trinkets" }
+
+cardinalComponents = { module="dev.onyxstudios.cardinal-components-api:cardinal-components-api", version.ref="cardinalComponents" }
+modMenu            = { module="com.terraformersmc:modmenu", version.ref="modMenu" }
+clothConfig-fabric = { module="me.shedaniel.cloth:cloth-config-fabric", version.ref="clothConfig" }
+inline-fabric = { module="com.samsthenerd.inline:inline-fabric", version.ref="inline" }
+
+asm          = { module="org.ow2.asm:asm", version.ref="asm" }
+asm-analysis = { module="org.ow2.asm:asm-analysis", version.ref="asm" }
+asm-commons  = { module="org.ow2.asm:asm-commons", version.ref="asm" }
+asm-tree     = { module="org.ow2.asm:asm-tree", version.ref="asm" }
+asm-util     = { module="org.ow2.asm:asm-util", version.ref="asm" }
+
+serializationHooks = { module="libs:serialization-hooks", version.ref="serializationHooks" }
+
+[plugins]
+shadow     = { id="com.github.johnrengelman.shadow", version.ref="shadow" }
+modPublish = { id="me.modmuss50.mod-publish-plugin", version.ref="modPublish" }
+pkJson5    = { id="at.petra-k.pkpcpbp.PKJson5Plugin", version.ref="pkpcpbp" }

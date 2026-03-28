@@ -1,0 +1,46 @@
+{
+  "name": "hextended.entry.functional_staves_1",
+  "category": "hexcasting:items",
+  "icon": "hextended:staff/sealed_lesser_battery",
+  "sortnum": 7,
+  "advancement": "hexcasting:root",
+  "read_by_default": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hextended.page.functional_staves_1.0"
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "hextended.page.functional_staves_1.crafting.header.0",
+      "text": "hextended.page.functional_staves_1.crafting.desc.0",
+      "recipes": [
+        "hextended:staff/lesser_battery_staff",
+        "hextended:staff/long/lesser_battery_extended_staff"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextended.page.functional_staves_1.1"
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "hextended.page.functional_staves_1.crafting.header.1",
+      "text": "hextended.page.functional_staves_1.crafting.desc.1",
+      "recipes": [
+        "hextended:staff/sealed_lesser_battery_staff",
+        "hextended:staff/long/sealed_lesser_battery_extended_staff",
+        "hextended:staff/long/sealed_lesser_battery_extended_staff_post_seal"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "hextended.page.functional_staves_1.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hextended:staff/drawing_orb",
+      "text": "hextended.page.functional_staves_1.crafting.desc.2"
+    }
+  ]
+}
