@@ -15,14 +15,14 @@ before the rewrite, I had this tentative text file for ideas about what to imple
 	you could still go out and apply the enchant manually if you wanted to use one of the
 	small staves and get the same functionality"" -Chloe
 
-    Original Staves - DONE
-	- spoon staff but the extended version is comically large
-		"this staff's name is 'Spoon Theory' look him up on google"
-	- also moss staff. need. flowering azalea variants. maybe an glow berrie?
-	- prismarine staves for matching to aquatic players, dark variant
-	- copper staves?
-	- nether-related staves (not quartz, sam covered that), netherrack?
-	- end staves > purpur, obsidian?
+	Original Staves - DONE
+		- spoon staff but the extended version is comically large
+			- "this staff's name is 'Spoon Theory' look him up on google"
+		- also moss staff. need. flowering azalea variants. maybe an glow berrie?
+		- prismarine staves for matching to aquatic players, dark variant
+		- copper staves?
+		- nether-related staves (not quartz, sam covered that), netherrack?
+		- end staves > purpur, obsidian?
 
     Impermanent Staff / Improviser's Staff - DONE
         staff made from amethyst, for people who didn't bring wood into the geode
@@ -61,8 +61,8 @@ before the rewrite, I had this tentative text file for ideas about what to imple
         - dancer sword w/ shards as blades, amethyst mjolnir
 
     Grand/Great(?) Staves
-	casts a hex for each pattern drawn?
-		--or--
+		casts a hex for each pattern drawn?
+			--or--
         implements ItemPackagedHex (is a casting device) BUT:
         - does not have a media buffer of its own
         - has a chargeup time to cast its bound hex(?), as well as the usual cooldown
@@ -72,32 +72,39 @@ before the rewrite, I had this tentative text file for ideas about what to imple
 
 -------- Bookbinding! Customized Spellbooks --------
     Custom Spellbooks that have varying page counts, but with other effects
-    - crafted from a base item (empty cover), needs chorus fruit
-    - shapeless recipe like a firework to add features
-        - focus for 8 pages,
-        - large/medium/small scrolls for <8
-            - (4,2,1?) for granularity
-        - hexbook for hexbook on rmb
-        - book and quill for gui on rmb
-            - maybe make this its own page
-              so it has compat with scribes etc
-        - artifact maybe? but idk if balanced
-	- map for carbon-copy things
-	    - rclick to write to shelves
-	    - copy to the offand item
-    - use nbt data to store rclick action & page count
+		- crafted from a base item (empty cover), needs chorus fruit
+		- shapeless recipe like a firework to add features
+			- focus for 8 pages, (or ancient scroll)
+			- large/medium/small scrolls for <8
+				- (4,2,1?) for granularity
+			- hexbook for hexbook on rmb
+			- book and quill for gui on rmb
+				- maybe make this its own page
+				so it has compat with scribes etc
+			- artifact maybe? but idk if balanced
+			- map for carbon-copy things
+				- rclick to write to shelves
+				- copy to the offand item
+			- ribbon for bookmarks (special item? or)
+				- scrolling while holding ctrl(?) flips 8 pages?
+				- or maybe apply bookmark on use in mainhand
+					- offhand spellbook's current page is marked
+					- scrolling with ctrl skips thru marked pages
+		- use nbt data to store rclick action & page count
 
-	- special Novice's Bound Spellbook
-		- doesn't use chorus
-		- very low page count (4~8)
+		- special Novice's Bound Spellbook
+			- doesn't use chorus
+			- very low page count (4~8)
+				- another firework-like handler
+				- large scrolls worth 1, ancients worth 2
 
 ---------Other Hex gear and trinkets --------
     Caster's Head Mirror:
-	head trinket, based on the old doctor's headband
-	- maybe reflects raycasts?
-	    - return null if they hit the wearer
-	    - only when originating from a point in the caster's vision?
-		- i.e. when norm(raycast) dot lookdir > 0
+		head trinket, based on the old doctor's headband
+		- maybe reflects raycasts?
+			- return null if they hit the wearer
+			- only when originating from a point in the caster's vision?
+			- i.e. when norm(raycast) dot lookdir > 0
 
 	DIADEMS - line of head curios
 		Charged Amethyst Diadem:
@@ -107,9 +114,9 @@ before the rewrite, I had this tentative text file for ideas about what to imple
 				- includes bloodcasting and damaging mishaps (like div0)
 			- can be made pre-enlighten but is decorative at first, like slates
 			- advancement for having it break for the first time
+				- "It... saved me. ..."
 				- (X) challenge for breaking it as your first bloodcast
 					- ill-advised, locked forever post-enlightenment
-				- "It... saved me. ..."
 	
 	    Budding Amethyst Diadem: (bud diadem)
 	        a headband that grows tiny clusters from its wearer's brain activity
@@ -162,9 +169,8 @@ before the rewrite, I had this tentative text file for ideas about what to imple
 		- write a spell pattern to it, reduces the cost
 		- constant or percentage? start with half & tweak/config
 		- call it the "Ring of Signature Spells"? (D&D reference)
-		
 	    - Silk Touch/Fortune rings (modifies break block)
-		- made obselete by hexical patterns, though may be useful for not incurring cost
+			- made obselete by hexical patterns, though may be useful for not incurring cost
 	    - reach ring, that adds some proportion of your reach distance to your ambit
 	        - could be a hand slot item
 	
