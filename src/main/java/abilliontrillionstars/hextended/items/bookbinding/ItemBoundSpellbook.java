@@ -1,12 +1,8 @@
 package abilliontrillionstars.hextended.items.bookbinding;
-import at.petrak.hexcasting.api.casting.iota.Iota;
-import at.petrak.hexcasting.api.casting.iota.IotaType;
 import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.common.items.storage.ItemSpellbook;
-import at.petrak.hexcasting.common.lib.HexItems;
-import net.minecraft.ChatFormatting;
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
@@ -16,11 +12,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.WritableBookItem;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import vazkii.patchouli.api.PatchouliAPI;
-
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -36,7 +30,7 @@ public class ItemBoundSpellbook extends ItemSpellbook
     public static String TAG_PAGE_NAMES = "page_names";
 
     public static final String TAG_MAX_PAGES = "max_pages";
-    public static final int MAX_PAGES = 32;
+    public static final int DEFAULT_MAX_PAGES = 32;
 
     public static final String TAG_BOOK_USE_ACTION = "book_use_action";
 
@@ -79,7 +73,7 @@ public class ItemBoundSpellbook extends ItemSpellbook
         if(NBTHelper.hasInt(stack, TAG_MAX_PAGES))
             max = NBTHelper.getInt(stack, TAG_MAX_PAGES);
         else
-            max = MAX_PAGES;
+            max = DEFAULT_MAX_PAGES;
 
         idx = Mth.clamp(idx, 0, max);
         NBTHelper.putInt(stack, TAG_SELECTED_PAGE, idx);
@@ -103,18 +97,13 @@ public class ItemBoundSpellbook extends ItemSpellbook
         if(useAction == null)
             return super.use(world, player, hand);
 
-        // TODO: code hotswapping would be DIVINE for troubleshooting this
-        // https://wiki.fabricmc.net/tutorial:hotswapping
         if(useAction.equals("hexbook"))
             PatchouliAPI.get().openBookGUI(new ResourceLocation("hexcasting", "thehexbook"));
 
         if(useAction.equals("book_and_quill"))
         {
-            // fake book and quill to open the gooey
-            // TODO: make a custom gooey and open it here, to store the text to
-            ItemStack quillBook = new ItemStack(Items.WRITABLE_BOOK);
-            player.openItemGui(quillBook, hand);
-            return quillBook.use(world, player, hand);
+            // custom gooey opens here, to store the text to
+            // see client callback mixin (because I can't access client things like the custom gooey from here)
         }
         return super.use(world, player, hand);
     }

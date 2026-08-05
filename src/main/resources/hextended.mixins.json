@@ -3,9 +3,9 @@
 	"package": "abilliontrillionstars.hextended.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"HextendedStavesMixin",
+      "ShiftScrollListenerMixin",
 		"MsgShiftScrollMixin",
-		"PlayerMixin"
+      "PlayerOnDamageMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

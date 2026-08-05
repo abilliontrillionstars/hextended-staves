@@ -3,7 +3,7 @@
 	"package": "abilliontrillionstars.hextended.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"ExampleClientMixin"
+      "LocalPlayerClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

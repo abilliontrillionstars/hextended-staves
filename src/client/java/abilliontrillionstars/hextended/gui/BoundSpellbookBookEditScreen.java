@@ -10,6 +10,8 @@ import net.minecraft.world.item.ItemStack;
 @Environment(EnvType.CLIENT)
 public class BoundSpellbookBookEditScreen extends BookEditScreen
 {
+    // this extension class is here in case I want to make any edits to the writing menu,
+    // but for now it's functionally identical
     public BoundSpellbookBookEditScreen(Player player, ItemStack itemStack, InteractionHand interactionHand)
     {
         super(player, itemStack, interactionHand);
