@@ -10,9 +10,9 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vazkii.patchouli.api.PatchouliAPI;
 import java.util.List;
@@ -90,7 +90,7 @@ public class ItemBoundSpellbook extends ItemSpellbook
         return idx;
     }
 
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
+    public @NotNull InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
     {
         ItemStack stack = player.getItemInHand(hand);
         String useAction = NBTHelper.getString(stack, TAG_BOOK_USE_ACTION);
@@ -105,6 +105,9 @@ public class ItemBoundSpellbook extends ItemSpellbook
             // custom gooey opens here, to store the text to
             // see client callback mixin (because I can't access client things like the custom gooey from here)
         }
+
+
+
         return super.use(world, player, hand);
     }
 }

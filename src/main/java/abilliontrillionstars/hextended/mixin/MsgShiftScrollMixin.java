@@ -26,7 +26,7 @@ public abstract class MsgShiftScrollMixin
         if (delta != 0)
         {
             var stack = sender.getItemInHand(hand);
-            if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK_TEST)
+            if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK)
                 hextended$spellbook(sender, hand, stack, delta);
         }
     }
@@ -41,7 +41,7 @@ public abstract class MsgShiftScrollMixin
             at = @At(value = "INVOKE", target = "Lat/petrak/hexcasting/common/items/storage/ItemSpellbook;highestPage(Lnet/minecraft/world/item/ItemStack;)I"))
     private int boundHighestPage(ItemStack stack, Operation<Integer> original)
     {
-        if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK_TEST)
+        if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK)
             return ItemBoundSpellbook.highestPage(stack);
         return original.call(stack);
     }
@@ -50,7 +50,7 @@ public abstract class MsgShiftScrollMixin
             at = @At(value = "INVOKE", target = "Lat/petrak/hexcasting/common/items/storage/ItemSpellbook;rotatePageIdx(Lnet/minecraft/world/item/ItemStack;Z)I"))
     private int boundRotateIdx(ItemStack stack, boolean increase, Operation<Integer> original)
     {
-        if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK_TEST)
+        if(stack.getItem() == HextendedStavesItems.BOUND_SPELLBOOK)
             return ItemBoundSpellbook.rotatePageIdx(stack, increase);
         return original.call(stack, increase);
     }

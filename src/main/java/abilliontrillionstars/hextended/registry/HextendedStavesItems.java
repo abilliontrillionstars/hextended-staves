@@ -82,7 +82,7 @@ public class HextendedStavesItems
     public static final ItemDrawingOrb DRAWING_ORB = makeStaff("drawing_orb", new ItemDrawingOrb(new Item.Properties().stacksTo(1)));
 
     public static final ItemSpellbookCover SPELLBOOK_COVER = make("spellbook_cover", new ItemSpellbookCover(new Item.Properties().stacksTo(Item.MAX_STACK_SIZE)));
-    public static final ItemBoundSpellbook BOUND_SPELLBOOK_TEST = make("bound_spellbook", new ItemBoundSpellbook(new Item.Properties().stacksTo(1)));
+    public static final ItemBoundSpellbook BOUND_SPELLBOOK = make("bound_spellbook", new ItemBoundSpellbook(new Item.Properties().stacksTo(1)));
 
 
     public static final ItemChargedDiadem CHARGED_AMETHYST_DIADEM = make("charged_amethyst_diadem", new ItemChargedDiadem(new Item.Properties().stacksTo(1)));

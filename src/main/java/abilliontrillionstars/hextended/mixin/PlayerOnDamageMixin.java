@@ -11,7 +11,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 // https://github.com/Robotgiggle/hierophantics/blob/main/common/src/main/java/robotgiggle/hierophantics/mixin/PlayerEntityMixin.java
 
 @Mixin(Player.class)
-public class PlayerMixin {
+public class PlayerOnDamageMixin
+{
     @Inject(method = "actuallyHurt", at = @At("TAIL"))
     private void onPlayerHurt(DamageSource source, float f, CallbackInfo ci) {
         Player player = (Player) (Object) this;
@@ -20,6 +21,7 @@ public class PlayerMixin {
         String dmgType = source.getMsgId();
         if (dmgType.equals("hexcasting.overcast"))
             HextendedStaves.LOGGER.info("player overcasted!");
-            // TODO: move this to per-plat (ugh,) so it can change the diadem to empty
+            // TODO: NOT move this to per-plat MUEJEJEJE
+            // change the diadem to an empty one
         }
     }

@@ -1,11 +1,10 @@
 package abilliontrillionstars.hextended.recipe;
 
 import abilliontrillionstars.hextended.items.bookbinding.ItemBoundSpellbook;
-import abilliontrillionstars.hextended.items.bookbinding.ItemSpellbookCover;
 import abilliontrillionstars.hextended.registry.HextendedStavesItems;
 import at.petrak.hexcasting.api.utils.NBTHelper;
+import at.petrak.hexcasting.common.items.storage.ItemScroll;
 import at.petrak.hexcasting.common.lib.HexItems;
-import net.minecraft.util.datafix.fixes.ItemWrittenBookPagesStrictJsonFix;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
@@ -29,8 +28,8 @@ public class BoundSpellbookRecipe extends CustomRecipe {
             new SimpleCraftingRecipeSerializer<>(BoundSpellbookRecipe::new);
     public BoundSpellbookRecipe(ResourceLocation id, CraftingBookCategory category) { super(id, category); }
 
-    public static final List<Item> BOOK_PARTS = List.of(HexItems.FOCUS, HexItems.SCROLL_LARGE, HexItems.SCROLL_MEDIUM, HexItems.SCROLL_SMOL,
-                                                        PatchouliItems.BOOK, Items.WRITABLE_BOOK);
+    public static final List<Item> PAGE_ITEMS = List.of(HexItems.FOCUS, HexItems.SCROLL_LARGE, HexItems.SCROLL_MEDIUM, HexItems.SCROLL_SMOL);
+    public static final List<Item> EXCLUSIVE_BOOK_PARTS = List.of(PatchouliItems.BOOK, Items.WRITABLE_BOOK);
     @Override
     public boolean canCraftInDimensions(int width, int height) {
         return width * height >= 9;
@@ -40,6 +39,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
     public boolean matches(CraftingContainer container, Level level) {
         boolean foundCover = false;
         int foundParts = 0;
+        boolean foundExclusivePart = false;
         // required parts
         for (int i = 0; i < container.getContainerSize(); i++)
         {
@@ -50,12 +50,16 @@ public class BoundSpellbookRecipe extends CustomRecipe {
                 if (foundCover) return false;
                 foundCover = true;
             }
-            // TODO: make this enforce a max of one rclick action part
-            else if(BOOK_PARTS.contains(stack.getItem()))
+            else if(PAGE_ITEMS.contains(stack.getItem()))
             {
                 // for wierd large crafting tables
                 if (foundParts > 8) return false;
                 foundParts++;
+            }
+            else if(EXCLUSIVE_BOOK_PARTS.contains(stack.getItem()))
+            {
+                // enforce a max of one rclick action part
+
             }
             else if(!stack.isEmpty()) // don't eat non-part items
                 return false;
@@ -65,7 +69,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
 
     @Override
     public ItemStack assemble(CraftingContainer inv, RegistryAccess registryAccess) {
-        ItemStack result = HextendedStavesItems.BOUND_SPELLBOOK_TEST.getDefaultInstance();
+        ItemStack result = HextendedStavesItems.BOUND_SPELLBOOK.getDefaultInstance();
         int pageCount = 0;
 
         for (int i = 0; i < inv.getContainerSize(); i++)
@@ -73,7 +77,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
             var stack = inv.getItem(i);
 
             // can't do switch case with items I guess? oh well
-            if (stack.is(HexItems.FOCUS))
+            if (stack.is(HexItems.FOCUS) || (stack.is(HexItems.SCROLL_LARGE) && NBTHelper.hasString(stack, ItemScroll.TAG_OP_ID)) )
                 pageCount += 8;
             else if(stack.is(HexItems.SCROLL_LARGE))
                 pageCount += 4;
