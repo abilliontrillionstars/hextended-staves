@@ -1,6 +1,7 @@
 package abilliontrillionstars.hextended;
 
 import abilliontrillionstars.hextended.items.ItemDrawingOrb;
+import abilliontrillionstars.hextended.items.bookbinding.ItemBoundSpellbook;
 import abilliontrillionstars.hextended.registry.HextendedStavesItems;
 import at.petrak.hexcasting.api.item.IotaHolderItem;
 import at.petrak.hexcasting.api.utils.NBTHelper;
@@ -27,6 +28,10 @@ public class HextendedStavesClient implements ClientModInitializer
 		registerSealableDataHolderOverrides(HextendedStavesItems.DRAWING_ORB,
 				stack -> HextendedStavesItems.DRAWING_ORB.readIotaTag(stack) != null,
 				ItemDrawingOrb::isSealed);
+		// FIXME this doesn't do the trick; see body of the called method.
+		registerSealableDataHolderOverrides(HextendedStavesItems.BOUND_SPELLBOOK,
+				stack -> HextendedStavesItems.BOUND_SPELLBOOK.readIotaTag(stack) != null,
+				ItemBoundSpellbook::isSealed);
 
 		registerGaslight4(HextendedStavesItems.EXTENDED_QUENCHED_STAFF);
 		registerColorProviders(ColorProviderRegistry.ITEM::register);
@@ -34,8 +39,6 @@ public class HextendedStavesClient implements ClientModInitializer
 
 	private static void registerGaslight4(Item item)
 	{
-
-		// TODO: translate to fabric
 		FabricModelPredicateProviderRegistry.register(item,
 				GaslightingTracker.GASLIGHTING_PRED, (stack, level, holder, holderID) ->
 						Math.abs(GaslightingTracker.getGaslightingAmount() % 4
@@ -44,7 +47,7 @@ public class HextendedStavesClient implements ClientModInitializer
 
 	private static void registerSealableDataHolderOverrides(IotaHolderItem item, Predicate<ItemStack> hasIota, Predicate<ItemStack> isSealed)
 	{
-		// TODO: translate to fabric
+		// TODO: this uses the orb predicate. why? investigate this next
 		FabricModelPredicateProviderRegistry.register((Item) item, ItemDrawingOrb.OVERLAY_PRED,
 				(stack, level, holder, holderID) -> {
 					if (!hasIota.test(stack) && !NBTHelper.hasString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY))
@@ -57,5 +60,6 @@ public class HextendedStavesClient implements ClientModInitializer
 	public static void registerColorProviders(BiConsumer<ItemColor, Item> itemColorRegistry)
 	{
 		itemColorRegistry.accept(makeIotaStorageColorizer(HextendedStavesItems.DRAWING_ORB::getColor), HextendedStavesItems.DRAWING_ORB);
+		itemColorRegistry.accept(makeIotaStorageColorizer(HextendedStavesItems.BOUND_SPELLBOOK::getColor), HextendedStavesItems.BOUND_SPELLBOOK);
 	}
 }
