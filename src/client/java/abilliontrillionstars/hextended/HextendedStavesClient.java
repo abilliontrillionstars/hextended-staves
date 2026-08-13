@@ -6,6 +6,7 @@ import abilliontrillionstars.hextended.registry.HextendedStavesItems;
 import at.petrak.hexcasting.api.item.IotaHolderItem;
 import at.petrak.hexcasting.api.utils.NBTHelper;
 import at.petrak.hexcasting.client.render.GaslightingTracker;
+import at.petrak.hexcasting.common.items.storage.ItemFocus;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -28,7 +29,7 @@ public class HextendedStavesClient implements ClientModInitializer
 		registerSealableDataHolderOverrides(HextendedStavesItems.DRAWING_ORB,
 				stack -> HextendedStavesItems.DRAWING_ORB.readIotaTag(stack) != null,
 				ItemDrawingOrb::isSealed);
-		// FIXME this doesn't do the trick; see body of the called method.
+		// FIXME this doesn't do the trick
 		registerSealableDataHolderOverrides(HextendedStavesItems.BOUND_SPELLBOOK,
 				stack -> HextendedStavesItems.BOUND_SPELLBOOK.readIotaTag(stack) != null,
 				ItemBoundSpellbook::isSealed);
@@ -47,8 +48,7 @@ public class HextendedStavesClient implements ClientModInitializer
 
 	private static void registerSealableDataHolderOverrides(IotaHolderItem item, Predicate<ItemStack> hasIota, Predicate<ItemStack> isSealed)
 	{
-		// TODO: this uses the orb predicate. why? investigate this next
-		FabricModelPredicateProviderRegistry.register((Item) item, ItemDrawingOrb.OVERLAY_PRED,
+		FabricModelPredicateProviderRegistry.register((Item) item, ItemFocus.OVERLAY_PRED,
 				(stack, level, holder, holderID) -> {
 					if (!hasIota.test(stack) && !NBTHelper.hasString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY))
 						return 0;

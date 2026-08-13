@@ -28,7 +28,6 @@ public class ItemDrawingOrb extends ItemStaff implements IotaHolderItem
 {
     public ItemDrawingOrb(Properties pProperties)  { super(pProperties); }
 
-    public static final ResourceLocation OVERLAY_PRED = modLoc("overlay_layer");
     public static final String TAG_DATA = "data";
     public static final String TAG_SEALED = "sealed";
 
