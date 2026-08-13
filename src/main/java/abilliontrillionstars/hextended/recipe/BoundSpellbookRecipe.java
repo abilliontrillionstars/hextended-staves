@@ -29,7 +29,7 @@ public class BoundSpellbookRecipe extends CustomRecipe {
     public BoundSpellbookRecipe(ResourceLocation id, CraftingBookCategory category) { super(id, category); }
 
     public static final List<Item> PAGE_ITEMS = List.of(HexItems.FOCUS, HexItems.SCROLL_LARGE, HexItems.SCROLL_MEDIUM, HexItems.SCROLL_SMOL);
-    public static final List<Item> EXCLUSIVE_BOOK_PARTS = List.of(PatchouliItems.BOOK, Items.WRITABLE_BOOK);
+    public static final List<Item> EXCLUSIVE_BOOK_PARTS = List.of(PatchouliItems.BOOK, Items.WRITABLE_BOOK, Items.MAP);
     @Override
     public boolean canCraftInDimensions(int width, int height) {
         return width * height >= 9;
@@ -59,7 +59,8 @@ public class BoundSpellbookRecipe extends CustomRecipe {
             else if(EXCLUSIVE_BOOK_PARTS.contains(stack.getItem()))
             {
                 // enforce a max of one rclick action part
-
+                if (foundExclusivePart) return false;
+                foundExclusivePart = true;
             }
             else if(!stack.isEmpty()) // don't eat non-part items
                 return false;
@@ -89,6 +90,9 @@ public class BoundSpellbookRecipe extends CustomRecipe {
                 NBTHelper.putString(result, ItemBoundSpellbook.TAG_BOOK_USE_ACTION, "hexbook");
             else if(stack.is(Items.WRITABLE_BOOK))
                 NBTHelper.putString(result, ItemBoundSpellbook.TAG_BOOK_USE_ACTION, "book_and_quill");
+            else if(stack.is(Items.MAP))
+                NBTHelper.putString(result, ItemBoundSpellbook.TAG_BOOK_USE_ACTION, "map");
+
         }
         NBTHelper.putInt(result, ItemBoundSpellbook.TAG_MAX_PAGES, pageCount);
         return result;

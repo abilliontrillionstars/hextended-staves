@@ -1,17 +1,32 @@
 package abilliontrillionstars.hextended.items.bookbinding;
+import at.petrak.hexcasting.api.casting.iota.Iota;
+import at.petrak.hexcasting.api.casting.iota.IotaType;
 import at.petrak.hexcasting.api.utils.NBTHelper;
+import at.petrak.hexcasting.common.blocks.akashic.BlockAkashicBookshelf;
+import at.petrak.hexcasting.common.blocks.akashic.BlockEntityAkashicBookshelf;
+import at.petrak.hexcasting.common.entities.EntityWallScroll;
 import at.petrak.hexcasting.common.items.storage.ItemSpellbook;
 import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vazkii.patchouli.api.PatchouliAPI;
@@ -106,8 +121,56 @@ public class ItemBoundSpellbook extends ItemSpellbook
             // see client callback mixin (because I can't access client things like the custom gooey from here)
         }
 
-
+        if(useAction.equals("map"))
+        {
+            // copy the iota from a selected akashic bookshelf onto the selected page
+            // see useOn
+        }
 
         return super.use(world, player, hand);
+    }
+
+    public @NotNull InteractionResult useOn(UseOnContext ctx) {
+        BlockPos posClicked = ctx.getClickedPos();
+        ItemStack itemstack = ctx.getItemInHand();
+
+        Level level = ctx.getLevel();
+        // everyone say hi ben
+        BlockEntity ben = level.getBlockEntity(posClicked);
+        if (ben instanceof BlockEntityAkashicBookshelf
+            && !level.isClientSide())
+        {
+            // get the shelf's iota
+            BlockEntityAkashicBookshelf shelf = (BlockEntityAkashicBookshelf) ben;
+            CompoundTag tag = shelf.getIotaTag();
+            if (tag == null) return InteractionResult.PASS;
+            Iota shelfIota = IotaType.deserialize(tag, (ServerLevel) level);
+            // get the spellbook page's iota
+            tag = this.readIotaTag(itemstack);
+            if (tag == null) return InteractionResult.PASS;
+            Iota heldIota = IotaType.deserialize(tag, (ServerLevel) level);
+
+
+
+            // the switcheroo
+            this.writeDatum(itemstack, shelfIota);
+            shelf.setNewMapping(shelf.getPattern(), heldIota);
+
+            // try to update visually?
+            // first, see if I can visually clear it
+            BlockState oldBs = shelf.getBlockState();
+            BlockState newBs = (BlockState) oldBs.setValue(BlockAkashicBookshelf.HAS_BOOKS, false);
+            level.setBlock(shelf.getBlockPos(), newBs, 3);
+            level.sendBlockUpdated(shelf.getBlockPos(), oldBs, newBs, 3);
+            // have you tried turning it off and back on again?
+            newBs = (BlockState) oldBs.setValue(BlockAkashicBookshelf.HAS_BOOKS, true);
+            level.setBlock(shelf.getBlockPos(), newBs, 3);
+            level.sendBlockUpdated(shelf.getBlockPos(), oldBs, newBs, 3);
+
+            // hmm, that didn't work...
+
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
     }
 }

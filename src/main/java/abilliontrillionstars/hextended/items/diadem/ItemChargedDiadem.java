@@ -14,7 +14,7 @@ import static at.petrak.hexcasting.common.items.ItemLens.SCRY_SIGHT;
 public class ItemChargedDiadem extends Item implements HexBaubleItem
 {
     public ItemChargedDiadem(Item.Properties properties) { super(properties); }
-    // TODO: make this a separate attr that triggers advancement / damage prevention!!
+
     @Override
     public Multimap<Attribute, AttributeModifier> getHexBaubleAttrs(ItemStack stack) {
         HashMultimap<Attribute, AttributeModifier> out = HashMultimap.create();
